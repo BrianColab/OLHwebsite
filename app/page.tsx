@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { FeatureCard } from "@/components/FeatureCard";
 import { CTASection } from "@/components/CTASection";
-import { SectionHeading } from "@/components/SectionHeading";
 
 export default function HomePage() {
   const { lang } = useLang();
@@ -59,7 +58,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Feature cards ──────────────────────────────────────────────────── */}
-      <section className="bg-olh-bg-light py-14 px-4 border-y border-olh-border">
+      <section className="bg-[#111111] py-14 px-4">
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {c.features.map((feature) => (
@@ -78,7 +77,15 @@ export default function HomePage() {
       <section className="bg-white py-20 px-4">
         <div className="max-w-container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <SectionHeading heading={c.bridging.heading} />
+            {/* Keyword-split heading: prefix small/gray, accent large/red */}
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-olh-text-secondary mb-2">
+                {c.bridging.headingPrefix}
+              </p>
+              <h2 className="text-4xl md:text-5xl font-black text-olh-red leading-tight tracking-tight">
+                {c.bridging.headingAccent}
+              </h2>
+            </div>
             <div className="flex flex-col gap-5">
               <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed">
                 {c.bridging.body1}
