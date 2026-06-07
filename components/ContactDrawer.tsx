@@ -131,6 +131,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
         role="dialog"
         aria-modal="true"
         aria-labelledby={headingId}
+        aria-hidden={!open}
         className={`fixed top-0 right-0 z-50 h-full w-full sm:w-[480px] flex flex-col bg-white shadow-2xl transition-transform duration-300 ease-in-out sm:rounded-l-2xl ${
           open ? "translate-x-0" : "translate-x-full"
         }`}

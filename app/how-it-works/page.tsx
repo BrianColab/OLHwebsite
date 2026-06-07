@@ -19,6 +19,7 @@ export default function HowItWorksPage() {
           <SectionHeading
             heading={c.hero.heading}
             align="center"
+            level={1}
           />
         </div>
       </section>

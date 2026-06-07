@@ -122,7 +122,7 @@ export default function HomePage() {
             </div>
             <div className="w-px self-stretch bg-olh-border hidden sm:block" aria-hidden="true" />
             <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed max-w-xl">
-              {c.bridging.body1.split(".")[0]}. OLH is free, accessible, and located in trusted Legion spaces across Ontario.
+              {c.bridging.body2}
             </p>
           </div>
         </div>

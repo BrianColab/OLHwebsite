@@ -20,6 +20,7 @@ export default function WhoWeServePage() {
             heading={c.hero.heading}
             subheading={c.hero.subheading}
             align="center"
+            level={1}
           />
         </div>
       </section>
