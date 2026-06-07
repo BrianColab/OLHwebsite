@@ -25,6 +25,9 @@ export const en = {
       // UI labels
       ctaPrimary: "Learn More",
       ctaSecondary: "Download the App",
+      // Floating badge over hero image
+      badgeTitle: "Free community screening",
+      badgeSubtitle: "Heart + mental health",
     },
 
     // Feature cards: titles are section labels; descriptions closely paraphrase

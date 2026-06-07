@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { FeatureCard } from "@/components/FeatureCard";
 import { CTASection } from "@/components/CTASection";
+import { Icon } from "@/components/icons";
 
 export default function HomePage() {
   const { lang } = useLang();
@@ -51,6 +52,16 @@ export default function HomePage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
+              </div>
+              {/* Floating badge — outside overflow-hidden so it won't be clipped */}
+              <div className="absolute bottom-5 left-5 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3 border border-olh-border">
+                <div className="w-9 h-9 rounded-xl bg-olh-red flex items-center justify-center flex-shrink-0">
+                  <Icon name="heart" className="w-4 h-4 text-white" />
+                </div>
+                <div className="leading-none">
+                  <p className="text-xs font-bold text-olh-text-primary">{c.hero.badgeTitle}</p>
+                  <p className="text-[11px] text-olh-text-secondary mt-0.5">{c.hero.badgeSubtitle}</p>
+                </div>
               </div>
             </div>
 
