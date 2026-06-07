@@ -96,7 +96,7 @@ export default function HomePage() {
               </p>
               <div className="mt-2">
                 <Button href="/how-it-works" variant="ghost" className="pl-0 text-base font-semibold">
-                  How It Works →
+                  {c.bridging.ctaLink}
                 </Button>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
             <div className="flex-shrink-0 text-center sm:text-left">
               <span className="text-4xl md:text-5xl font-bold text-olh-red block">2.5M+</span>
               <span className="text-sm text-olh-text-secondary mt-1 block max-w-[200px]">
-                Ontarians currently without a primary care provider
+                {c.bridging.statLabel}
               </span>
             </div>
             <div className="w-px self-stretch bg-olh-border hidden sm:block" aria-hidden="true" />

@@ -62,6 +62,8 @@ export const en = {
       heading: "Bridging the Gap in Healthcare",
       headingPrefix: "Bridging the",
       headingAccent: "Gap in Healthcare",
+      statLabel: "Ontarians currently without a primary care provider",
+      ctaLink: "How It Works →",
       // Doc: paragraph 4
       body1:
         "Over 2.5 million Ontarians are currently navigating the healthcare system without a primary care provider. Ontario Legion Health (OLH) was designed to bridge this gap. We provide a low-barrier, preventative screening service focused on the leading contributors to everyday wellness: cardiovascular and mental health.",

@@ -58,6 +58,8 @@ export const fr: SiteContent = {
       heading: "Combler les lacunes en soins de santé",
       headingPrefix: "Combler",
       headingAccent: "les lacunes en soins de santé",
+      statLabel: "Ontariens actuellement sans médecin de famille", // [DRAFT FR]
+      ctaLink: "Fonctionnement →",
       body1:
         "Plus de 2,5 millions d'Ontariens naviguent actuellement dans le système de santé sans médecin de famille. Ontario Legion Health (OLH) a été conçu pour combler cette lacune. Nous offrons un service de dépistage préventif à faible seuil, axé sur les principaux facteurs de bien-être au quotidien : la santé cardiovasculaire et mentale.",
       body2:

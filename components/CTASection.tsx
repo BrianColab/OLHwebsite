@@ -1,6 +1,26 @@
 "use client";
 
 import Image from "next/image";
+import { useLang } from "@/app/LangProvider";
+
+const CTA_LABELS = {
+  en: {
+    eyebrow: "Available now · iOS & Android",
+    appStorePre: "Download on the",
+    appStore: "App Store",
+    playPre: "Get it on",
+    play: "Google Play",
+    trustNote: "Free · No health card required",
+  },
+  fr: {
+    eyebrow: "Disponible maintenant · iOS et Android",
+    appStorePre: "Télécharger dans l’",
+    appStore: "App Store",
+    playPre: "Disponible sur",
+    play: "Google Play",
+    trustNote: "Gratuit · Aucune carte santé requise",
+  },
+} as const;
 
 interface CTASectionProps {
   heading: string;
@@ -10,6 +30,8 @@ interface CTASectionProps {
 }
 
 export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTASectionProps) {
+  const { lang } = useLang();
+  const t = CTA_LABELS[lang];
   return (
     <section
       className="relative overflow-hidden"
@@ -51,7 +73,7 @@ export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTAS
 
           {/* Eyebrow */}
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50 mb-5">
-            Available now · iOS &amp; Android
+            {t.eyebrow}
           </p>
 
           {/* Heading */}
@@ -82,8 +104,8 @@ export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTAS
                 <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701z" />
               </svg>
               <div className="text-left leading-none">
-                <div className="text-[10px] text-white/55 mb-1 tracking-wide">Download on the</div>
-                <div className="text-[15px] font-semibold tracking-tight">App Store</div>
+                <div className="text-[10px] text-white/55 mb-1 tracking-wide">{t.appStorePre}</div>
+                <div className="text-[15px] font-semibold tracking-tight">{t.appStore}</div>
               </div>
             </a>
 
@@ -103,8 +125,8 @@ export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTAS
                 <path fill="#FBBC04" d="M22 10.13l-3.81-2.31-3.5 3.49 3.5 3.5 3.81-2.3A1.6 1.6 0 0 0 22 10.13z"/>
               </svg>
               <div className="text-left leading-none">
-                <div className="text-[10px] text-white/55 mb-1 tracking-wide">Get it on</div>
-                <div className="text-[15px] font-semibold tracking-tight">Google Play</div>
+                <div className="text-[10px] text-white/55 mb-1 tracking-wide">{t.playPre}</div>
+                <div className="text-[15px] font-semibold tracking-tight">{t.play}</div>
               </div>
             </a>
 
@@ -112,7 +134,7 @@ export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTAS
 
           {/* Trust note */}
           <p className="mt-6 text-xs text-white/35 tracking-wide">
-            Free · No health card required
+            {t.trustNote}
           </p>
 
         </div>
