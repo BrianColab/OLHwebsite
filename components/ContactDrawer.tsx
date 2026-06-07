@@ -6,36 +6,40 @@ import { useLang } from "@/app/LangProvider";
 const LABELS = {
   en: {
     heading: "Contact Us",
+    subheading: "We'd love to hear from you.",
     closeAriaLabel: "Close contact drawer",
     intro: "Contact details to be added.",
-    nameLabel: "Name",
+    nameLabel: "Full Name",
     namePlaceholder: "Your full name",
-    emailLabel: "Email",
+    emailLabel: "Email Address",
     emailPlaceholder: "your@email.com",
     orgLabel: "Organization",
-    orgOptional: "(optional)",
+    orgOptional: "Optional",
     orgPlaceholder: "Your organization",
     messageLabel: "Message",
     messagePlaceholder: "How can we help?",
     required: "(required)",
-    submit: "Submit",
+    submit: "Send Message",
+    successTitle: "Message received",
     successMessage: "Contact form endpoint to be added.",
   },
   fr: {
     heading: "Nous joindre",
+    subheading: "Nous serions ravis de vous entendre.",
     closeAriaLabel: "Fermer le panneau de contact",
     intro: "Les coordonnées seront ajoutées sous peu.",
-    nameLabel: "Nom",
+    nameLabel: "Nom complet",
     namePlaceholder: "Votre nom complet",
-    emailLabel: "Courriel",
+    emailLabel: "Adresse courriel",
     emailPlaceholder: "votre@courriel.com",
     orgLabel: "Organisation",
-    orgOptional: "(facultatif)",
+    orgOptional: "Facultatif",
     orgPlaceholder: "Votre organisation",
     messageLabel: "Message",
-    messagePlaceholder: "Comment pouvons-nous vous aider ?",
+    messagePlaceholder: "Comment pouvons-nous vous aider ?",
     required: "(obligatoire)",
     submit: "Envoyer",
+    successTitle: "Message reçu",
     successMessage: "Le point de traitement du formulaire sera ajouté sous peu.",
   },
 } as const;
@@ -53,6 +57,9 @@ type FormData = {
 };
 
 const EMPTY_FORM: FormData = { name: "", email: "", organization: "", message: "" };
+
+const inputClass =
+  "w-full rounded-xl border border-[#E8E8E8] bg-[#FAFAFA] px-4 py-3 text-sm text-olh-text-primary placeholder:text-[#BDBDBD] transition-all focus:outline-none focus:bg-white focus:border-olh-red focus:ring-2 focus:ring-olh-red/15";
 
 export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
   const { lang } = useLang();
@@ -83,9 +90,8 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
   // ── Focus close button when drawer opens ────────────────────────────────
   useEffect(() => {
     if (open) {
-      // Defer to let CSS transition start first
-      const t = setTimeout(() => closeBtnRef.current?.focus(), 50);
-      return () => clearTimeout(t);
+      const id = setTimeout(() => closeBtnRef.current?.focus(), 50);
+      return () => clearTimeout(id);
     }
   }, [open]);
 
@@ -99,7 +105,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open, onClose]);
 
-  // ── Focus trap — Tab cycles within the drawer ───────────────────────────
+  // ── Focus trap ──────────────────────────────────────────────────────────
   useEffect(() => {
     if (!open || !drawerRef.current) return;
     function onKeyDown(e: KeyboardEvent) {
@@ -127,11 +133,11 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
   // ── Reset form when drawer closes ───────────────────────────────────────
   useEffect(() => {
     if (!open) {
-      const t = setTimeout(() => {
+      const id = setTimeout(() => {
         setForm(EMPTY_FORM);
         setSubmitted(false);
-      }, 300); // after close animation completes
-      return () => clearTimeout(t);
+      }, 300);
+      return () => clearTimeout(id);
     }
   }, [open]);
 
@@ -142,9 +148,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: Replace this handler with the real form endpoint or email handler.
-    // Options: POST to an API route, send via a form service (e.g. Formspree,
-    // EmailJS, or a Next.js API route), or integrate a CRM/help desk.
+    // TODO: Replace with real endpoint (Formspree, EmailJS, Next.js API route, or CRM).
     // Do not hard-code an email address or fake endpoint here.
     setSubmitted(true);
   }
@@ -155,178 +159,145 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
       <div
         aria-hidden="true"
         onClick={onClose}
-        className={`fixed inset-0 z-40 bg-black/40 transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
           open ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       />
 
       {/* ── Drawer ───────────────────────────────────────────────────────── */}
-      {/*
-        Always in the DOM so the close slide-out animation plays.
-        Made non-interactive via the `inert` attribute when closed.
-        Width: full on mobile, 480px on sm+.
-      */}
       <div
         ref={drawerRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby={headingId}
         aria-hidden={!open}
-        className={`fixed top-0 right-0 z-50 h-full w-full sm:w-[480px] flex flex-col bg-white shadow-2xl transition-transform duration-300 ease-in-out sm:rounded-l-2xl ${
+        className={`fixed top-0 right-0 z-50 h-full w-full sm:w-[460px] flex flex-col shadow-2xl transition-transform duration-300 ease-in-out sm:rounded-l-3xl overflow-hidden ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Red accent stripe at top */}
-        <div className="h-1 w-full bg-olh-red flex-shrink-0 sm:rounded-tl-2xl" aria-hidden="true" />
+        {/* ── Dark branded header ────────────────────────────────────────── */}
+        <div
+          className="relative flex-shrink-0 px-7 pt-8 pb-7 overflow-hidden"
+          style={{ background: "linear-gradient(135deg, #0f0f0f 0%, #2a0508 60%, #3d0b0e 100%)" }}
+        >
+          {/* Radial glow */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "radial-gradient(ellipse at 10% 80%, rgba(207,31,42,0.3) 0%, transparent 60%)" }}
+          />
 
-        {/* ── Drawer header ─────────────────────────────────────────────── */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-olh-border flex-shrink-0">
-          <h2
-            id={headingId}
-            className="text-xl font-bold text-olh-text-primary"
-          >
+          {/* Close button */}
+          <div className="relative flex justify-end mb-5">
+            <button
+              ref={closeBtnRef}
+              type="button"
+              onClick={onClose}
+              aria-label={t.closeAriaLabel}
+              className="w-9 h-9 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+
+          {/* OLH icon badge */}
+          <div className="relative mb-4">
+            <div className="w-10 h-10 rounded-xl bg-olh-red flex items-center justify-center shadow-lg shadow-black/40">
+              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </div>
+          </div>
+
+          <h2 id={headingId} className="relative text-2xl font-bold text-white leading-tight">
             {t.heading}
           </h2>
-          <button
-            ref={closeBtnRef}
-            type="button"
-            onClick={onClose}
-            aria-label={t.closeAriaLabel}
-            className="w-11 h-11 rounded-full flex items-center justify-center text-olh-text-secondary hover:text-olh-text-primary hover:bg-olh-bg-light transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red"
-          >
-            <svg
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              aria-hidden="true"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          </button>
+          <p className="relative mt-1 text-sm text-white/50">{t.subheading}</p>
         </div>
 
-        {/* ── Drawer body ───────────────────────────────────────────────── */}
-        <div className="flex-1 overflow-y-auto px-6 py-7">
-          <p className="text-sm text-olh-text-secondary mb-7 leading-relaxed">
+        {/* ── Form area ─────────────────────────────────────────────────── */}
+        <div className="flex-1 overflow-y-auto bg-white px-7 py-6">
+          <p className="text-xs text-olh-text-secondary/70 mb-6 leading-relaxed border-l-2 border-olh-red/30 pl-3 italic">
             {t.intro}
           </p>
 
           {submitted ? (
-            // ── Submission acknowledgement ─────────────────────────────
-            // TODO: Replace this message with a real success/error response
-            // once the form endpoint is wired.
-            <div
-              role="status"
-              aria-live="polite"
-              className="rounded-xl border border-olh-border bg-olh-bg-light px-6 py-5 text-sm text-olh-text-secondary leading-relaxed"
-            >
-              {t.successMessage}
+            // ── Success state ──────────────────────────────────────────────
+            // TODO: Replace with real success/error response once endpoint is wired
+            <div role="status" aria-live="polite" className="flex flex-col items-center text-center py-10">
+              <div className="w-16 h-16 rounded-full bg-green-50 border-2 border-green-200 flex items-center justify-center mb-5">
+                <svg className="w-8 h-8 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <p className="text-base font-bold text-olh-text-primary mb-2">{t.successTitle}</p>
+              <p className="text-sm text-olh-text-secondary leading-relaxed max-w-xs">
+                {t.successMessage}
+              </p>
             </div>
           ) : (
-            // ── Contact form ────────────────────────────────────────────
-            <form
-              onSubmit={handleSubmit}
-              noValidate
-              aria-label="Contact form"
-              className="flex flex-col gap-5"
-            >
+            // ── Contact form ───────────────────────────────────────────────
+            <form onSubmit={handleSubmit} noValidate aria-label="Contact form" className="flex flex-col gap-4">
+
               {/* Name */}
               <div className="flex flex-col gap-1.5">
-                <label
-                  htmlFor="contact-name"
-                  className="text-sm font-medium text-olh-text-primary"
-                >
+                <label htmlFor="contact-name" className="text-xs font-semibold uppercase tracking-wider text-olh-text-secondary">
                   {t.nameLabel} <span className="text-olh-red" aria-hidden="true">*</span>
                   <span className="sr-only">{t.required}</span>
                 </label>
-                <input
-                  id="contact-name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                  value={form.name}
-                  onChange={handleChange}
-                  placeholder={t.namePlaceholder}
-                  className="w-full rounded-lg border border-olh-border bg-white px-4 py-3 text-sm text-olh-text-primary placeholder:text-olh-text-secondary/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red focus-visible:border-olh-red"
-                />
+                <input id="contact-name" name="name" type="text" autoComplete="name" required
+                  value={form.name} onChange={handleChange} placeholder={t.namePlaceholder}
+                  className={inputClass} />
               </div>
 
               {/* Email */}
               <div className="flex flex-col gap-1.5">
-                <label
-                  htmlFor="contact-email"
-                  className="text-sm font-medium text-olh-text-primary"
-                >
+                <label htmlFor="contact-email" className="text-xs font-semibold uppercase tracking-wider text-olh-text-secondary">
                   {t.emailLabel} <span className="text-olh-red" aria-hidden="true">*</span>
                   <span className="sr-only">{t.required}</span>
                 </label>
-                <input
-                  id="contact-email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder={t.emailPlaceholder}
-                  className="w-full rounded-lg border border-olh-border bg-white px-4 py-3 text-sm text-olh-text-primary placeholder:text-olh-text-secondary/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red focus-visible:border-olh-red"
-                />
+                <input id="contact-email" name="email" type="email" autoComplete="email" required
+                  value={form.email} onChange={handleChange} placeholder={t.emailPlaceholder}
+                  className={inputClass} />
               </div>
 
               {/* Organization */}
               <div className="flex flex-col gap-1.5">
-                <label
-                  htmlFor="contact-org"
-                  className="text-sm font-medium text-olh-text-primary"
-                >
-                  {t.orgLabel}{" "}
-                  <span className="text-olh-text-secondary font-normal">{t.orgOptional}</span>
+                <label htmlFor="contact-org" className="text-xs font-semibold uppercase tracking-wider text-olh-text-secondary flex items-center gap-2">
+                  {t.orgLabel}
+                  <span className="text-[10px] font-medium normal-case tracking-normal bg-[#F0F0F0] text-olh-text-secondary/70 px-2 py-0.5 rounded-full">{t.orgOptional}</span>
                 </label>
-                <input
-                  id="contact-org"
-                  name="organization"
-                  type="text"
-                  autoComplete="organization"
-                  value={form.organization}
-                  onChange={handleChange}
-                  placeholder={t.orgPlaceholder}
-                  className="w-full rounded-lg border border-olh-border bg-white px-4 py-3 text-sm text-olh-text-primary placeholder:text-olh-text-secondary/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red focus-visible:border-olh-red"
-                />
+                <input id="contact-org" name="organization" type="text" autoComplete="organization"
+                  value={form.organization} onChange={handleChange} placeholder={t.orgPlaceholder}
+                  className={inputClass} />
               </div>
 
               {/* Message */}
               <div className="flex flex-col gap-1.5">
-                <label
-                  htmlFor="contact-message"
-                  className="text-sm font-medium text-olh-text-primary"
-                >
+                <label htmlFor="contact-message" className="text-xs font-semibold uppercase tracking-wider text-olh-text-secondary">
                   {t.messageLabel} <span className="text-olh-red" aria-hidden="true">*</span>
                   <span className="sr-only">{t.required}</span>
                 </label>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  required
-                  rows={5}
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder={t.messagePlaceholder}
-                  className="w-full rounded-lg border border-olh-border bg-white px-4 py-3 text-sm text-olh-text-primary placeholder:text-olh-text-secondary/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red focus-visible:border-olh-red resize-none leading-relaxed"
-                />
+                <textarea id="contact-message" name="message" required rows={5}
+                  value={form.message} onChange={handleChange} placeholder={t.messagePlaceholder}
+                  className={`${inputClass} resize-none leading-relaxed`} />
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
-                className="mt-1 w-full min-h-[48px] rounded-lg bg-olh-red px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-olh-red-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-olh-red"
+                className="mt-2 w-full min-h-[52px] rounded-xl bg-olh-red text-white font-semibold text-sm flex items-center justify-center gap-2 hover:bg-olh-red-hover active:scale-[0.98] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-olh-red shadow-lg shadow-olh-red/25"
               >
                 {t.submit}
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
               </button>
+
             </form>
           )}
         </div>
