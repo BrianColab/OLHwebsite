@@ -25,6 +25,15 @@ export const en = {
       // UI labels
       ctaPrimary: "Learn More",
       ctaSecondary: "Download the App",
+      // Floating badge over hero image
+      badgeTitle: "Free community screening",
+      badgeSubtitle: "Heart + mental health",
+      // Trust row under buttons
+      trust: [
+        { icon: "heart", label: "Free Screening" },
+        { icon: "pin", label: "Community-Based" },
+        { icon: "shield", label: "Private & Secure" },
+      ],
     },
 
     // Feature cards: titles are section labels; descriptions closely paraphrase

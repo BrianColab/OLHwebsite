@@ -24,6 +24,15 @@ export const fr: SiteContent = {
         "Dépistage gratuit et accessible pour votre santé cardiovasculaire et mentale, dans les espaces de confiance de votre Légion royale canadienne locale.",
       ctaPrimary: "En savoir plus",
       ctaSecondary: "Télécharger l'application",
+      // [DRAFT FR] — requires client review
+      badgeTitle: "Dépistage communautaire gratuit",
+      badgeSubtitle: "Santé cardiaque + santé mentale",
+      // [DRAFT FR] — requires client review
+      trust: [
+        { icon: "heart", label: "Dépistage gratuit" },
+        { icon: "pin", label: "Ancré dans la communauté" },
+        { icon: "shield", label: "Privé et sécurisé" },
+      ],
     },
 
     features: [
