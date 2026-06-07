@@ -65,7 +65,8 @@ export default function HowItWorksPage() {
       {/* ── CTA ────────────────────────────────────────────────────────────── */}
       <CTASection
         heading={c.cta.heading}
-        buttonLabel={c.cta.button}
+        iosLabel={c.cta.iosButton}
+        androidLabel={c.cta.androidButton}
       />
     </>
   );

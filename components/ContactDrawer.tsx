@@ -1,6 +1,44 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { useLang } from "@/app/LangProvider";
+
+const LABELS = {
+  en: {
+    heading: "Contact Us",
+    closeAriaLabel: "Close contact drawer",
+    intro: "Contact details to be added.",
+    nameLabel: "Name",
+    namePlaceholder: "Your full name",
+    emailLabel: "Email",
+    emailPlaceholder: "your@email.com",
+    orgLabel: "Organization",
+    orgOptional: "(optional)",
+    orgPlaceholder: "Your organization",
+    messageLabel: "Message",
+    messagePlaceholder: "How can we help?",
+    required: "(required)",
+    submit: "Submit",
+    successMessage: "Contact form endpoint to be added.",
+  },
+  fr: {
+    heading: "Nous joindre",
+    closeAriaLabel: "Fermer le panneau de contact",
+    intro: "Les coordonnées seront ajoutées sous peu.",
+    nameLabel: "Nom",
+    namePlaceholder: "Votre nom complet",
+    emailLabel: "Courriel",
+    emailPlaceholder: "votre@courriel.com",
+    orgLabel: "Organisation",
+    orgOptional: "(facultatif)",
+    orgPlaceholder: "Votre organisation",
+    messageLabel: "Message",
+    messagePlaceholder: "Comment pouvons-nous vous aider ?",
+    required: "(obligatoire)",
+    submit: "Envoyer",
+    successMessage: "Le point de traitement du formulaire sera ajouté sous peu.",
+  },
+} as const;
 
 interface ContactDrawerProps {
   open: boolean;
@@ -17,6 +55,8 @@ type FormData = {
 const EMPTY_FORM: FormData = { name: "", email: "", organization: "", message: "" };
 
 export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
+  const { lang } = useLang();
+  const t = LABELS[lang];
   const headingId = useId();
   const drawerRef = useRef<HTMLDivElement>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
@@ -145,13 +185,13 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
             id={headingId}
             className="text-xl font-bold text-olh-text-primary"
           >
-            Contact Us
+            {t.heading}
           </h2>
           <button
             ref={closeBtnRef}
             type="button"
             onClick={onClose}
-            aria-label="Close contact drawer"
+            aria-label={t.closeAriaLabel}
             className="w-11 h-11 rounded-full flex items-center justify-center text-olh-text-secondary hover:text-olh-text-primary hover:bg-olh-bg-light transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red"
           >
             <svg
@@ -172,7 +212,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
         {/* ── Drawer body ───────────────────────────────────────────────── */}
         <div className="flex-1 overflow-y-auto px-6 py-7">
           <p className="text-sm text-olh-text-secondary mb-7 leading-relaxed">
-            Contact details to be added.
+            {t.intro}
           </p>
 
           {submitted ? (
@@ -184,7 +224,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
               aria-live="polite"
               className="rounded-xl border border-olh-border bg-olh-bg-light px-6 py-5 text-sm text-olh-text-secondary leading-relaxed"
             >
-              Contact form endpoint to be added.
+              {t.successMessage}
             </div>
           ) : (
             // ── Contact form ────────────────────────────────────────────
@@ -200,8 +240,8 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                   htmlFor="contact-name"
                   className="text-sm font-medium text-olh-text-primary"
                 >
-                  Name <span className="text-olh-red" aria-hidden="true">*</span>
-                  <span className="sr-only">(required)</span>
+                  {t.nameLabel} <span className="text-olh-red" aria-hidden="true">*</span>
+                  <span className="sr-only">{t.required}</span>
                 </label>
                 <input
                   id="contact-name"
@@ -211,7 +251,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                   required
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="Your full name"
+                  placeholder={t.namePlaceholder}
                   className="w-full rounded-lg border border-olh-border bg-white px-4 py-3 text-sm text-olh-text-primary placeholder:text-olh-text-secondary/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red focus-visible:border-olh-red"
                 />
               </div>
@@ -222,8 +262,8 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                   htmlFor="contact-email"
                   className="text-sm font-medium text-olh-text-primary"
                 >
-                  Email <span className="text-olh-red" aria-hidden="true">*</span>
-                  <span className="sr-only">(required)</span>
+                  {t.emailLabel} <span className="text-olh-red" aria-hidden="true">*</span>
+                  <span className="sr-only">{t.required}</span>
                 </label>
                 <input
                   id="contact-email"
@@ -233,7 +273,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                   required
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="your@email.com"
+                  placeholder={t.emailPlaceholder}
                   className="w-full rounded-lg border border-olh-border bg-white px-4 py-3 text-sm text-olh-text-primary placeholder:text-olh-text-secondary/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red focus-visible:border-olh-red"
                 />
               </div>
@@ -244,8 +284,8 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                   htmlFor="contact-org"
                   className="text-sm font-medium text-olh-text-primary"
                 >
-                  Organization{" "}
-                  <span className="text-olh-text-secondary font-normal">(optional)</span>
+                  {t.orgLabel}{" "}
+                  <span className="text-olh-text-secondary font-normal">{t.orgOptional}</span>
                 </label>
                 <input
                   id="contact-org"
@@ -254,7 +294,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                   autoComplete="organization"
                   value={form.organization}
                   onChange={handleChange}
-                  placeholder="Your organization"
+                  placeholder={t.orgPlaceholder}
                   className="w-full rounded-lg border border-olh-border bg-white px-4 py-3 text-sm text-olh-text-primary placeholder:text-olh-text-secondary/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red focus-visible:border-olh-red"
                 />
               </div>
@@ -265,8 +305,8 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                   htmlFor="contact-message"
                   className="text-sm font-medium text-olh-text-primary"
                 >
-                  Message <span className="text-olh-red" aria-hidden="true">*</span>
-                  <span className="sr-only">(required)</span>
+                  {t.messageLabel} <span className="text-olh-red" aria-hidden="true">*</span>
+                  <span className="sr-only">{t.required}</span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -275,7 +315,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                   rows={5}
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="How can we help?"
+                  placeholder={t.messagePlaceholder}
                   className="w-full rounded-lg border border-olh-border bg-white px-4 py-3 text-sm text-olh-text-primary placeholder:text-olh-text-secondary/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red focus-visible:border-olh-red resize-none leading-relaxed"
                 />
               </div>
@@ -285,7 +325,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
                 type="submit"
                 className="mt-1 w-full min-h-[48px] rounded-lg bg-olh-red px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-olh-red-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-olh-red"
               >
-                Submit
+                {t.submit}
               </button>
             </form>
           )}

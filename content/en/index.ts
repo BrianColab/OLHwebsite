@@ -71,7 +71,8 @@ export const en = {
     cta: {
       heading: "Your health. Your community. Your time.",
       subheading: null as null, // removed: "Ontario Legion Health is here for you." — not in doc
-      button: "Download the App", // UI label
+      iosButton: "Download for iOS", // UI label — TODO: replace href="#" with App Store link
+      androidButton: "Download for Android", // UI label — TODO: replace href="#" with Google Play link
     },
 
   },
@@ -151,7 +152,8 @@ export const en = {
     cta: {
       heading: "Download the App", // UI label
       subheading: null as null,
-      button: "Download the App", // UI label
+      iosButton: "Download for iOS",
+      androidButton: "Download for Android",
     },
   },
 
@@ -222,7 +224,7 @@ export const en = {
           // Doc: paragraph 27
           description:
             "Serving as the welcoming, community-based home for our screening kiosks across the province.",
-          logo: "/assets/olh/partners/rcl-ontario-command.webp",
+          logo: "/assets/olh/partners/legion-ontario-command.svg",
         },
         {
           // Doc: paragraph 28 label
@@ -230,7 +232,7 @@ export const en = {
           // Doc: paragraph 28
           description:
             "Providing clinical oversight, research expertise, and specialized care navigation for Veterans.",
-          logo: "/assets/olh/partners/sunnybrook.webp",
+          logo: "/assets/olh/partners/sunnybrook.svg",
         },
         {
           // Doc: paragraph 29 label
@@ -238,7 +240,7 @@ export const en = {
           // Doc: paragraph 29
           description:
             "Powering the secure mobile application and mental health screening tools.",
-          logo: "/assets/olh/partners/trycycle.png",
+          logo: "/assets/olh/partners/trycycle-black-text.svg",
         },
         {
           // Doc: paragraph 30 label
@@ -246,7 +248,7 @@ export const en = {
           // Doc: paragraph 30
           description:
             "Supplying the clinically validated biometric kiosks used across the country.",
-          logo: "/assets/olh/partners/pharmasmart.png",
+          logo: "/assets/olh/partners/pharmasmart.svg",
         },
       ],
     },
@@ -255,7 +257,8 @@ export const en = {
     cta: {
       heading: "Download the App", // UI label
       subheading: null as null,
-      button: "Download the App", // UI label
+      iosButton: "Download for iOS",
+      androidButton: "Download for Android",
     },
   },
 

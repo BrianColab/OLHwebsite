@@ -132,7 +132,8 @@ export default function HomePage() {
       {/* [BRIEF] heading came from build brief — pending client confirmation */}
       <CTASection
         heading={c.cta.heading}
-        buttonLabel={c.cta.button}
+        iosLabel={c.cta.iosButton}
+        androidLabel={c.cta.androidButton}
       />
     </>
   );

@@ -9,7 +9,7 @@ Pre-launch items grouped by owner. Check each before go-live.
 - [ ] **CTA heading confirmed** — "Your health. Your community. Your time." is from the build brief, not the Word doc. Confirm or replace before launch. See `content/en/index.ts` (marked `[BRIEF]`).
 - [ ] **Footer tagline confirmed** — "Ontario Legion Health — Care in Your Community" is from the build brief. Confirm or replace. See `content/en/index.ts` (marked `[BRIEF]`).
 - [ ] **Copyright year confirmed** — Currently "© 2025 Ontario Legion Health." Verify year is correct at launch.
-- [ ] **French version decision** — FR toggle is currently disabled with a "coming soon" banner. Confirm whether French copy will be provided before launch, or if the toggle should be hidden entirely.
+- [ ] **French copy client review** — FR toggle is now live. Draft French translation is in `content/fr/index.ts`. All strings are marked `[DRAFT FR]`. A qualified Canadian French translator must review before public launch. Do not launch FR without client sign-off.
 
 ---
 
@@ -18,7 +18,7 @@ Pre-launch items grouped by owner. Check each before go-live.
 - [ ] **Full copy review against `OLH Website Copy.docx`** — Verify all body copy matches the source document exactly.
 - [ ] **Contact drawer intro text** — "Contact details to be added." is a placeholder. Add real contact information or messaging before launch.
 - [ ] **Contact form endpoint** — Form currently shows "Contact form endpoint to be added." Wire a real endpoint (Formspree, EmailJS, API route, or CRM). See `components/ContactDrawer.tsx` `handleSubmit()`.
-- [ ] **French copy** — If launching with French, replace all `"TODO: French copy"` values in `content/fr/index.ts` with approved translations. Do not use machine translation.
+- [ ] **French copy review** — Draft French copy is in `content/fr/index.ts`. Must be reviewed and approved by client and a qualified Canadian French translator before public launch.
 
 ---
 
@@ -28,11 +28,14 @@ Pre-launch items grouped by owner. Check each before go-live.
 - [ ] **Hero image** — Replace placeholder in `app/page.tsx` with final photography.
   - Place file at: `public/assets/olh/hero/` (recommended: `hero-main.jpg`, 800 × 600px, 4:3)
   - Update `<Image>` src in `app/page.tsx` hero section.
+- [ ] **App CTA iOS link** — Replace `href="#"` on the iOS button in `components/CTASection.tsx` with the real App Store URL when the app is published.
+- [ ] **App CTA Android link** — Replace `href="#"` on the Android button in `components/CTASection.tsx` with the real Google Play URL when the app is published.
+- [ ] **App CTA phone mockup** — CSS placeholder phone in `CTASection.tsx` should be replaced with a real app screenshot once the app UI is finalized.
 - [ ] **Step 01 image** — Replace placeholder in `components/StepCard.tsx`.
   - Place file at: `public/assets/olh/steps/step-01-app.jpg` (800 × 600px, 4:3)
 - [ ] **Step 02 image** — Place at `public/assets/olh/steps/step-02-kiosk.jpg`
 - [ ] **Step 03 image** — Place at `public/assets/olh/steps/step-03-results.jpg`
-- [x] **Partner logos** — All 4 official logos downloaded and committed to `public/assets/olh/partners/`. Logo paths wired in `content/en/index.ts` and `content/fr/index.ts`.
+- [x] **Partner logos** — All 4 SVG logos confirmed valid and committed. Paths updated to SVG in `content/en/index.ts` and `content/fr/index.ts`. Previous PNG/WEBP assets retained as fallbacks. Logo display area increased to 80px height.
 
 ---
 
