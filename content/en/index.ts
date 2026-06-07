@@ -17,6 +17,8 @@ export const en = {
     hero: {
       // Doc: "Ontario Legion Health: Care in Your Community"
       headline: "Care in Your Community",
+      headlinePrefix: "Care in Your",
+      headlineAccent: "Community",
       // Doc: paragraph 2
       subheadline:
         "Free, accessible screening for your heart and mental health, located in the trusted spaces of your local Royal Canadian Legion.",
@@ -84,6 +86,8 @@ export const en = {
       // [BRIEF] "Simple steps. Powerful insights." removed — not in doc
       // "Better health starts here." removed — not in doc
       heading: "How It Works", // Doc: section heading
+      headingPrefix: "How It",
+      headingAccent: "Works",
     },
 
     steps: [
@@ -163,6 +167,8 @@ export const en = {
     hero: {
       // Doc: section heading
       heading: "Who We Serve",
+      headingPrefix: "Who We",
+      headingAccent: "Serve",
       // Doc: paragraph 18
       subheading:
         "OLH is a free, inclusive program open to the public. Kiosks are strategically placed in urban community hubs and rural Legion branches to support those who face the highest barriers to traditional care.",

@@ -5,6 +5,7 @@ import { content } from "@/content";
 import { StepCard } from "@/components/StepCard";
 import { SupportCard } from "@/components/SupportCard";
 import { CTASection } from "@/components/CTASection";
+import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const STEP_IMAGES = [
@@ -20,15 +21,7 @@ export default function HowItWorksPage() {
   return (
     <>
       {/* ── Page hero ──────────────────────────────────────────────────────── */}
-      <section className="bg-white border-b border-olh-border py-16 md:py-20 px-4">
-        <div className="max-w-container mx-auto">
-          <SectionHeading
-            heading={c.hero.heading}
-            align="center"
-            level={1}
-          />
-        </div>
-      </section>
+      <PageHero prefix={c.hero.headingPrefix || undefined} accent={c.hero.headingAccent} />
 
       {/* ── Steps ──────────────────────────────────────────────────────────── */}
       <section className="bg-white py-20 px-4">

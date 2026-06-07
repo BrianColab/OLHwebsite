@@ -18,6 +18,8 @@ export const fr: SiteContent = {
     hero: {
       // [DRAFT FR] — requires client review
       headline: "Des soins dans votre communauté",
+      headlinePrefix: "Des soins dans votre",
+      headlineAccent: "communauté",
       subheadline:
         "Dépistage gratuit et accessible pour votre santé cardiovasculaire et mentale, dans les espaces de confiance de votre Légion royale canadienne locale.",
       ctaPrimary: "En savoir plus",
@@ -75,6 +77,8 @@ export const fr: SiteContent = {
   howItWorks: {
     hero: {
       heading: "Fonctionnement",
+      headingPrefix: "",
+      headingAccent: "Fonctionnement",
     },
 
     steps: [
@@ -141,6 +145,8 @@ export const fr: SiteContent = {
     hero: {
       // [DRAFT FR]
       heading: "Publics servis",
+      headingPrefix: "Publics",
+      headingAccent: "servis",
       subheading:
         "OLH est un programme gratuit et inclusif, ouvert au public. Les kiosques sont stratégiquement placés dans des centres communautaires urbains et des succursales rurales de la Légion pour soutenir ceux qui font face aux plus grands obstacles aux soins traditionnels.",
     },

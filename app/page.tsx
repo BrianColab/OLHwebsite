@@ -23,8 +23,9 @@ export default function HomePage() {
               <p className="text-olh-red text-sm font-semibold uppercase tracking-widest mb-4">
                 Ontario Legion Health
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-olh-text-primary leading-[1.08] tracking-tight">
-                {c.hero.headline}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight">
+                <span className="text-olh-text-primary">{c.hero.headlinePrefix} </span>
+                <span className="text-olh-red">{c.hero.headlineAccent}</span>
               </h1>
               <p className="mt-6 text-lg md:text-xl text-olh-text-secondary leading-relaxed max-w-lg">
                 {c.hero.subheadline}

@@ -5,6 +5,7 @@ import { content } from "@/content";
 import { AudienceCard } from "@/components/AudienceCard";
 import { PartnerCard } from "@/components/PartnerCard";
 import { CTASection } from "@/components/CTASection";
+import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export default function WhoWeServePage() {
@@ -14,16 +15,11 @@ export default function WhoWeServePage() {
   return (
     <>
       {/* ── Page hero ──────────────────────────────────────────────────────── */}
-      <section className="bg-white border-b border-olh-border py-16 md:py-20 px-4">
-        <div className="max-w-container mx-auto">
-          <SectionHeading
-            heading={c.hero.heading}
-            subheading={c.hero.subheading}
-            align="center"
-            level={1}
-          />
-        </div>
-      </section>
+      <PageHero
+        prefix={c.hero.headingPrefix || undefined}
+        accent={c.hero.headingAccent}
+        subheading={c.hero.subheading}
+      />
 
       {/* ── Audience cards ─────────────────────────────────────────────────── */}
       <section className="bg-olh-bg-light py-20 px-4">
