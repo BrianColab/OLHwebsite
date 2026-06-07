@@ -7,6 +7,12 @@ import { SupportCard } from "@/components/SupportCard";
 import { CTASection } from "@/components/CTASection";
 import { SectionHeading } from "@/components/SectionHeading";
 
+const STEP_IMAGES = [
+  "/assets/olh/hero/image1.png",
+  "/assets/olh/hero/images2.png",
+  "/assets/olh/hero/image3.png",
+];
+
 export default function HowItWorksPage() {
   const { lang } = useLang();
   const c = content[lang].howItWorks;
@@ -34,6 +40,7 @@ export default function HowItWorksPage() {
               title={step.title}
               body={step.body}
               imageAlt={step.imageAlt}
+              imageSrc={STEP_IMAGES[i]}
               reversed={i % 2 === 1}
             />
           ))}
