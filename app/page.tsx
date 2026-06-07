@@ -2,6 +2,7 @@
 
 import { useLang } from "./LangProvider";
 import { content } from "@/content";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { FeatureCard } from "@/components/FeatureCard";
 import { CTASection } from "@/components/CTASection";
@@ -39,29 +40,17 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* ── Hero image placeholder ───────────────────────────────────────
-                TODO: Replace with professional photography of a Veteran or
-                older adult speaking with a healthcare worker using a tablet.
-                Tone: warm, bright, community-based, trustworthy.
-                Recommended image size: 800 × 600px (4:3 ratio).
-            ─────────────────────────────────────────────────────────────────── */}
+            {/* Hero image */}
             <div className="relative hidden md:block">
-              <div
-                className="rounded-2xl bg-olh-bg-light border border-olh-border overflow-hidden aspect-[4/3] flex items-center justify-center"
-                role="img"
-                aria-label="Healthcare professional assisting a community member at an OLH kiosk"
-              >
-                <div className="text-center p-10 pointer-events-none select-none">
-                  <div className="w-20 h-20 rounded-full bg-olh-red/10 flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-10 h-10 text-olh-red/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                    </svg>
-                  </div>
-                  <p className="text-xs text-olh-text-secondary/60 italic leading-relaxed">
-                    Photo: Veteran or older adult<br />with healthcare worker (tablet)
-                  </p>
-                </div>
-                <div className="absolute top-0 right-0 w-28 h-28 bg-olh-red/5 rounded-bl-full pointer-events-none" aria-hidden="true" />
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/assets/olh/hero/homepageimage.png"
+                  alt="Person holding an OLH app on their phone, standing next to a Legion Health kiosk in a Legion branch"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
               </div>
             </div>
 
