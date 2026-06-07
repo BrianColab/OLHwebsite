@@ -222,8 +222,7 @@ export const en = {
           // Doc: paragraph 27
           description:
             "Serving as the welcoming, community-based home for our screening kiosks across the province.",
-          // TODO: Replace null with path to official logo once supplied
-          logo: null as null,
+          logo: "/assets/olh/partners/rcl-ontario-command.webp",
         },
         {
           // Doc: paragraph 28 label
@@ -231,8 +230,7 @@ export const en = {
           // Doc: paragraph 28
           description:
             "Providing clinical oversight, research expertise, and specialized care navigation for Veterans.",
-          // TODO: Replace null with path to official logo once supplied
-          logo: null as null,
+          logo: "/assets/olh/partners/sunnybrook.webp",
         },
         {
           // Doc: paragraph 29 label
@@ -240,8 +238,7 @@ export const en = {
           // Doc: paragraph 29
           description:
             "Powering the secure mobile application and mental health screening tools.",
-          // TODO: Replace null with path to official logo once supplied
-          logo: null as null,
+          logo: "/assets/olh/partners/trycycle.png",
         },
         {
           // Doc: paragraph 30 label
@@ -249,8 +246,7 @@ export const en = {
           // Doc: paragraph 30
           description:
             "Supplying the clinically validated biometric kiosks used across the country.",
-          // TODO: Replace null with path to official logo once supplied
-          logo: null as null,
+          logo: "/assets/olh/partners/pharmasmart.png",
         },
       ],
     },

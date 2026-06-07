@@ -98,10 +98,10 @@ export const fr: SiteContent = {
       heading: "TODO: French copy",
       subheading: "TODO: French copy",
       list: [
-        { name: "The Royal Canadian Legion – Ontario Command", description: "TODO: French copy", logo: null },
-        { name: "Sunnybrook Health Sciences Centre", description: "TODO: French copy", logo: null },
-        { name: "TryCycle Data Systems", description: "TODO: French copy", logo: null },
-        { name: "PharmaSmart", description: "TODO: French copy", logo: null },
+        { name: "The Royal Canadian Legion – Ontario Command", description: "TODO: French copy", logo: "/assets/olh/partners/rcl-ontario-command.webp" },
+        { name: "Sunnybrook Health Sciences Centre", description: "TODO: French copy", logo: "/assets/olh/partners/sunnybrook.webp" },
+        { name: "TryCycle Data Systems", description: "TODO: French copy", logo: "/assets/olh/partners/trycycle.png" },
+        { name: "PharmaSmart", description: "TODO: French copy", logo: "/assets/olh/partners/pharmasmart.png" },
       ],
     },
     cta: {
