@@ -7,7 +7,7 @@ interface PageHeroProps {
 export function PageHero({ prefix, accent, subheading }: PageHeroProps) {
   return (
     <section
-      className="relative overflow-hidden py-20 md:py-28 px-4 text-center"
+      className="relative overflow-hidden py-20 md:py-28 px-6 lg:px-8 text-center"
       style={{ background: "linear-gradient(135deg, #0f0f0f 0%, #1a0507 60%, #2a080b 100%)" }}
     >
       {/* Radial glow */}

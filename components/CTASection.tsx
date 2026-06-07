@@ -68,7 +68,7 @@ export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTAS
       </div>
 
       {/* Content */}
-      <div className="relative max-w-container mx-auto px-4">
+      <div className="relative max-w-container mx-auto px-6 lg:px-8">
         <div className="py-20 lg:py-28 lg:max-w-[50%]">
 
           {/* Eyebrow */}

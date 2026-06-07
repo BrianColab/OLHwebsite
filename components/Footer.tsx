@@ -10,7 +10,7 @@ interface FooterProps {
 
 export function Footer({ tagline, links, contactLabel, onContactClick, copyright }: FooterProps) {
   return (
-    <footer className="bg-olh-text-primary text-white py-12 px-4">
+    <footer className="bg-olh-text-primary text-white py-12 px-6 lg:px-8">
       <div className="max-w-container mx-auto">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
 

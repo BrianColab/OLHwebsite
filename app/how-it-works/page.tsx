@@ -24,7 +24,7 @@ export default function HowItWorksPage() {
       <PageHero prefix={c.hero.headingPrefix || undefined} accent={c.hero.headingAccent} />
 
       {/* ── Steps ──────────────────────────────────────────────────────────── */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-white py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto flex flex-col gap-20 lg:gap-28">
           {c.steps.map((step, i) => (
             <StepCard
@@ -41,7 +41,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── Support cards ──────────────────────────────────────────────────── */}
-      <section className="bg-olh-bg-light border-y border-olh-border py-20 px-4">
+      <section className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <SectionHeading
             heading={c.support.heading}

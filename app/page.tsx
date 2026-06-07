@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="bg-white py-16 md:py-24 px-4 overflow-hidden">
+      <section className="bg-white py-16 md:py-24 px-6 lg:px-8 overflow-hidden">
         <div className="max-w-container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
 
@@ -54,7 +54,7 @@ export default function HomePage() {
                 />
               </div>
               {/* Floating badge — outside overflow-hidden so it won't be clipped */}
-              <div className="absolute bottom-5 left-5 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3 border border-olh-border">
+              <div className="absolute bottom-5 left-5 bg-white rounded-2xl shadow-lg px-6 lg:px-8 py-3 flex items-center gap-3 border border-olh-border">
                 <div className="w-9 h-9 rounded-xl bg-olh-red flex items-center justify-center flex-shrink-0">
                   <Icon name="heart" className="w-4 h-4 text-white" />
                 </div>
@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Feature cards ──────────────────────────────────────────────────── */}
-      <section className="bg-[#111111] py-14 px-4">
+      <section className="bg-[#111111] py-14 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {c.features.map((feature) => (
@@ -86,7 +86,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Bridging the Gap ───────────────────────────────────────────────── */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-white py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Keyword-split heading: prefix small/gray, accent large/red */}
@@ -119,7 +119,7 @@ export default function HomePage() {
           Only the "Over 2.5 million Ontarians" figure is cited in the source
           document. All other invented stat labels have been removed.
       ──────────────────────────────────────────────────────────────────────── */}
-      <section className="bg-olh-bg-light border-y border-olh-border py-12 px-4">
+      <section className="bg-olh-bg-light border-y border-olh-border py-12 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-12">
             <div className="flex-shrink-0 text-center sm:text-left">

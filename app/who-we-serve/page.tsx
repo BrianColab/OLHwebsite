@@ -22,7 +22,7 @@ export default function WhoWeServePage() {
       />
 
       {/* ── Audience cards ─────────────────────────────────────────────────── */}
-      <section className="bg-olh-bg-light py-20 px-4">
+      <section className="bg-olh-bg-light py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {c.audiences.map((audience) => (
@@ -41,7 +41,7 @@ export default function WhoWeServePage() {
       {/* TODO: Replace text-placeholder cards with official partner logos
           once supplied. Required: PNG or SVG at ≥ 2× resolution on white bg.
           Do not invent or approximate official logos. */}
-      <section id="partners" className="bg-olh-bg-light border-y border-olh-border py-20 px-4">
+      <section id="partners" className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <SectionHeading
             heading={c.partners.heading}
