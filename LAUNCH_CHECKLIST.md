@@ -56,19 +56,27 @@ Pre-launch items grouped by owner. Check each before go-live.
 
 ## RAILWAY DEPLOYMENT
 
-- [x] GitHub repo pushed: https://github.com/BrianColab/OLHwebsite
-- [ ] Railway project created and connected to GitHub repo
+- [x] GitHub repo pushed: https://github.com/BrianColab/OLHwebsite (branch: master)
+- [ ] Railway project created and connected to GitHub repo — **action required** (see `DEPLOYMENT.md` → First-time setup)
 - [x] Build command: `npm run build`
 - [x] Start command: `npm run start`
+- [x] Node version declared: `>=20` in `package.json` engines
+- [x] `railway.json` present: NIXPACKS builder, healthcheck `/`, restart on failure
+- [x] No `output: "export"` in `next.config.ts` — confirmed removed
 - [x] Required environment variables: none currently
 - [ ] Contact form endpoint variable: pending (add when endpoint is known)
 - [ ] Production URL assigned by Railway: pending
 - [ ] Custom domain configured: pending
-- [x] Final build verified locally: passes, zero errors
-- [x] Final lint verified locally: passes, zero errors
+- [x] Final build verified locally (Phase 7A): passes, zero TypeScript errors
+- [x] Final lint verified locally (Phase 7A): passes, zero ESLint errors
 - [ ] Production smoke test on Railway URL: pending
+- [ ] Live EN/FR toggle test: pending
+- [ ] Live contact drawer test: pending
+- [ ] Live partner logo test: pending
+- [ ] Live responsive QA (360–1440px): pending
 
-See `DEPLOYMENT.md` for step-by-step Railway setup instructions.
+**To deploy:** https://railway.app → New Project → Deploy from GitHub repo → BrianColab/OLHwebsite
+See `DEPLOYMENT.md` for the full step-by-step guide and post-deploy QA checklist.
 
 ---
 

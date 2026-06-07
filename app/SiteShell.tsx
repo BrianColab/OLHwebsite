@@ -42,7 +42,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-olh-red focus:px-4 focus:py-2 focus:rounded focus:font-semibold focus:shadow-md"
       >
-        Skip to main content
+        {lang === "fr" ? "Passer au contenu principal" : "Skip to main content"}
       </a>
 
       <Header

@@ -1,3 +1,5 @@
+"use client";
+
 interface CTASectionProps {
   heading: string;
   subheading?: string | null;
@@ -36,6 +38,7 @@ export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTAS
               {/* TODO: Replace href="#" with the real App Store link when the iOS app is published */}
               <a
                 href="#"
+                onClick={(e) => e.preventDefault()}
                 className="inline-flex items-center justify-center gap-2.5 min-h-[48px] px-7 py-3 rounded-full bg-white text-[#111111] font-semibold text-sm hover:bg-white/90 active:bg-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#CF1F2A] shadow-lg shadow-black/30"
               >
                 {/* Apple logo */}
@@ -48,6 +51,7 @@ export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTAS
               {/* TODO: Replace href="#" with the real Google Play link when the Android app is published */}
               <a
                 href="#"
+                onClick={(e) => e.preventDefault()}
                 className="inline-flex items-center justify-center gap-2.5 min-h-[48px] px-7 py-3 rounded-full border-2 border-white/35 text-white font-semibold text-sm hover:bg-white/10 active:bg-white/15 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#CF1F2A]"
               >
                 {/* Google Play logo */}
