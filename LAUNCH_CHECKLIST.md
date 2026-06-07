@@ -32,24 +32,40 @@ Pre-launch items grouped by owner. Check each before go-live.
   - Place file at: `public/assets/olh/steps/step-01-app.jpg` (800 × 600px, 4:3)
 - [ ] **Step 02 image** — Place at `public/assets/olh/steps/step-02-kiosk.jpg`
 - [ ] **Step 03 image** — Place at `public/assets/olh/steps/step-03-results.jpg`
-- [ ] **Partner logos** — Official logos for all 4 partners. Required: PNG or SVG on white/transparent background at ≥ 2× resolution.
-  - Place files at: `public/assets/olh/partners/`
-  - Suggested filenames: `rcl-ontario-command.png`, `sunnybrook.png`, `trycycle.png`, `pharmasmart.png`
-  - Update each partner's `logo` field in `content/en/index.ts` (currently `null`).
+- [x] **Partner logos** — All 4 official logos downloaded and committed to `public/assets/olh/partners/`. Logo paths wired in `content/en/index.ts` and `content/fr/index.ts`.
 
 ---
 
 ## TECHNICAL
 
-- [ ] **Run `npm run build`** — Must produce zero errors and zero TypeScript warnings.
-- [ ] **Run `npm run lint`** — Must produce zero errors.
-- [ ] **Environment / hosting** — Configure deployment target (Vercel, Netlify, S3/CloudFront, etc.). Project uses `output: "export"` in `next.config.ts` — compatible with any static host.
-- [ ] **Domain / DNS** — Set up custom domain and SSL.
+- [x] **`npm run build`** — Passes. Zero TypeScript errors. All 4 routes pre-render as static.
+- [x] **`npm run lint`** — Passes. Zero ESLint errors across all 20 source files.
+- [x] **`npm run start`** — Production server starts cleanly on `localhost:3000`.
+- [ ] **Railway deployment** — See `DEPLOYMENT.md` and the Railway section below. Connect GitHub repo at https://railway.app.
+- [ ] **Domain / DNS** — Configure custom domain in Railway → Settings → Domains after the production URL is confirmed.
 - [ ] **`robots.txt`** — Add `public/robots.txt` if search indexing should be restricted during soft launch.
 - [ ] **`sitemap.xml`** — Generate and add for SEO.
 - [ ] **Analytics** — Add analytics script (GA4, Plausible, etc.) to `app/layout.tsx` if required.
 - [ ] **Open Graph / social meta** — Add `og:title`, `og:description`, `og:image` to `app/layout.tsx`.
 - [ ] **Favicon** — Add `public/favicon.ico` and `public/apple-touch-icon.png`.
+
+---
+
+## RAILWAY DEPLOYMENT
+
+- [x] GitHub repo pushed: https://github.com/BrianColab/OLHwebsite
+- [ ] Railway project created and connected to GitHub repo
+- [x] Build command: `npm run build`
+- [x] Start command: `npm run start`
+- [x] Required environment variables: none currently
+- [ ] Contact form endpoint variable: pending (add when endpoint is known)
+- [ ] Production URL assigned by Railway: pending
+- [ ] Custom domain configured: pending
+- [x] Final build verified locally: passes, zero errors
+- [x] Final lint verified locally: passes, zero errors
+- [ ] Production smoke test on Railway URL: pending
+
+See `DEPLOYMENT.md` for step-by-step Railway setup instructions.
 
 ---
 
