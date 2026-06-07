@@ -26,7 +26,7 @@ export default function WhoWeServePage() {
       </section>
 
       {/* ── Audience cards ─────────────────────────────────────────────────── */}
-      <section className="bg-white py-20 px-4">
+      <section className="bg-olh-bg-light py-20 px-4">
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {c.audiences.map((audience) => (
