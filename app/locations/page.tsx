@@ -61,7 +61,7 @@ export default function LocationsPage() {
       {/* ── Interactive map ──────────────────────────────────────────────── */}
       <section className="bg-white px-6 lg:px-8 py-10">
         <div className="max-w-container mx-auto">
-          <div className="rounded-2xl overflow-hidden border border-olh-border shadow-sm" style={{ height: "480px" }}>
+          <div className="rounded-2xl overflow-hidden border border-olh-border shadow-sm" style={{ height: "480px", isolation: "isolate" }}>
             <LocationsMap onDirectionsClick={openDrawer} />
           </div>
           <p className="mt-3 text-xs text-olh-text-secondary/55 text-center leading-relaxed">
