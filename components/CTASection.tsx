@@ -1,7 +1,15 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useLang } from "@/app/LangProvider";
+
+const CTA_IMAGES = [
+  "/assets/olh/hero/image2a.png",
+  "/assets/olh/hero/image2b.png",
+  "/assets/olh/hero/image2c.png",
+  "/assets/olh/hero/image2d.png",
+];
 
 const CTA_LABELS = {
   en: {
@@ -32,6 +40,12 @@ interface CTASectionProps {
 export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTASectionProps) {
   const { lang } = useLang();
   const t = CTA_LABELS[lang];
+
+  const [ctaImage, setCtaImage] = useState(CTA_IMAGES[0]);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCtaImage(CTA_IMAGES[Math.floor(Math.random() * CTA_IMAGES.length)]);
+  }, []);
   return (
     <section
       className="relative overflow-hidden"
@@ -48,7 +62,7 @@ export function CTASection({ heading, subheading, iosLabel, androidLabel }: CTAS
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[52%]" aria-hidden="true">
         <div className="relative h-full w-full">
           <Image
-            src="/assets/olh/hero/homepageimage.png"
+            src={ctaImage}
             alt=""
             fill
             className="object-cover object-[22%_center]"
