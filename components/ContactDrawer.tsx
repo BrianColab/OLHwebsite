@@ -189,24 +189,22 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
           />
 
           <div className="relative flex items-start justify-between gap-4">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 flex-wrap">
+            <div className="flex items-center gap-3 flex-1">
+              {/* Logo on left — height matches the two-line text block beside it */}
+              <Image
+                src="/olh-logo.png"
+                alt="Ontario Legion Health"
+                width={120}
+                height={35}
+                className="h-[44px] w-auto flex-shrink-0"
+                style={{ filter: "invert(1) hue-rotate(180deg)", mixBlendMode: "screen" }}
+              />
+              <div>
                 <h2 id={headingId} className="text-xl font-bold text-white leading-tight">
                   {t.heading}
                 </h2>
-                {/* Logo: invert(1) turns black text white; hue-rotate(180deg) brings
-                    the red icon back to red; mix-blend-mode:screen makes the black
-                    background vanish against the dark header gradient. */}
-                <Image
-                  src="/olh-logo.png"
-                  alt="Ontario Legion Health"
-                  width={120}
-                  height={35}
-                  className="h-7 w-auto"
-                  style={{ filter: "invert(1) hue-rotate(180deg)", mixBlendMode: "screen" }}
-                />
+                <p className="mt-0.5 text-sm text-white/45">{t.subheading}</p>
               </div>
-              <p className="mt-0.5 text-sm text-white/45">{t.subheading}</p>
             </div>
             <button
               ref={closeBtnRef}
