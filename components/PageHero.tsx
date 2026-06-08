@@ -24,13 +24,15 @@ export function PageHero({ prefix, accent, subheading }: PageHeroProps) {
       />
 
       <div className="relative max-w-container mx-auto">
-        {prefix && (
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/40 mb-4">
-            {prefix}
-          </p>
-        )}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-olh-red leading-none tracking-tight">
-          {accent}
+        <h1 className="leading-none tracking-tight">
+          {prefix && (
+            <span className="block text-5xl md:text-6xl lg:text-7xl font-black text-white">
+              {prefix}
+            </span>
+          )}
+          <span className="block text-5xl md:text-6xl lg:text-7xl font-black text-olh-red">
+            {accent}
+          </span>
         </h1>
         {subheading && (
           <p className="mt-6 text-base md:text-lg text-white/60 leading-relaxed max-w-2xl mx-auto">
