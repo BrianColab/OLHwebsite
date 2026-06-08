@@ -9,6 +9,16 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 
+const STEP1_IMAGES = [
+  "/assets/olh/hero/image1a.png",
+  "/assets/olh/hero/image1b.png",
+  "/assets/olh/hero/image1c.png",
+  "/assets/olh/hero/image1d.png",
+  "/assets/olh/hero/image1e.png",
+  "/assets/olh/hero/image1f.png",
+  "/assets/olh/hero/image1g.png",
+];
+
 const STEP2_IMAGES = [
   "/assets/olh/hero/image2a.png",
   "/assets/olh/hero/image2b.png",
@@ -27,10 +37,12 @@ export default function HowItWorksPage() {
   const { lang } = useLang();
   const c = content[lang].howItWorks;
 
+  const [step1Image, setStep1Image] = useState(STEP1_IMAGES[0]);
   const [step2Image, setStep2Image] = useState(STEP2_IMAGES[0]);
   const [step3Image, setStep3Image] = useState(STEP3_IMAGES[0]);
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
+    setStep1Image(STEP1_IMAGES[Math.floor(Math.random() * STEP1_IMAGES.length)]);
     setStep2Image(STEP2_IMAGES[Math.floor(Math.random() * STEP2_IMAGES.length)]);
     setStep3Image(STEP3_IMAGES[Math.floor(Math.random() * STEP3_IMAGES.length)]);
   }, []);
@@ -50,7 +62,7 @@ export default function HowItWorksPage() {
               title={step.title}
               body={step.body}
               imageAlt={step.imageAlt}
-              imageSrc={i === 0 ? "/assets/olh/hero/image1.png" : i === 1 ? step2Image : step3Image}
+              imageSrc={i === 0 ? step1Image : i === 1 ? step2Image : step3Image}
               reversed={i % 2 === 1}
             />
           ))}
