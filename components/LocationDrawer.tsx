@@ -1,8 +1,17 @@
 "use client";
 
 import { useEffect, useId, useRef } from "react";
+import dynamic from "next/dynamic";
 import type { OLHLocation } from "@/data/locations";
 import { useLang } from "@/app/LangProvider";
+
+const LocationMiniMap = dynamic(
+  () => import("@/components/LocationMiniMap").then((m) => m.LocationMiniMap),
+  {
+    ssr: false,
+    loading: () => <div className="h-full w-full bg-olh-bg-light animate-pulse" />,
+  }
+);
 
 const LABELS = {
   en: {
@@ -173,6 +182,13 @@ export function LocationDrawer({ location, open, onClose }: LocationDrawerProps)
             </button>
           </div>
         </div>
+
+        {/* Mini map preview */}
+        {location && (
+          <div className="flex-shrink-0 h-[200px]" style={{ isolation: "isolate" }}>
+            <LocationMiniMap location={location} />
+          </div>
+        )}
 
         {/* Body */}
         <div className="flex-1 overflow-y-auto bg-white px-7 py-6 flex flex-col gap-6">
