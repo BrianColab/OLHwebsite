@@ -194,7 +194,7 @@ export default function HomePage() {
 
             {/* Heading — explicit lines to prevent long strings overflowing */}
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-black text-white leading-tight tracking-tight">
-              Now live in
+              Now in
               <br />
               <span className="text-olh-red">{LOCATIONS.length} communities</span>
               <br />
