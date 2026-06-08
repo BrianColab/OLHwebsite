@@ -26,3 +26,28 @@ body {
   outline: 2px solid #CF1F2A;
   outline-offset: 2px;
 }
+
+/* Leaflet popup — match site card aesthetic */
+.leaflet-popup-content-wrapper {
+  border-radius: 14px !important;
+  padding: 0 !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #E8E8E8 !important;
+}
+.leaflet-popup-content {
+  margin: 14px 16px !important;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+.leaflet-popup-tip {
+  background: white !important;
+  box-shadow: none !important;
+}
+.leaflet-popup-close-button {
+  top: 7px !important;
+  right: 9px !important;
+  color: #aaa !important;
+  font-size: 18px !important;
+}
+.leaflet-popup-close-button:hover {
+  color: #CF1F2A !important;
+}

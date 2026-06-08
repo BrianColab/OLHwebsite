@@ -11,6 +11,7 @@ export const fr: SiteContent = {
     howItWorks: "Fonctionnement",
     whoWeServe: "Publics servis",
     partners: "Partenaires",
+    locations: "Emplacements", // [DRAFT FR]
     contact: "Nous joindre",
   },
 
@@ -230,6 +231,28 @@ export const fr: SiteContent = {
     },
   },
 
+  locations: {
+    hero: {
+      // [DRAFT FR]
+      heading: "Trouver un emplacement",
+      headingPrefix: "Trouver un",
+      headingAccent: "emplacement",
+      subheading:
+        "Les kiosques de dépistage OLH sont disponibles dans les succursales suivantes de la Légion royale canadienne et dans les lieux communautaires à travers l'Ontario.",
+    },
+    // [DRAFT FR]
+    mapNote:
+      "Les emplacements des épingles sont approximatifs. Confirmez les heures d'ouverture avec votre succursale locale avant de vous y rendre.",
+    getDirections: "Obtenir l'itinéraire", // [DRAFT FR]
+    rcl: "Légion royale canadienne", // [DRAFT FR]
+    cta: {
+      heading: "Télécharger l'application", // UI label
+      subheading: null as null,
+      iosButton: "Télécharger la version iOS",
+      androidButton: "Télécharger la version Android",
+    },
+  },
+
   footer: {
     // [BRIEF - DRAFT FR] — tagline came from client build brief; translated as draft only.
     tagline: "Ontario Legion Health — Des soins dans votre communauté",
@@ -238,6 +261,7 @@ export const fr: SiteContent = {
       { label: "Fonctionnement", href: "/how-it-works" },
       { label: "Publics servis", href: "/who-we-serve" },
       { label: "Partenaires", href: "/who-we-serve#partners" },
+      { label: "Emplacements", href: "/locations" }, // [DRAFT FR]
     ],
     copyright: "© 2025 Ontario Legion Health. Tous droits réservés.",
   },

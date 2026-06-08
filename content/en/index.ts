@@ -10,6 +10,7 @@ export const en = {
     howItWorks: "How It Works",
     whoWeServe: "Who We Serve",
     partners: "Partners",
+    locations: "Locations",
     contact: "Contact Us",
   },
 
@@ -275,6 +276,28 @@ export const en = {
     },
   },
 
+  locations: {
+    hero: {
+      // UI labels — no Word doc source for locations page
+      heading: "Find a Location",
+      headingPrefix: "Find a",
+      headingAccent: "Location",
+      subheading:
+        "OLH health screening kiosks are available at the following Royal Canadian Legion branches and community locations across Ontario.",
+    },
+    // UI label — approximate disclaimer for map pins
+    mapNote:
+      "Pin locations are approximate. Confirm opening hours with your local branch before visiting.",
+    getDirections: "Get Directions",
+    rcl: "Royal Canadian Legion",
+    cta: {
+      heading: "Download the App", // UI label
+      subheading: null as null,
+      iosButton: "Download for iOS",
+      androidButton: "Download for Android",
+    },
+  },
+
   footer: {
     // [BRIEF] — tagline came from client build brief, not Word doc. Flagged for review.
     tagline: "Ontario Legion Health — Care in Your Community",
@@ -285,6 +308,7 @@ export const en = {
       { label: "How It Works", href: "/how-it-works" },
       { label: "Who We Serve", href: "/who-we-serve" },
       { label: "Partners", href: "/who-we-serve#partners" },
+      { label: "Locations", href: "/locations" },
     ],
     copyright: "© 2025 Ontario Legion Health. All rights reserved.",
   },

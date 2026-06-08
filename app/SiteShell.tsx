@@ -54,6 +54,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           howItWorks: c.nav.howItWorks,
           whoWeServe: c.nav.whoWeServe,
           partners: c.nav.partners,
+          locations: c.nav.locations,
           contact: c.nav.contact,
         }}
       />

@@ -17,6 +17,7 @@ interface HeaderProps {
     howItWorks: string;
     whoWeServe: string;
     partners: string;
+    locations: string;
     contact: string;
   };
 }
@@ -30,6 +31,7 @@ export function Header({ lang, onLangChange, onContactClick, navLabels }: Header
     { label: navLabels.howItWorks, href: "/how-it-works" },
     { label: navLabels.whoWeServe, href: "/who-we-serve" },
     { label: navLabels.partners, href: "/who-we-serve#partners" },
+    { label: navLabels.locations, href: "/locations" },
   ];
 
   const isActive = (href: string) =>
