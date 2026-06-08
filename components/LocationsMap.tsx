@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { LOCATIONS } from "@/data/locations";
+import type { OLHLocation } from "@/data/locations";
 import { useLang } from "@/app/LangProvider";
 
 // OLH red teardrop pin — inline SVG, bypasses Leaflet's default PNG icon issue in Next.js
@@ -21,10 +22,14 @@ const PIN_ICON = L.divIcon({
 
 const LABELS = {
   en: { getDirections: "Get Directions" },
-  fr: { getDirections: "Obtenir l’itinéraire" },
+  fr: { getDirections: "Obtenir l'itinéraire" },
 } as const;
 
-export function LocationsMap() {
+interface LocationsMapProps {
+  onDirectionsClick: (location: OLHLocation) => void;
+}
+
+export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
   const { lang } = useLang();
   const t = LABELS[lang];
 
@@ -48,14 +53,13 @@ export function LocationsMap() {
               <p className="font-bold text-[13px] leading-snug text-gray-900">{loc.community}</p>
               <p className="text-[12px] text-gray-500 mt-0.5 leading-snug">{loc.branch}</p>
               <p className="text-[11px] text-gray-400 mt-1 leading-snug">{loc.address}</p>
-              <a
-                href={`https://maps.google.com/?q=${encodeURIComponent(loc.address)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-block text-[12px] font-semibold text-[#CF1F2A] hover:underline"
+              <button
+                type="button"
+                onClick={() => onDirectionsClick(loc)}
+                className="mt-2 inline-block text-[12px] font-semibold text-[#CF1F2A] hover:underline cursor-pointer"
               >
                 {t.getDirections} →
-              </a>
+              </button>
             </div>
           </Popup>
         </Marker>

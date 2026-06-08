@@ -1,11 +1,14 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useCallback, useRef, useState } from "react";
 import { useLang } from "../LangProvider";
 import { content } from "@/content";
 import { LOCATIONS } from "@/data/locations";
+import type { OLHLocation } from "@/data/locations";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { LocationDrawer } from "@/components/LocationDrawer";
 import { Icon } from "@/components/icons";
 
 // Leaflet accesses `window` at module level — must be loaded client-only
@@ -25,6 +28,24 @@ export default function LocationsPage() {
   const { lang } = useLang();
   const c = content[lang].locations;
 
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState<OLHLocation | null>(null);
+  const triggerRef = useRef<HTMLElement | null>(null);
+
+  const openDrawer = useCallback((loc: OLHLocation) => {
+    triggerRef.current = document.activeElement as HTMLElement;
+    setSelectedLocation(loc);
+    setDrawerOpen(true);
+  }, []);
+
+  const closeDrawer = useCallback(() => {
+    setDrawerOpen(false);
+    setTimeout(() => {
+      triggerRef.current?.focus();
+      triggerRef.current = null;
+    }, 310);
+  }, []);
+
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
@@ -41,7 +62,7 @@ export default function LocationsPage() {
       <section className="bg-white px-6 lg:px-8 py-10">
         <div className="max-w-container mx-auto">
           <div className="rounded-2xl overflow-hidden border border-olh-border shadow-sm" style={{ height: "480px" }}>
-            <LocationsMap />
+            <LocationsMap onDirectionsClick={openDrawer} />
           </div>
           <p className="mt-3 text-xs text-olh-text-secondary/55 text-center leading-relaxed">
             {c.mapNote}
@@ -76,12 +97,11 @@ export default function LocationsPage() {
                 {/* Address */}
                 <p className="text-sm text-olh-text-secondary leading-relaxed">{loc.address}</p>
 
-                {/* Directions link */}
-                <a
-                  href={`https://maps.google.com/?q=${encodeURIComponent(loc.address)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-olh-red hover:text-olh-red-hover transition-colors"
+                {/* Directions button */}
+                <button
+                  type="button"
+                  onClick={() => openDrawer(loc)}
+                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-olh-red hover:text-olh-red-hover transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red rounded"
                 >
                   {c.getDirections}
                   <svg
@@ -97,7 +117,7 @@ export default function LocationsPage() {
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />
                   </svg>
-                </a>
+                </button>
               </div>
             ))}
           </div>
@@ -109,6 +129,13 @@ export default function LocationsPage() {
         heading={c.cta.heading}
         iosLabel={c.cta.iosButton}
         androidLabel={c.cta.androidButton}
+      />
+
+      {/* ── Location drawer ──────────────────────────────────────────────── */}
+      <LocationDrawer
+        location={selectedLocation}
+        open={drawerOpen}
+        onClose={closeDrawer}
       />
     </>
   );
