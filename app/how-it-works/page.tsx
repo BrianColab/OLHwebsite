@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useLang } from "../LangProvider";
 import { content } from "@/content";
 import { StepCard } from "@/components/StepCard";
@@ -8,15 +9,22 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 
-const STEP_IMAGES = [
-  "/assets/olh/hero/image1.png",
-  "/assets/olh/hero/images2.png",
+const STEP3_IMAGES = [
   "/assets/olh/hero/image3.png",
+  "/assets/olh/hero/image3x.png",
+  "/assets/olh/hero/image3y.png",
+  "/assets/olh/hero/image3z.png",
 ];
 
 export default function HowItWorksPage() {
   const { lang } = useLang();
   const c = content[lang].howItWorks;
+
+  const [step3Image, setStep3Image] = useState(STEP3_IMAGES[0]);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setStep3Image(STEP3_IMAGES[Math.floor(Math.random() * STEP3_IMAGES.length)]);
+  }, []);
 
   return (
     <>
@@ -33,7 +41,7 @@ export default function HowItWorksPage() {
               title={step.title}
               body={step.body}
               imageAlt={step.imageAlt}
-              imageSrc={STEP_IMAGES[i]}
+              imageSrc={i === 2 ? step3Image : ["/assets/olh/hero/image1.png", "/assets/olh/hero/images2.png"][i]}
               reversed={i % 2 === 1}
             />
           ))}
