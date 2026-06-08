@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { useLang } from "./LangProvider";
 import { content } from "@/content";
 import Image from "next/image";
@@ -8,6 +9,12 @@ import { Button } from "@/components/Button";
 import { FeatureCard } from "@/components/FeatureCard";
 import { CTASection } from "@/components/CTASection";
 import { Icon } from "@/components/icons";
+import { LOCATIONS } from "@/data/locations";
+
+const LocationsPreviewMap = dynamic(
+  () => import("@/components/LocationsPreviewMap").then((m) => m.LocationsPreviewMap),
+  { ssr: false, loading: () => <div className="h-full w-full bg-[#1a1a1a]" /> }
+);
 
 const HERO_IMAGES = [
   "/assets/olh/hero/image2a.png",
@@ -150,6 +157,74 @@ export default function HomePage() {
             <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed max-w-xl">
               {c.bridging.body1}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Locations teaser ───────────────────────────────────────────────── */}
+      <section
+        className="relative overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #0c0c0c 0%, #141414 100%)" }}
+      >
+        {/* Live map — right side, bleeds to section edge on desktop */}
+        <div className="hidden lg:block absolute inset-y-0 right-0 w-[52%]" aria-hidden="true">
+          <div className="relative h-full w-full" style={{ isolation: "isolate" }}>
+            <LocationsPreviewMap />
+            {/* Left-edge fade blends map into dark background */}
+            <div
+              className="absolute inset-y-0 left-0 w-[55%] pointer-events-none"
+              style={{ background: "linear-gradient(to right, #111111 0%, #111111 10%, transparent 100%)" }}
+            />
+            {/* Top/bottom vignette */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "linear-gradient(to bottom, rgba(12,12,12,0.4) 0%, transparent 15%, transparent 85%, rgba(12,12,12,0.4) 100%)" }}
+            />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="relative max-w-container mx-auto px-6 lg:px-8">
+          <div className="py-20 lg:py-28 lg:max-w-[52%]">
+
+            {/* Eyebrow */}
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-olh-red mb-5">
+              OLH Kiosk Locations
+            </p>
+
+            {/* Heading */}
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-black text-white leading-tight tracking-tight">
+              Now live in{" "}
+              <span className="text-olh-red">{LOCATIONS.length} communities</span>
+              {" "}across Ontario
+            </h2>
+
+            <p className="mt-4 text-base text-white/55 leading-relaxed max-w-sm">
+              Find a free OLH health screening kiosk at a Royal Canadian Legion branch near you.
+            </p>
+
+            {/* Location chips */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {LOCATIONS.map((loc) => (
+                <span
+                  key={loc.id}
+                  className="inline-flex items-center gap-1.5 bg-white/8 border border-white/10 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full"
+                >
+                  <svg className="w-3 h-3 text-olh-red flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  {loc.community}
+                </span>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8">
+              <Button href="/locations" variant="primary" className="text-base px-7 py-4">
+                Find a Location Near You →
+              </Button>
+            </div>
+
           </div>
         </div>
       </section>
