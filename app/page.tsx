@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useLang } from "./LangProvider";
 import { content } from "@/content";
 import Image from "next/image";
@@ -8,9 +9,26 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { CTASection } from "@/components/CTASection";
 import { Icon } from "@/components/icons";
 
+const HERO_IMAGES = [
+  "/assets/olh/hero/image2a.png",
+  "/assets/olh/hero/image2b.png",
+  "/assets/olh/hero/image2c.png",
+  "/assets/olh/hero/image2d.png",
+];
+
 export default function HomePage() {
   const { lang } = useLang();
   const c = content[lang].home;
+
+  // Stable initial value (index 0) matches the static pre-render; randomised
+  // after hydration so there is no server/client mismatch warning.
+  const [heroImage, setHeroImage] = useState(HERO_IMAGES[0]);
+  useEffect(() => {
+    // One-time client-side pick — stable initial value (index 0) satisfies
+    // static pre-render; random swap happens after hydration, avoiding mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setHeroImage(HERO_IMAGES[Math.floor(Math.random() * HERO_IMAGES.length)]);
+  }, []);
 
   return (
     <>
@@ -45,8 +63,8 @@ export default function HomePage() {
             <div className="relative hidden md:block">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="/assets/olh/hero/homepageimage.png"
-                  alt="Person holding an OLH app on their phone, standing next to a Legion Health kiosk in a Legion branch"
+                  src={heroImage}
+                  alt="Community member using Ontario Legion Health screening services at a local Legion branch"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
