@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Ontario Legion Health — Care in Your Community",
   description:
     "Free, accessible screening for your heart and mental health, located in the trusted spaces of your local Royal Canadian Legion.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

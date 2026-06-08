@@ -130,7 +130,7 @@ export default function HomePage() {
             </div>
             <div className="w-px self-stretch bg-olh-border hidden sm:block" aria-hidden="true" />
             <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed max-w-xl">
-              {c.bridging.body2}
+              {c.bridging.body1}
             </p>
           </div>
         </div>
