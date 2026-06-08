@@ -22,11 +22,11 @@ export function SectionHeading({
   return (
     <div className={`${textAlign} ${maxWidth} ${className}`}>
       {eyebrow && (
-        <p className="text-olh-red text-sm font-semibold uppercase tracking-widest mb-3">
+        <p className="text-white text-lg font-semibold uppercase tracking-widest mb-3">
           {eyebrow}
         </p>
       )}
-      <HeadingTag className="text-3xl md:text-4xl font-bold text-olh-text-primary leading-tight">
+      <HeadingTag className="text-4xl md:text-5xl font-bold text-olh-text-primary leading-tight">
         {heading}
       </HeadingTag>
       {subheading && (
