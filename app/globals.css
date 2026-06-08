@@ -51,3 +51,17 @@ body {
 .leaflet-popup-close-button:hover {
   color: #CF1F2A !important;
 }
+
+/* Leaflet tooltip — hover address bubble */
+.leaflet-tooltip {
+  border-radius: 10px !important;
+  border: 1px solid #E8E8E8 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10), 0 1px 3px rgba(0, 0, 0, 0.06) !important;
+  padding: 8px 12px !important;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.leaflet-tooltip-top::before {
+  border-top-color: #E8E8E8 !important;
+}

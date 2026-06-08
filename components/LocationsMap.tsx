@@ -2,7 +2,7 @@
 
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
 import { LOCATIONS } from "@/data/locations";
 import type { OLHLocation } from "@/data/locations";
 import { useLang } from "@/app/LangProvider";
@@ -48,6 +48,12 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
       />
       {LOCATIONS.map((loc) => (
         <Marker key={loc.id} position={[loc.lat, loc.lng]} icon={PIN_ICON}>
+          <Tooltip direction="top" offset={[0, -46]} opacity={1}>
+            <div className="olh-map-tooltip">
+              <p className="font-bold text-[12px] leading-snug text-gray-900">{loc.community}</p>
+              <p className="text-[11px] text-gray-400 mt-0.5 leading-snug">{loc.address}</p>
+            </div>
+          </Tooltip>
           <Popup>
             <div className="olh-map-popup">
               <p className="font-bold text-[13px] leading-snug text-gray-900">{loc.community}</p>
