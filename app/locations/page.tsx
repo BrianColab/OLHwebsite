@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useCallback, useRef, useState } from "react";
 import { useLang } from "../LangProvider";
 import { content } from "@/content";
@@ -51,11 +52,21 @@ export default function LocationsPage() {
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <PageHero prefix={c.hero.headingPrefix || undefined} accent={c.hero.headingAccent} />
 
-      {/* ── Subheading ───────────────────────────────────────────────────── */}
-      <div className="bg-white px-6 lg:px-8 pt-8 pb-2">
-        <p className="max-w-container mx-auto text-base md:text-lg text-olh-text-secondary leading-relaxed">
-          {c.hero.subheading}
-        </p>
+      {/* ── Logo + subheading row ────────────────────────────────────────── */}
+      <div className="bg-white border-b border-olh-border px-6 lg:px-8 py-6">
+        <div className="max-w-container mx-auto flex items-center gap-5">
+          <Image
+            src="/olh-logo.png"
+            alt="Ontario Legion Health"
+            width={180}
+            height={52}
+            className="h-10 lg:h-12 w-auto flex-shrink-0"
+          />
+          <div className="w-px self-stretch bg-olh-border flex-shrink-0" aria-hidden="true" />
+          <p className="text-sm md:text-base text-olh-text-secondary leading-relaxed">
+            {c.hero.subheading}
+          </p>
+        </div>
       </div>
 
       {/* ── Interactive map ──────────────────────────────────────────────── */}
