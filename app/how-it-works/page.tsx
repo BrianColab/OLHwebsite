@@ -84,7 +84,7 @@ export default function HowItWorksPage() {
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {c.support.cards.map((card, i) => (
-              <FadeIn key={card.title} delay={i * 80}>
+              <FadeIn key={card.title} delay={i * 80} className="h-full">
               <SupportCard
                 icon={card.icon}
                 title={card.title}
