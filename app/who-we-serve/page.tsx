@@ -7,6 +7,7 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { FadeIn } from "@/components/FadeIn";
 
 export default function WhoWeServePage() {
   const { lang } = useLang();
@@ -25,13 +26,14 @@ export default function WhoWeServePage() {
       <section className="bg-olh-bg-light py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {c.audiences.map((audience) => (
+            {c.audiences.map((audience, i) => (
+              <FadeIn key={audience.title} delay={i * 80}>
               <AudienceCard
-                key={audience.title}
                 icon={audience.icon}
                 title={audience.title}
                 body={audience.body}
               />
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -43,20 +45,23 @@ export default function WhoWeServePage() {
           Do not invent or approximate official logos. */}
       <section id="partners" className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
+          <FadeIn>
           <SectionHeading
             heading={c.partners.heading}
             subheading={c.partners.subheading}
             align="center"
             className="mb-12"
           />
+          </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {c.partners.list.map((partner) => (
+            {c.partners.list.map((partner, i) => (
+              <FadeIn key={partner.name} delay={i * 80}>
               <PartnerCard
-                key={partner.name}
                 name={partner.name}
                 description={partner.description}
                 logo={partner.logo}
               />
+              </FadeIn>
             ))}
           </div>
         </div>

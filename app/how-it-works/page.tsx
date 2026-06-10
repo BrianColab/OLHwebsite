@@ -8,6 +8,7 @@ import { SupportCard } from "@/components/SupportCard";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { FadeIn } from "@/components/FadeIn";
 
 const STEP1_IMAGES = [
   "/assets/olh/hero/image1a.png",
@@ -56,8 +57,8 @@ export default function HowItWorksPage() {
       <section className="bg-white py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto flex flex-col gap-20 lg:gap-28">
           {c.steps.map((step, i) => (
+            <FadeIn key={step.number} delay={i * 80}>
             <StepCard
-              key={step.number}
               number={step.number}
               title={step.title}
               body={step.body}
@@ -65,6 +66,7 @@ export default function HowItWorksPage() {
               imageSrc={i === 0 ? step1Image : i === 1 ? step2Image : step3Image}
               reversed={i % 2 === 1}
             />
+            </FadeIn>
           ))}
         </div>
       </section>
@@ -72,20 +74,23 @@ export default function HowItWorksPage() {
       {/* ── Support cards ──────────────────────────────────────────────────── */}
       <section className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
+          <FadeIn>
           <SectionHeading
             heading={c.support.heading}
             subheading={c.support.subheading}
             align="center"
             className="mb-12"
           />
+          </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {c.support.cards.map((card) => (
+            {c.support.cards.map((card, i) => (
+              <FadeIn key={card.title} delay={i * 80}>
               <SupportCard
-                key={card.title}
                 icon={card.icon}
                 title={card.title}
                 body={card.body}
               />
+              </FadeIn>
             ))}
           </div>
         </div>

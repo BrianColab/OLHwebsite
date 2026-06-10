@@ -10,6 +10,7 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { CTASection } from "@/components/CTASection";
 import { Icon } from "@/components/icons";
 import { LOCATIONS } from "@/data/locations";
+import { FadeIn } from "@/components/FadeIn";
 
 const LocationsPreviewMap = dynamic(
   () => import("@/components/LocationsPreviewMap").then((m) => m.LocationsPreviewMap),
@@ -45,6 +46,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             {/* Copy */}
+            <FadeIn>
             <div>
               <p className="text-olh-red text-sm font-semibold uppercase tracking-widest mb-4">
                 Ontario Legion Health
@@ -65,8 +67,10 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
+            </FadeIn>
 
             {/* Hero image */}
+            <FadeIn delay={150}>
             <div className="relative hidden md:block">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
@@ -89,6 +93,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+            </FadeIn>
 
           </div>
         </div>
@@ -98,13 +103,14 @@ export default function HomePage() {
       <section className="bg-[#111111] py-14 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {c.features.map((feature) => (
+            {c.features.map((feature, i) => (
+              <FadeIn key={feature.title} delay={i * 80}>
               <FeatureCard
-                key={feature.title}
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
               />
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -115,6 +121,7 @@ export default function HomePage() {
         <div className="max-w-container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Keyword-split heading: prefix small/gray, accent large/red */}
+            <FadeIn>
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-olh-text-secondary mb-2">
                 {c.bridging.headingPrefix}
@@ -123,6 +130,8 @@ export default function HomePage() {
                 {c.bridging.headingAccent}
               </h2>
             </div>
+            </FadeIn>
+            <FadeIn delay={120}>
             <div className="flex flex-col gap-5">
               <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed">
                 {c.bridging.body1}
@@ -136,6 +145,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -146,6 +156,7 @@ export default function HomePage() {
       ──────────────────────────────────────────────────────────────────────── */}
       <section className="bg-olh-bg-light border-y border-olh-border py-12 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
+          <FadeIn>
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-12">
             <div className="flex-shrink-0 text-center sm:text-left">
               <span className="text-4xl md:text-5xl font-bold text-olh-red block">2.5M+</span>
@@ -158,6 +169,7 @@ export default function HomePage() {
               {c.bridging.body1}
             </p>
           </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -185,6 +197,7 @@ export default function HomePage() {
 
         {/* Content — capped at 42% on desktop so it never reaches the map */}
         <div className="relative max-w-container mx-auto px-6 lg:px-8">
+          <FadeIn>
           <div className="py-20 lg:py-28 lg:max-w-[42%]">
 
             {/* Eyebrow */}
@@ -228,6 +241,7 @@ export default function HomePage() {
             </div>
 
           </div>
+          </FadeIn>
         </div>
       </section>
 

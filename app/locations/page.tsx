@@ -9,6 +9,7 @@ import { LOCATIONS } from "@/data/locations";
 import type { OLHLocation } from "@/data/locations";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { FadeIn } from "@/components/FadeIn";
 import { LocationDrawer } from "@/components/LocationDrawer";
 import { Icon } from "@/components/icons";
 
@@ -85,9 +86,9 @@ export default function LocationsPage() {
       <section className="bg-olh-bg-light border-y border-olh-border py-16 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {LOCATIONS.map((loc) => (
+            {LOCATIONS.map((loc, i) => (
+              <FadeIn key={loc.id} delay={i * 60}>
               <div
-                key={loc.id}
                 className="bg-white rounded-2xl border border-olh-border p-6 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow"
               >
                 {/* Card header */}
@@ -130,6 +131,7 @@ export default function LocationsPage() {
                   </svg>
                 </button>
               </div>
+              </FadeIn>
             ))}
           </div>
         </div>
