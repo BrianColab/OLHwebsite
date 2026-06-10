@@ -71,7 +71,7 @@ export default function HomePage() {
 
             {/* Hero image */}
             <FadeIn delay={150}>
-            <div className="relative hidden md:block">
+            <div className="relative">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
                   src={heroImage}
@@ -83,7 +83,7 @@ export default function HomePage() {
                 />
               </div>
               {/* Floating badge — outside overflow-hidden so it won't be clipped */}
-              <div className="absolute bottom-5 left-5 bg-white rounded-2xl shadow-lg px-6 lg:px-8 py-3 flex items-center gap-3 border border-olh-border">
+              <div className="absolute bottom-5 left-5 bg-white rounded-2xl shadow-lg px-6 lg:px-8 py-3 hidden md:flex items-center gap-3 border border-olh-border">
                 <div className="w-9 h-9 rounded-xl bg-olh-red flex items-center justify-center flex-shrink-0">
                   <Icon name="heart" className="w-4 h-4 text-white" />
                 </div>
