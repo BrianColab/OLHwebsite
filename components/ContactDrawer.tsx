@@ -192,7 +192,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
             <div className="flex items-center gap-3 flex-1">
               {/* Logo on left — height matches the two-line text block beside it */}
               <Image
-                src="/olh-logo.png"
+                src="/assets/olh/partners/OLH Master Logo.png"
                 alt="Ontario Legion Health"
                 width={120}
                 height={35}

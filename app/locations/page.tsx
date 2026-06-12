@@ -57,7 +57,7 @@ export default function LocationsPage() {
       <div className="bg-white border-b border-olh-border px-6 lg:px-8 py-6">
         <div className="max-w-container mx-auto flex items-center gap-5">
           <Image
-            src="/olh-logo.png"
+            src="/assets/olh/partners/OLH Master Logo.png"
             alt="Ontario Legion Health"
             width={180}
             height={52}
