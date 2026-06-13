@@ -200,7 +200,7 @@ export const fr: SiteContent = {
           name: "The Royal Canadian Legion – Ontario Command",
           description:
             "Accueillir nos kiosques de dépistage dans leurs succursales à travers la province, à titre de partenaire communautaire de confiance.",
-          logo: "/assets/olh/partners/legion-ontario-command.svg",
+          logo: "/assets/olh/partners/OLH Master Logo.png",
         },
         {
           name: "Sunnybrook Health Sciences Centre",

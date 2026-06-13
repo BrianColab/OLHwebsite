@@ -238,7 +238,7 @@ export const en = {
           // Doc: paragraph 27
           description:
             "Serving as the welcoming, community-based home for our screening kiosks across the province.",
-          logo: "/assets/olh/partners/legion-ontario-command.svg",
+          logo: "/assets/olh/partners/OLH Master Logo.png",
         },
         {
           // Doc: paragraph 28 label
