@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import type { OLHLocation } from "@/data/locations";
+import { CARTO_BASEMAP_URL } from "@/data/mapTiles";
 
 const PIN_ICON = L.divIcon({
   html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="28" height="42">
@@ -34,7 +35,7 @@ export function LocationMiniMap({ location }: LocationMiniMapProps) {
       attributionControl={false}
     >
       <TileLayer
-        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        url={CARTO_BASEMAP_URL}
         subdomains="abcd"
         maxZoom={19}
       />
