@@ -36,6 +36,13 @@ export default function WhoWeServePage() {
               </FadeIn>
             ))}
           </div>
+          <FadeIn delay={c.audiences.length * 80}>
+          <div className="mt-8 rounded-2xl bg-white border border-olh-border px-6 py-5 md:px-8 md:py-6 max-w-3xl mx-auto text-center">
+            <p className="text-base text-olh-text-secondary leading-relaxed">
+              {c.inclusiveNote}
+            </p>
+          </div>
+          </FadeIn>
         </div>
       </section>
 

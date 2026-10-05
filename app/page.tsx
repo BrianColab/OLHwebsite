@@ -49,7 +49,7 @@ export default function HomePage() {
             <FadeIn>
             <div>
               <p className="text-olh-red text-sm font-semibold uppercase tracking-widest mb-4">
-                Ontario Legion Health
+                {c.hero.eyebrow}
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight">
                 <span className="text-olh-text-primary">{c.hero.headlinePrefix} </span>
@@ -58,11 +58,14 @@ export default function HomePage() {
               <p className="mt-6 text-lg md:text-xl text-olh-text-secondary leading-relaxed max-w-lg">
                 {c.hero.subheadline}
               </p>
+              <p className="mt-3 text-base text-olh-text-secondary leading-relaxed max-w-lg">
+                {c.hero.subheadline2}
+              </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Button href="/how-it-works" variant="primary" className="text-base px-7 py-4">
                   {c.hero.ctaPrimary}
                 </Button>
-                <Button href="#" variant="secondary" className="text-base px-7 py-4">
+                <Button href="/locations" variant="secondary" className="text-base px-7 py-4">
                   {c.hero.ctaSecondary}
                 </Button>
               </div>
@@ -168,6 +171,50 @@ export default function HomePage() {
             <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed max-w-xl">
               {c.bridging.body1}
             </p>
+          </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ── Trust section: Why the Legion matters ──────────────────────────── */}
+      {/* PLACEHOLDER copy — pending client confirmation of the Legion history claim. */}
+      <section className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
+        <div className="max-w-container mx-auto max-w-3xl">
+          <FadeIn>
+          <h2 className="text-2xl md:text-3xl font-black text-olh-text-primary tracking-tight mb-4">
+            {c.trust.heading}
+          </h2>
+          <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed">
+            {c.trust.body1}
+          </p>
+          <p className="mt-4 text-base md:text-lg text-olh-text-secondary leading-relaxed">
+            {c.trust.body2}
+          </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ── Partner preview ───────────────────────────────────────────────── */}
+      {/* PLACEHOLDER copy — partner names withheld pending roster confirmation. */}
+      <section className="bg-white py-20 px-6 lg:px-8">
+        <div className="max-w-container mx-auto max-w-3xl">
+          <FadeIn>
+          <h2 className="text-2xl md:text-3xl font-black text-olh-text-primary tracking-tight mb-4">
+            {c.partnerPreview.heading}
+          </h2>
+          <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed">
+            {c.partnerPreview.body1}
+          </p>
+          <p className="mt-4 text-base md:text-lg text-olh-text-secondary leading-relaxed">
+            {c.partnerPreview.body2}
+          </p>
+          <p className="mt-4 text-base md:text-lg text-olh-text-secondary leading-relaxed">
+            {c.partnerPreview.body3}
+          </p>
+          <div className="mt-6">
+            <Button href="/who-we-serve#partners" variant="ghost" className="pl-0 text-base font-semibold">
+              {c.partnerPreview.link}
+            </Button>
           </div>
           </FadeIn>
         </div>

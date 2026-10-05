@@ -18,13 +18,16 @@ export const fr: SiteContent = {
   home: {
     hero: {
       // [DRAFT FR] — requires client review
-      headline: "Des soins dans votre communauté",
-      headlinePrefix: "Des soins dans votre",
-      headlineAccent: "communauté",
+      eyebrow: "ONTARIO LEGION HEALTH",
+      headline: "Un lieu de confiance. Un premier pas simple. Un chemin humain vers les soins.",
+      headlinePrefix: "Un lieu de confiance. Un premier pas simple.",
+      headlineAccent: "Un chemin humain vers les soins.",
       subheadline:
-        "Dépistage gratuit et accessible pour votre santé cardiovasculaire et mentale, dans les espaces de confiance de votre Légion royale canadienne locale.",
-      ctaPrimary: "En savoir plus",
-      ctaSecondary: "Télécharger l'application",
+        "Ontario Legion Health combine une borne de santé sans rendez-vous, une application privée et un suivi par un infirmier-navigateur OLH — dans des lieux communautaires familiers.",
+      subheadline2:
+        "Ouvert à tous. Aucun rendez-vous ni carte santé requis dans les emplacements participants.",
+      ctaPrimary: "Découvrir le fonctionnement d'OLH",
+      ctaSecondary: "Trouver une borne",
       // [DRAFT FR] — requires client review
       badgeTitle: "Dépistage communautaire gratuit",
       badgeSubtitle: "Santé cardiaque + santé mentale",
@@ -33,27 +36,27 @@ export const fr: SiteContent = {
     features: [
       {
         icon: "heart",
-        title: "Santé cardiovasculaire",
+        title: "Dépistage biométrique de la santé",
         description:
-          "Mesurez votre tension artérielle, votre poids et votre IMC grâce à des kiosques de qualité clinique installés dans votre communauté.",
+          "Utilisez une borne OLH pour mesurer des indicateurs comme la tension artérielle, le poids et l'IMC lors d'une séance guidée, sans rendez-vous.",
       },
       {
         icon: "brain",
-        title: "Santé mentale",
+        title: "Suivis de santé mentale",
         description:
-          "Effectuez des évaluations normalisées de la santé mentale pour l'anxiété, la dépression et le stress, directement depuis votre téléphone.",
+          "Effectuez des évaluations normalisées en toute confidentialité depuis l'application OLH et choisissez les renseignements que vous souhaitez partager.",
       },
       {
-        icon: "pin",
-        title: "Au cœur de votre communauté",
+        icon: "nurse",
+        title: "Suivi humain",
         description:
-          "Les kiosques sont installés dans les succursales de la Légion royale canadienne — dans les centres communautaires urbains et les communautés rurales.",
+          "Avec votre consentement, un infirmier-navigateur OLH examine les renseignements que vous avez autorisés et vous appelle pour clarifier la prochaine étape.",
       },
       {
-        icon: "people",
-        title: "Gratuit et inclusif",
+        icon: "navigator",
+        title: "Accès aux services",
         description:
-          "OLH est un programme gratuit et inclusif, ouvert au public et conçu pour soutenir ceux qui font face aux plus grands obstacles aux soins traditionnels.",
+          "Lorsqu'un soutien supplémentaire est approprié, l'infirmier-navigateur peut vous aider à entrer en contact avec un réseau grandissant de partenaires en santé et en services communautaires.",
       },
     ],
 
@@ -70,11 +73,34 @@ export const fr: SiteContent = {
         "Bien qu'OLH ne remplace pas un médecin de famille, il sert de plaque tournante sécuritaire et temporaire. Nous vous aidons à prendre en charge votre bien-être, à détecter les risques pour la santé tôt et à naviguer dans le système de soins de santé pendant que vous attendez d'être jumelé à un prestataire de soins primaires.",
     },
 
+    // [DRAFT FR] — PLACEHOLDER, pending Legion history claim confirmation.
+    trust: {
+      heading: "Pourquoi la Légion est importante",
+      body1:
+        "Les succursales de la Légion royale canadienne sont des lieux de rassemblement familiers dans les communautés à travers l'Ontario. Elles sont reconnaissables, accessibles et souvent moins intimidantes qu'un environnement clinique.",
+      body2:
+        "En installant la borne OLH dans les succursales participantes, les résidents peuvent commencer sans prendre rendez-vous ni entrer dans une salle d'attente. La succursale offre la confiance avant que la technologie ne demande une action.",
+    },
+
+    // [DRAFT FR] — PLACEHOLDER, partner names withheld pending roster confirmation.
+    partnerPreview: {
+      heading: "Le dépistage n'est utile que s'il mène quelque part.",
+      body1:
+        "OLH bâtit un réseau de services qui aide à transformer les renseignements de santé autorisés en prochaines étapes concrètes.",
+      body2:
+        "[Noms des partenaires en attente de confirmation]. Ensemble, ils offrent des passerelles vers des services spécialisés couvrant la santé des anciens combattants, les soins cardiovasculaires, l'abandon du tabac, la santé mentale, la mémoire et l'évaluation cognitive.",
+      body3:
+        "Ces organisations ne sont qu'un début. À mesure que le projet pilote révèle les besoins des communautés, OLH prévoit ajouter de nouveaux partenaires en soins et en services.",
+      link: "Découvrir nos partenaires de services →",
+    },
+
     // [BRIEF - DRAFT FR] — heading came from the client build brief (not Word doc) and
     // has been translated as draft only. Requires client review before launch.
+    // [DRAFT FR]
     cta: {
-      heading: "Votre santé. Votre communauté. À votre rythme.",
-      subheading: null as null,
+      heading: "Votre santé. Vos renseignements. Votre prochaine étape.",
+      subheading:
+        "Utilisez l'application OLH pour compléter des évaluations optionnelles, jumeler une borne participante, gérer vos autorisations et rester connecté au parcours OLH.",
       iosButton: "Télécharger la version iOS",
       androidButton: "Télécharger la version Android",
     },
@@ -82,66 +108,82 @@ export const fr: SiteContent = {
 
   howItWorks: {
     hero: {
-      heading: "Fonctionnement",
-      headingPrefix: "",
-      headingAccent: "Fonctionnement",
+      // [DRAFT FR]
+      heading: "Un seul parcours simple—d'une préoccupation à une connexion.",
+      headingPrefix: "Un seul parcours simple—",
+      headingAccent: "d'une préoccupation à une connexion.",
+      subheading:
+        "La borne, l'application et l'infirmier-navigateur ont chacun un rôle clair. Ensemble, ils rendent la prochaine étape plus facile à comprendre.",
     },
 
     steps: [
       {
         number: "01",
         // [DRAFT FR]
-        title: "Télécharger l'application sécurisée",
-        body: "Commencez par télécharger l'application mobile OLH gratuite. Depuis votre téléphone, en toute confidentialité, vous pouvez compléter des évaluations normalisées de la santé mentale pour l'anxiété, la dépression et le stress. L'application vous sert également de centre privé et sécurisé pour toutes vos données de dépistage physique.",
+        title: "Commencez avec l'application OLH",
+        body: "Créez votre compte privé et complétez des évaluations de santé mentale optionnelles depuis votre téléphone. L'application regroupe vos renseignements et vos autorisations OLH en un seul endroit.",
         imageAlt: "Écran d'accueil de l'application mobile OLH sur un téléphone intelligent",
       },
       {
         number: "02",
         // [DRAFT FR]
-        title: "Visiter un kiosque communautaire",
-        body: "Rendez-vous dans une succursale participante de la Légion royale canadienne et jumelez votre application à l'un de nos kiosques de santé de qualité clinique. En quelques minutes, le kiosque mesurera des indicateurs essentiels de santé physique, dont votre tension artérielle, votre poids et votre IMC.",
+        title: "Visitez une borne OLH",
+        body: "Rendez-vous dans un emplacement participant—aucun rendez-vous requis—et complétez un dépistage biométrique guidé. La borne peut mesurer des indicateurs comme la tension artérielle, le poids et l'IMC.",
         imageAlt: "Kiosque de dépistage OLH dans une succursale de la Légion",
       },
       {
         number: "03",
         // [DRAFT FR]
-        title: "Consulter vos résultats et passer à l'action",
-        body: "Vos résultats vous sont transmis instantanément et en toute sécurité sur votre appareil. Si des indicateurs ou des risques pour la santé sont détectés, l'application vous guidera vers les prochaines étapes.",
-        imageAlt: "Application OLH affichant des résultats de santé sur un téléphone intelligent",
+        title: "Choisissez ce que vous partagez",
+        body: "Vous décidez quels renseignements peuvent être transmis à l'infirmier-navigateur OLH et si vous souhaitez être contacté. Rien n'est transmis au navigateur sans les autorisations requises pour ce suivi.",
+        imageAlt: "Écran de préférences de consentement et de partage de l'application OLH",
+      },
+      {
+        number: "04",
+        // [DRAFT FR]
+        title: "Recevez un appel de l'infirmier-navigateur",
+        body: "La visite à la borne et l'appel ont lieu à des moments différents. L'infirmier-navigateur examine les renseignements que vous avez autorisés, vous appelle en toute confidentialité et vous aide à comprendre les options possibles.",
+        imageAlt: "Personne recevant un appel privé d'un infirmier-navigateur OLH",
+      },
+      {
+        number: "05",
+        // [DRAFT FR]
+        title: "Connectez-vous avec un service approprié",
+        body: "Lorsqu'un soutien supplémentaire est approprié, l'infirmier-navigateur peut vous aider à entrer en contact avec un partenaire de soins ou de services OLH selon vos besoins, votre admissibilité et les services offerts.",
+        imageAlt: "Personne mise en contact avec un partenaire de services de santé",
       },
     ],
+
+    // [DRAFT FR]
+    callout:
+      "Complétez le dépistage à la succursale. Recevez l'appel de l'infirmier-navigateur plus tard—à la maison ou où vous vous sentez à l'aise.",
+
+    technology: {
+      heading: "Ce que fait la technologie",
+      body: "Les renseignements d'évaluation autorisés peuvent être organisés grâce à une révision assistée par IA avant l'appel de l'infirmier-navigateur. Cela peut aider à faire ressortir des tendances et des signaux prioritaires qui méritent attention. L'infirmier-navigateur examine les renseignements source, y ajoute du contexte et demeure responsable de la conversation humaine et de la décision quant à la prochaine étape.",
+      safetyLine:
+        "L'IA soutient la préparation et la priorisation. Elle ne pose pas de diagnostic, ne prescrit pas de traitement et ne remplace pas le jugement de l'infirmier-navigateur.",
+    },
 
     support: {
       heading: "Et ensuite", // UI label
       // [DRAFT FR]
-      subheading: "Selon vos résultats, vous pouvez choisir de :",
-      cards: [
-        {
-          icon: "book",
-          title: "Accéder à des ressources éducatives",
-          body: "Accéder à des ressources éducatives pour vous aider à maintenir un mode de vie sain.",
-        },
-        {
-          icon: "chart",
-          title: "Suivre votre évolution",
-          body: "Suivre votre évolution dans le temps et partager vos données avec votre médecin, si vous en avez un.",
-        },
-        {
-          icon: "nurse",
-          title: "Consulter une infirmière virtuelle",
-          body: "Prendre rendez-vous via l'application pour échanger directement avec une infirmière OLH, qui peut vous aider à interpréter vos résultats et vous offrir des conseils personnalisés.",
-        },
-        {
-          icon: "navigator",
-          title: "Travailler avec un navigateur en soins",
-          body: "Si vous avez besoin d'un soutien supplémentaire, nos navigateurs peuvent vous aider à trouver des cliniques locales, des ressources en santé mentale et des services communautaires.",
-        },
+      subheading: "Selon les renseignements que vous choisissez de partager et ce qui est discuté pendant l'appel, l'infirmier-navigateur peut :",
+      bullets: [
+        "expliquer ce que les renseignements de dépistage peuvent signifier et ce qu'ils ne signifient pas;",
+        "vous aider à préparer des questions pour un professionnel de la santé;",
+        "partager des ressources d'éducation ou d'autogestion appropriées;",
+        "aider à identifier un partenaire de services OLH approprié; ou",
+        "recommander un niveau de soins plus immédiat lorsque les renseignements indiquent une urgence.",
       ],
+      note: "Un résultat de dépistage ne crée pas automatiquement une référence. Chaque prochaine étape dépend du consentement, du besoin évalué, de la disponibilité des services et de l'admissibilité du partenaire.",
     },
 
+    // [DRAFT FR]
     cta: {
-      heading: "Télécharger l'application", // UI label
-      subheading: null as null,
+      heading: "Votre santé. Vos renseignements. Votre prochaine étape.",
+      subheading:
+        "Utilisez l'application OLH pour compléter des évaluations optionnelles, jumeler une borne participante, gérer vos autorisations et rester connecté au parcours OLH.",
       iosButton: "Télécharger la version iOS",
       androidButton: "Télécharger la version Android",
     },
@@ -150,45 +192,54 @@ export const fr: SiteContent = {
   whoWeServe: {
     hero: {
       // [DRAFT FR]
-      heading: "Publics servis",
-      headingPrefix: "Publics",
-      headingAccent: "servis",
+      heading: "Tout le monde est le bienvenu.",
+      headingPrefix: "Tout le monde est",
+      headingAccent: "le bienvenu.",
       subheading:
-        "OLH est un programme gratuit et inclusif, ouvert au public. Les kiosques sont stratégiquement placés dans des centres communautaires urbains et des succursales rurales de la Légion pour soutenir ceux qui font face aux plus grands obstacles aux soins traditionnels.",
+        "OLH est conçu pour quiconque souhaite un premier pas simple et privé—mais il peut être particulièrement utile lorsque les soins semblent distants, déroutants, inconfortables ou difficiles d'accès.",
     },
 
     audiences: [
       {
-        icon: "veteran",
-        title: "Anciens combattants et leurs familles",
-        body: "Offrir un soutien adapté pour la santé physique et les blessures liées au stress opérationnel.",
+        icon: "doctor",
+        title: "Personnes sans soins primaires",
+        body: "Un moyen pratique de surveiller certains indicateurs de santé et de discuter d'une prochaine étape appropriée en attendant d'être jumelé à un prestataire de soins primaires.",
       },
       {
-        icon: "doctor",
-        title: "Sans médecin de famille",
-        body: "Fournir un moyen fiable de surveiller votre santé pendant que vous attendez d'être jumelé à un prestataire de soins primaires.",
+        icon: "veteran",
+        title: "Anciens combattants et leurs familles",
+        body: "Un cadre communautaire familier offrant des passerelles possibles vers des services hospitaliers et spécialisés pour anciens combattants, lorsque approprié.",
       },
       {
         icon: "senior",
         title: "Aînés",
-        body: "Offrir une surveillance pratique et proche de chez soi pour des affections comme l'hypertension artérielle ou le diabète.",
+        body: "Un accès proche de chez soi à un dépistage guidé, avec un soutien humain disponible pour expliquer les options et réduire la confusion.",
       },
       {
         icon: "rural",
-        title: "Résidents des régions rurales",
-        body: "Apporter le dépistage préventif directement aux communautés où l'accès aux soins de santé est limité.",
+        title: "Résidents des régions rurales et des petites municipalités",
+        body: "Un point d'accès local pour les personnes confrontées à de longs déplacements, à une disponibilité limitée des rendez-vous ou à de longues attentes pour les soins.",
       },
       {
         icon: "community",
         title: "Peuples autochtones",
-        body: "Offrir une surveillance de la santé sécuritaire et sans stigmatisation, assurée par un personnel formé au Code de conduite Cristal Clair.",
+        body: "Un accès culturellement respectueux et à faible seuil, soutenu par du personnel formé, un consentement clair et une option indépendante pour explorer une préoccupation de santé.",
+      },
+      {
+        icon: "people",
+        title: "Personnes hésitantes",
+        body: "Un premier pas privé pour quiconque se sent effrayé, en colère, gêné, incertain ou inquiet que d'autres apprennent une préoccupation de santé.",
       },
       {
         icon: "wellness",
-        title: "Les personnes soucieuses de leur santé",
-        body: "Toute personne souhaitant un moyen gratuit et simple de suivre de manière proactive son bien-être physique et mental.",
+        title: "Personnes qui surveillent leur bien-être",
+        body: "Un moyen simple de répéter certains dépistages, d'observer les changements dans le temps et de décider si une conversation avec un professionnel de la santé pourrait être utile.",
       },
     ],
+
+    // [DRAFT FR]
+    inclusiveNote:
+      "OLH ne s'adresse pas exclusivement aux membres de la Légion, aux anciens combattants, aux aînés ou aux peuples autochtones. Le programme est conçu pour servir tout le monde dans la communauté.",
 
     partners: {
       // [DRAFT FR]
@@ -223,9 +274,11 @@ export const fr: SiteContent = {
       ],
     },
 
+    // [DRAFT FR]
     cta: {
-      heading: "Télécharger l'application", // UI label
-      subheading: null as null,
+      heading: "Votre santé. Vos renseignements. Votre prochaine étape.",
+      subheading:
+        "Utilisez l'application OLH pour compléter des évaluations optionnelles, jumeler une borne participante, gérer vos autorisations et rester connecté au parcours OLH.",
       iosButton: "Télécharger la version iOS",
       androidButton: "Télécharger la version Android",
     },
@@ -234,35 +287,50 @@ export const fr: SiteContent = {
   locations: {
     hero: {
       // [DRAFT FR]
-      heading: "Trouver un emplacement",
-      headingPrefix: "Trouver un",
-      headingAccent: "emplacement",
+      heading: "Trouvez une borne OLH près de chez vous.",
+      headingPrefix: "Trouvez une borne OLH",
+      headingAccent: "près de chez vous.",
       subheading:
-        "Les kiosques de dépistage OLH sont disponibles dans les succursales suivantes de la Légion royale canadienne et dans les lieux communautaires à travers l'Ontario.",
+        "Les bornes OLH sont disponibles dans des succursales participantes de la Légion royale canadienne et dans des lieux communautaires à travers l'Ontario. Aucun rendez-vous n'est requis. Vérifiez les détails de l'emplacement et confirmez les heures d'ouverture publiques avant de vous y rendre.",
     },
     // [DRAFT FR]
     mapNote:
       "Les emplacements des épingles sont approximatifs. Confirmez les heures d'ouverture avec votre succursale locale avant de vous y rendre.",
     getDirections: "Obtenir l'itinéraire", // [DRAFT FR]
     rcl: "Légion royale canadienne", // [DRAFT FR]
+    // [DRAFT FR]
     cta: {
-      heading: "Télécharger l'application", // UI label
-      subheading: null as null,
+      heading: "Votre santé. Vos renseignements. Votre prochaine étape.",
+      subheading:
+        "Utilisez l'application OLH pour compléter des évaluations optionnelles, jumeler une borne participante, gérer vos autorisations et rester connecté au parcours OLH.",
       iosButton: "Télécharger la version iOS",
       androidButton: "Télécharger la version Android",
     },
   },
 
   footer: {
+    // [DRAFT FR] — PENDING confirmation, same as EN (see review list, item 4).
+    disclaimer:
+      "Les outils de dépistage OLH ne fournissent pas de diagnostic et ne remplacent pas les soins médicaux. Si vous vivez une urgence médicale, composez le 911 ou rendez-vous au service d'urgence le plus proche. Si vous ou une personne que vous connaissez pensez au suicide, composez ou textez le 9-8-8 pour obtenir du soutien, disponible 24 heures sur 24, 7 jours sur 7.",
     // [BRIEF - DRAFT FR] — tagline came from client build brief; translated as draft only.
-    tagline: "Ontario Legion Health — Des soins dans votre communauté",
+    // [DRAFT FR]
+    tagline: "Ontario Legion Health — Un lieu de confiance. Un premier pas simple. Un chemin humain vers les soins.",
     links: [
       { label: "Accueil", href: "/" },
       { label: "Fonctionnement", href: "/how-it-works" },
       { label: "Publics servis", href: "/who-we-serve" },
       { label: "Partenaires", href: "/who-we-serve#partners" },
       { label: "Emplacements", href: "/locations" }, // [DRAFT FR]
+      { label: "Confidentialité", href: "/privacy" },
     ],
     copyright: "© 2025 Ontario Legion Health. Tous droits réservés.",
+  },
+
+  // [DRAFT FR] — Placeholder page; full content pending privacy/clinical review.
+  privacy: {
+    heading: "Confidentialité, consentement et supervision humaine",
+    headingPrefix: "Confidentialité, consentement",
+    headingAccent: "et supervision humaine",
+    comingSoon: "Texte à venir.",
   },
 };

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useLang } from "../LangProvider";
 import { content } from "@/content";
 import { StepCard } from "@/components/StepCard";
-import { SupportCard } from "@/components/SupportCard";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -51,7 +50,7 @@ export default function HowItWorksPage() {
   return (
     <>
       {/* ── Page hero ──────────────────────────────────────────────────────── */}
-      <PageHero prefix={c.hero.headingPrefix || undefined} accent={c.hero.headingAccent} />
+      <PageHero prefix={c.hero.headingPrefix || undefined} accent={c.hero.headingAccent} subheading={c.hero.subheading} />
 
       {/* ── Steps ──────────────────────────────────────────────────────────── */}
       <section className="bg-white py-20 px-6 lg:px-8">
@@ -63,7 +62,7 @@ export default function HowItWorksPage() {
               title={step.title}
               body={step.body}
               imageAlt={step.imageAlt}
-              imageSrc={i === 0 ? step1Image : i === 1 ? step2Image : step3Image}
+              imageSrc={i === 0 ? step1Image : i === 1 ? step2Image : i === 2 ? step3Image : undefined}
               reversed={i % 2 === 1}
             />
             </FadeIn>
@@ -71,7 +70,38 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* ── Support cards ──────────────────────────────────────────────────── */}
+      {/* ── Callout ────────────────────────────────────────────────────────── */}
+      <section className="bg-white px-6 lg:px-8">
+        <div className="max-w-container mx-auto">
+          <FadeIn>
+          <div className="rounded-2xl bg-olh-bg-light border border-olh-border px-6 py-5 md:px-8 md:py-6">
+            <p className="text-base text-olh-text-primary leading-relaxed">
+              <span className="font-bold uppercase tracking-wide text-olh-red mr-2">Important</span>
+              {c.callout}
+            </p>
+          </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ── What the technology does ─────────────────────────────────────────── */}
+      <section className="bg-white py-20 px-6 lg:px-8">
+        <div className="max-w-container mx-auto max-w-3xl">
+          <FadeIn>
+          <h2 className="text-2xl md:text-3xl font-black text-olh-text-primary tracking-tight mb-4">
+            {c.technology.heading}
+          </h2>
+          <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed">
+            {c.technology.body}
+          </p>
+          <p className="mt-4 text-base font-semibold text-olh-text-primary leading-relaxed">
+            {c.technology.safetyLine}
+          </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ── What happens next ────────────────────────────────────────────────── */}
       <section className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <FadeIn>
@@ -79,20 +109,24 @@ export default function HowItWorksPage() {
             heading={c.support.heading}
             subheading={c.support.subheading}
             align="center"
-            className="mb-12"
+            className="mb-10"
           />
           </FadeIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {c.support.cards.map((card, i) => (
-              <FadeIn key={card.title} delay={i * 80} className="h-full">
-              <SupportCard
-                icon={card.icon}
-                title={card.title}
-                body={card.body}
-              />
-              </FadeIn>
+          <FadeIn delay={80}>
+          <ul className="max-w-2xl mx-auto flex flex-col gap-3">
+            {c.support.bullets.map((bullet) => (
+              <li key={bullet} className="flex items-start gap-3 text-base text-olh-text-secondary leading-relaxed">
+                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-olh-red flex-shrink-0" aria-hidden="true" />
+                {bullet}
+              </li>
             ))}
-          </div>
+          </ul>
+          </FadeIn>
+          <FadeIn delay={140}>
+          <p className="max-w-2xl mx-auto mt-8 text-sm text-olh-text-secondary/80 leading-relaxed italic">
+            {c.support.note}
+          </p>
+          </FadeIn>
         </div>
       </section>
 

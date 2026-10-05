@@ -16,17 +16,23 @@ export const en = {
 
   home: {
     hero: {
-      // Doc: "Ontario Legion Health: Care in Your Community"
-      headline: "Care in Your Community",
-      headlinePrefix: "Care in Your",
-      headlineAccent: "Community",
-      // Doc: paragraph 2
+      // Doc: Hero eyebrow
+      eyebrow: "ONTARIO LEGION HEALTH",
+      // Doc: Hero headline
+      headline: "A trusted place. A simple first step. A human path to care.",
+      headlinePrefix: "A trusted place. A simple first step.",
+      headlineAccent: "A human path to care.",
+      // Doc: Hero body
       subheadline:
-        "Free, accessible screening for your heart and mental health, located in the trusted spaces of your local Royal Canadian Legion.",
-      // UI labels
-      ctaPrimary: "Learn More",
-      ctaSecondary: "Download the App",
-      // Floating badge over hero image
+        "Ontario Legion Health combines a walk-in health kiosk, a private app and follow-up from an OLH Nurse Navigator—inside familiar community locations.",
+      // Doc: Hero body, second line
+      subheadline2:
+        "Open to everyone. No appointment or health card required at participating locations.",
+      // Doc: Primary actions ("SEE HOW OLH WORKS | FIND A KIOSK")
+      // Implementation note: Keep "Download the App" as a secondary action.
+      ctaPrimary: "See How OLH Works",
+      ctaSecondary: "Find a Kiosk",
+      // Floating badge over hero image — keeping current concept for now
       badgeTitle: "Free community screening",
       badgeSubtitle: "Heart + mental health",
     },
@@ -36,28 +42,27 @@ export const en = {
     features: [
       {
         icon: "heart",
-        title: "Heart Health",
+        title: "Biometric health screening",
         description:
-          "Measure blood pressure, weight, and BMI with clinical-grade kiosks right in your community.",
+          "Use an OLH kiosk to measure indicators such as blood pressure, weight and BMI in a guided, walk-in session.",
       },
       {
         icon: "brain",
-        title: "Mental Health",
+        title: "Mental-health check-ins",
         description:
-          "Complete standardized mental health screenings for anxiety, depression, and stress from your phone.",
+          "Complete standardized assessments from the privacy of the OLH app and decide what information you want to share.",
       },
       {
-        icon: "pin",
-        title: "Right in Your Community",
+        icon: "nurse",
+        title: "Human follow-up",
         description:
-          "Kiosks are placed in Royal Canadian Legion branches — in urban community hubs and rural communities alike.",
+          "With your consent, an OLH Nurse Navigator reviews the information you authorized and calls to help clarify the next step.",
       },
       {
-        icon: "people",
-        title: "Free & Inclusive",
-        // Doc: "OLH is a free, inclusive program open to the public"
+        icon: "navigator",
+        title: "Connections to service",
         description:
-          "OLH is a free, inclusive program open to the public, supporting those who face the highest barriers to traditional care.",
+          "When additional support is appropriate, the Nurse Navigator can help connect you with a growing network of healthcare and community-service partners.",
       },
     ],
 
@@ -76,11 +81,35 @@ export const en = {
         "While OLH does not replace a family doctor, it serves as a secure, temporary hub. We help you take charge of your wellbeing, interpret health risks early, and navigate the healthcare system while you wait to be connected with a primary care provider.",
     },
 
-    // [BRIEF] — CTA heading and subheading came from the client build brief,
-    // not the Word doc. Flagged for client confirmation before launch.
+    // Doc: "Why the Legion matters" (trust section)
+    // PLACEHOLDER — pending client confirmation of the Legion history claim (see review list, item 2).
+    // The doc's "For more than a century..." line is deliberately omitted until approved.
+    trust: {
+      heading: "Why the Legion matters",
+      body1:
+        "Royal Canadian Legion branches are familiar gathering places in communities across Ontario. They are recognizable, accessible and often less intimidating than a clinical setting.",
+      body2:
+        "By placing the OLH kiosk inside participating branches, residents can begin without scheduling an appointment or entering a waiting room. The branch supplies trust before the technology asks for action.",
+    },
+
+    // Doc: Partner preview section
+    // PLACEHOLDER — partner names withheld pending client confirmation of the roster (see review list, item 1).
+    partnerPreview: {
+      heading: "Screening is only useful when it leads somewhere.",
+      body1:
+        "OLH is building a fulfillment network that helps turn authorized health information into practical next steps.",
+      body2:
+        "[Partner names pending confirmation — see partner roster review]. Together, they provide pathways into specialized services spanning veterans' health, cardiovascular care, smoking cessation, mental health, memory and cognitive assessment.",
+      body3:
+        "These organizations are the beginning. As the pilot reveals what communities need most, OLH expects to add new care and service partners. A larger network creates more possible pathways and gives Nurse Navigators more appropriate options when helping clients move forward.",
+      link: "Meet Our Service Partners →",
+    },
+
+    // Doc: App promotion (section 8)
     cta: {
-      heading: "Your health. Your community. Your time.",
-      subheading: null as null, // removed: "Ontario Legion Health is here for you." — not in doc
+      heading: "Your health. Your information. Your next step.",
+      subheading:
+        "Use the OLH app to complete optional assessments, pair with a participating kiosk, manage your permissions and stay connected to the OLH pathway.",
       iosButton: "Download for iOS", // UI label — TODO: replace href="#" with App Store link
       androidButton: "Download for Android", // UI label — TODO: replace href="#" with Google Play link
     },
@@ -89,81 +118,87 @@ export const en = {
 
   howItWorks: {
     hero: {
-      // [BRIEF] "Simple steps. Powerful insights." removed — not in doc
-      // "Better health starts here." removed — not in doc
-      heading: "How It Works", // Doc: section heading
-      headingPrefix: "How It",
-      headingAccent: "Works",
+      // Doc: Page headline
+      heading: "One simple pathway—from concern to connection.",
+      headingPrefix: "One simple pathway—",
+      headingAccent: "from concern to connection.",
+      // Doc: subhead line under page headline
+      subheading:
+        "The kiosk, app and Nurse Navigator each have one clear job. Together, they help make the next step easier to understand.",
     },
 
     steps: [
       {
         number: "01",
-        // Doc: paragraph 7
-        title: "Download the Secure App",
-        // Doc: paragraph 8
-        body: "Start by downloading the free OLH mobile app. From the privacy of your phone, you can complete standardized mental health screenings to check in on anxiety, depression, and stress. The app also serves as your private, secure hub for all your physical screening data.",
-        // Alt text for placeholder image
+        // Doc: "Start with the OLH app"
+        title: "Start with the OLH app",
+        body: "Create your private account and complete optional mental-health assessments from your phone. The app keeps your OLH information and permissions together in one place.",
         imageAlt: "OLH mobile app welcome screen on a smartphone",
       },
       {
         number: "02",
-        // Doc: paragraph 9
-        title: "Visit a Community Kiosk",
-        // Doc: paragraph 10
-        body: "Head to a participating Royal Canadian Legion branch and pair your app with one of our clinical-grade health kiosks. In just a few minutes, the kiosk will measure vital physical health indicators, including your blood pressure, weight, and BMI.",
+        // Doc: "Visit an OLH kiosk"
+        title: "Visit an OLH kiosk",
+        body: "Go to a participating location—no appointment required—and complete a guided biometric screening. The kiosk may measure indicators including blood pressure, weight and BMI.",
         imageAlt: "OLH health screening kiosk at a Legion branch",
       },
       {
         number: "03",
-        // Doc: paragraph 11
-        title: "Review and Connect",
-        // Doc: paragraph 12
-        body: "Your results are delivered instantly and securely to your device. If any health flags or risks are identified, the app will guide you on your next steps.",
-        imageAlt: "OLH app showing health results on a smartphone",
+        // Doc: "Choose what to share"
+        title: "Choose what to share",
+        body: "You decide what information may be sent to the OLH Nurse Navigator and whether you want to be contacted. Nothing moves to the navigator without the permissions required for that follow-up.",
+        imageAlt: "OLH app consent and sharing preferences screen",
+      },
+      {
+        number: "04",
+        // Doc: "Receive a call from the Nurse Navigator"
+        title: "Receive a call from the Nurse Navigator",
+        body: "The kiosk visit and the call happen at different times. The Nurse Navigator reviews the information you authorized, calls you privately and helps make sense of the available options.",
+        imageAlt: "Person taking a private phone call from an OLH Nurse Navigator",
+      },
+      {
+        number: "05",
+        // Doc: "Connect with an appropriate service"
+        title: "Connect with an appropriate service",
+        body: "When further support is appropriate, the Nurse Navigator can help connect you with an OLH care or service partner based on your needs, eligibility and the services available.",
+        imageAlt: "Person connecting with a healthcare service partner",
       },
     ],
 
+    // Doc: "IMPORTANT" callout
+    callout:
+      "Complete the screening at the branch. Receive the Nurse Navigator call later—at home or wherever you feel comfortable.",
+
+    // Doc: "What the technology does"
+    technology: {
+      heading: "What the technology does",
+      body: "Authorized assessment information may be organized with AI-assisted review before the Nurse Navigator calls. This can help surface patterns and priority signals that deserve attention. The Nurse Navigator reviews the source information, adds context and retains responsibility for the human conversation and next-step decision.",
+      // Doc: "Plain-language safety line"
+      safetyLine:
+        "AI supports preparation and prioritization. It does not diagnose, prescribe treatment or replace the Nurse Navigator's judgment.",
+    },
+
+    // Doc: "What happens next"
     support: {
-      heading: "What Happens Next", // UI label
-      // Doc: from paragraph 12 — "Depending on your results, you can choose to:"
-      subheading: "Depending on your results, you can choose to:",
-      cards: [
-        {
-          icon: "book",
-          // Doc: paragraph 13 label
-          title: "Access Educational Resources",
-          // Doc: paragraph 13
-          body: "Access educational resources to help maintain a healthy lifestyle.",
-        },
-        {
-          icon: "chart",
-          // Doc: paragraph 14 label
-          title: "Track Your Progress",
-          // Doc: paragraph 14
-          body: "Track your progress over time and share the data with your doctor, if you have one.",
-        },
-        {
-          icon: "nurse",
-          // Doc: paragraph 15 label
-          title: "Connect with a Virtual Nurse",
-          // Doc: paragraph 15
-          body: "Book an appointment through the app to speak directly with an OLH nurse who can help you interpret your results and offer personalized guidance.",
-        },
-        {
-          icon: "navigator",
-          // Doc: paragraph 16 label
-          title: "Work with a Care Navigator",
-          // Doc: paragraph 16
-          body: "If further support is needed, our navigators can help you connect with local clinics, mental health resources, and community services.",
-        },
+      heading: "What happens next",
+      subheading:
+        "Depending on the information you choose to share and what is discussed during the call, the Nurse Navigator may:",
+      bullets: [
+        "explain what the screening information may mean and what it does not mean;",
+        "help you prepare questions for a healthcare provider;",
+        "share appropriate education or self-management resources;",
+        "help identify a suitable OLH service partner; or",
+        "recommend a more immediate level of care when the information indicates urgency.",
       ],
+      note: "A screening result does not automatically create a referral. Every next step depends on consent, assessed need, service availability and partner eligibility.",
     },
 
     // CTA — removed invented subheading; heading is a UI label only
+    // Doc: App promotion (section 8)
     cta: {
-      heading: "Download the App", // UI label
-      subheading: null as null,
+      heading: "Your health. Your information. Your next step.",
+      subheading:
+        "Use the OLH app to complete optional assessments, pair with a participating kiosk, manage your permissions and stay connected to the OLH pathway.",
       iosButton: "Download for iOS",
       androidButton: "Download for Android",
     },
@@ -171,59 +206,63 @@ export const en = {
 
   whoWeServe: {
     hero: {
-      // Doc: section heading
-      heading: "Who We Serve",
-      headingPrefix: "Who We",
-      headingAccent: "Serve",
-      // Doc: paragraph 18
+      // Doc: Page headline
+      heading: "Everyone is welcome.",
+      headingPrefix: "Everyone is",
+      headingAccent: "welcome.",
+      // Doc: subhead line under page headline
       subheading:
-        "OLH is a free, inclusive program open to the public. Kiosks are strategically placed in urban community hubs and rural Legion branches to support those who face the highest barriers to traditional care.",
+        "OLH is designed for anyone who wants a simple, private first step—but it may be especially valuable when care feels distant, confusing, uncomfortable or difficult to access.",
     },
 
     audiences: [
       {
-        icon: "veteran",
-        // Doc: paragraph 19 label
-        title: "Veterans and their families",
-        // Doc: paragraph 19
-        body: "Offering tailored support for physical health and operational stress injuries.",
+        icon: "doctor",
+        // Doc: "People without primary care"
+        title: "People without primary care",
+        body: "A practical way to monitor selected health indicators and discuss an appropriate next step while waiting to be connected with a primary-care provider.",
       },
       {
-        icon: "doctor",
-        // Doc: paragraph 20 label
-        title: "Without a family doctor",
-        // Doc: paragraph 20
-        body: "Providing a reliable way to monitor your health while you wait for attachment to a primary care provider.",
+        icon: "veteran",
+        // Doc: "Veterans and their families"
+        title: "Veterans and their families",
+        body: "A familiar community setting with possible pathways to specialized veteran and hospital services when appropriate.",
       },
       {
         icon: "senior",
-        // Doc: paragraph 21 label
+        // Doc: "Seniors"
         title: "Seniors",
-        // Doc: paragraph 21
-        body: "Offering convenient, close-to-home monitoring for conditions like high blood pressure or diabetes.",
+        body: "Close-to-home access to guided screening, with human support available to help explain options and reduce confusion.",
       },
       {
         icon: "rural",
-        // Doc: paragraph 22 label
-        title: "Rural residents",
-        // Doc: paragraph 22
-        body: "Bringing preventative screening directly to communities where healthcare access is limited.",
+        // Doc: "Rural and small-town residents"
+        title: "Rural and small-town residents",
+        body: "A local entry point for people facing long travel, limited appointment availability or extended waits for care.",
       },
       {
         icon: "community",
-        // Doc: paragraph 23 label
-        title: "Indigenous peoples",
-        // Doc: paragraph 23
-        body: "Providing safe, stigma-free health monitoring, backed by staff trained in the Crystal Clear Code of Conduct.",
+        // Doc: "Indigenous people"
+        title: "Indigenous people",
+        body: "Culturally respectful, low-barrier access supported by trained staff, clear consent and an arm's-length option for exploring a health concern.",
+      },
+      {
+        icon: "people",
+        // Doc: "People who feel hesitant"
+        title: "People who feel hesitant",
+        body: "A private first step for anyone who feels scared, angry, embarrassed, uncertain or worried about others learning about a health concern.",
       },
       {
         icon: "wellness",
-        // Doc: paragraph 24 label
-        title: "The health-conscious",
-        // Doc: paragraph 24
-        body: "Anyone looking for a free, simple way to proactively track their physical and mental wellness.",
+        // Doc: "People monitoring their wellbeing"
+        title: "People monitoring their wellbeing",
+        body: "A simple way to repeat selected screenings, observe changes over time and decide whether a conversation with a healthcare professional may be useful.",
       },
     ],
+
+    // Doc: "INCLUSIVE POSITIONING" callout
+    inclusiveNote:
+      "OLH is not exclusively for Legion members, veterans, seniors or Indigenous people. It is designed to serve everyone in the community.",
 
     partners: {
       // Doc: paragraph 25
@@ -268,9 +307,11 @@ export const en = {
     },
 
     // CTA — removed invented subheadings; heading is a UI label
+    // Doc: App promotion (section 8)
     cta: {
-      heading: "Download the App", // UI label
-      subheading: null as null,
+      heading: "Your health. Your information. Your next step.",
+      subheading:
+        "Use the OLH app to complete optional assessments, pair with a participating kiosk, manage your permissions and stay connected to the OLH pathway.",
       iosButton: "Download for iOS",
       androidButton: "Download for Android",
     },
@@ -278,29 +319,36 @@ export const en = {
 
   locations: {
     hero: {
-      // UI labels — no Word doc source for locations page
-      heading: "Find a Location",
-      headingPrefix: "Find a",
-      headingAccent: "Location",
+      // Doc: Page headline
+      heading: "Find an OLH kiosk near you.",
+      headingPrefix: "Find an OLH kiosk",
+      headingAccent: "near you.",
+      // Doc: body + "No appointment is required..." line
       subheading:
-        "OLH health screening kiosks are available at the following Royal Canadian Legion branches and community locations across Ontario.",
+        "OLH kiosks are available at participating Royal Canadian Legion branches and community locations across Ontario. No appointment is required. Check the location details and confirm public opening hours before visiting.",
     },
     // UI label — approximate disclaimer for map pins
     mapNote:
       "Pin locations are approximate. Confirm opening hours with your local branch before visiting.",
     getDirections: "Get Directions",
     rcl: "Royal Canadian Legion",
+    // Doc: App promotion (section 8)
     cta: {
-      heading: "Download the App", // UI label
-      subheading: null as null,
+      heading: "Your health. Your information. Your next step.",
+      subheading:
+        "Use the OLH app to complete optional assessments, pair with a participating kiosk, manage your permissions and stay connected to the OLH pathway.",
       iosButton: "Download for iOS",
       androidButton: "Download for Android",
     },
   },
 
   footer: {
-    // [BRIEF] — tagline came from client build brief, not Word doc. Flagged for review.
-    tagline: "Ontario Legion Health — Care in Your Community",
+    // Doc: Clinical and crisis disclaimer (section 8)
+    // Exact wording from the doc — PENDING client confirmation before this goes live (see review list, item 4).
+    disclaimer:
+      "OLH screening tools do not provide a diagnosis and are not a substitute for medical care. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department. If you or someone you know is thinking about suicide, call or text 9-8-8 for support available 24 hours a day, seven days a week.",
+    // Doc: Footer
+    tagline: "Ontario Legion Health — A trusted place. A simple first step. A human path to care.",
     // Contact Us is intentionally absent — it opens the slide-out drawer,
     // handled via the onContactClick prop in Footer and SiteShell.
     links: [
@@ -309,8 +357,18 @@ export const en = {
       { label: "Who We Serve", href: "/who-we-serve" },
       { label: "Partners", href: "/who-we-serve#partners" },
       { label: "Locations", href: "/locations" },
+      { label: "Privacy", href: "/privacy" },
     ],
     copyright: "© 2025 Ontario Legion Health. All rights reserved.",
+  },
+
+  // Placeholder page — full content (section 6 of the doc) is on hold pending
+  // privacy/clinical counsel review. Do not publish real copy here without sign-off.
+  privacy: {
+    heading: "Privacy, Consent and Human Oversight",
+    headingPrefix: "Privacy, Consent",
+    headingAccent: "and Human Oversight",
+    comingSoon: "Text coming soon.",
   },
 };
 

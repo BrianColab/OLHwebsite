@@ -6,9 +6,10 @@ interface FooterProps {
   contactLabel: string;
   onContactClick: () => void;
   copyright: string;
+  disclaimer: string;
 }
 
-export function Footer({ tagline, links, contactLabel, onContactClick, copyright }: FooterProps) {
+export function Footer({ tagline, links, contactLabel, onContactClick, copyright, disclaimer }: FooterProps) {
   return (
     <footer className="bg-olh-text-primary text-white py-12 px-6 lg:px-8">
       <div className="max-w-container mx-auto">
@@ -50,7 +51,12 @@ export function Footer({ tagline, links, contactLabel, onContactClick, copyright
           </nav>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 text-sm text-white/40">
+        {/* PLACEHOLDER — exact wording pending client confirmation before launch. */}
+        <p className="mt-10 pt-6 border-t border-white/10 text-xs text-white/40 leading-relaxed max-w-3xl">
+          {disclaimer}
+        </p>
+
+        <div className="mt-6 text-sm text-white/40">
           {copyright}
         </div>
       </div>

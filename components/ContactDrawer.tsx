@@ -6,10 +6,19 @@ import { useLang } from "@/app/LangProvider";
 
 const LABELS = {
   en: {
-    heading: "Contact Us",
-    subheading: "We'd love to hear from you.",
+    // Doc: Contact panel
+    heading: "How can we help?",
+    subheading: "Ask about using OLH, hosting a kiosk, joining the service network or participating in the pilot.",
     closeAriaLabel: "Close contact drawer",
     intro: "Contact details to be added.",
+    // Doc: Contact reasons
+    reasonLabel: "I'm reaching out because",
+    reasonOptions: [
+      "I need help using OLH",
+      "I represent a Legion branch",
+      "I represent a service partner",
+      "Other",
+    ],
     nameLabel: "Full Name",
     namePlaceholder: "Your full name",
     emailLabel: "Email Address",
@@ -25,10 +34,18 @@ const LABELS = {
     successMessage: "Contact form endpoint to be added.",
   },
   fr: {
-    heading: "Nous joindre",
-    subheading: "Nous serions ravis de vous entendre.",
+    // [DRAFT FR]
+    heading: "Comment pouvons-nous vous aider?",
+    subheading: "Renseignez-vous sur l'utilisation d'OLH, l'accueil d'une borne, l'adhésion au réseau de services ou la participation au projet pilote.",
     closeAriaLabel: "Fermer le panneau de contact",
     intro: "Les coordonnées seront ajoutées sous peu.",
+    reasonLabel: "Je vous contacte parce que",
+    reasonOptions: [
+      "J'ai besoin d'aide pour utiliser OLH",
+      "Je représente une succursale de la Légion",
+      "Je représente un partenaire de services",
+      "Autre",
+    ],
     nameLabel: "Nom complet",
     namePlaceholder: "Votre nom complet",
     emailLabel: "Adresse courriel",
@@ -51,13 +68,14 @@ interface ContactDrawerProps {
 }
 
 type FormData = {
+  reason: string;
   name: string;
   email: string;
   organization: string;
   message: string;
 };
 
-const EMPTY_FORM: FormData = { name: "", email: "", organization: "", message: "" };
+const EMPTY_FORM: FormData = { reason: "", name: "", email: "", organization: "", message: "" };
 
 const inputClass =
   "w-full rounded-xl border border-[#E8E8E8] bg-[#FAFAFA] px-4 py-3 text-sm text-olh-text-primary placeholder:text-[#BDBDBD] transition-all focus:outline-none focus:bg-white focus:border-olh-red focus:ring-2 focus:ring-olh-red/15";
@@ -142,7 +160,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
     }
   }, [open]);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   }
@@ -244,6 +262,22 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
           ) : (
             // ── Contact form ───────────────────────────────────────────────
             <form onSubmit={handleSubmit} noValidate aria-label="Contact form" className="flex flex-col gap-4">
+
+              {/* Reason */}
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="contact-reason" className="text-xs font-semibold uppercase tracking-wider text-olh-text-secondary">
+                  {t.reasonLabel} <span className="text-olh-red" aria-hidden="true">*</span>
+                  <span className="sr-only">{t.required}</span>
+                </label>
+                <select id="contact-reason" name="reason" required
+                  value={form.reason} onChange={handleChange}
+                  className={inputClass}>
+                  <option value="" disabled>—</option>
+                  {t.reasonOptions.map((option) => (
+                    <option key={option} value={option}>{option}</option>
+                  ))}
+                </select>
+              </div>
 
               {/* Name */}
               <div className="flex flex-col gap-1.5">

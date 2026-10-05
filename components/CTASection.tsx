@@ -13,20 +13,21 @@ const CTA_IMAGES = [
 
 const CTA_LABELS = {
   en: {
-    eyebrow: "Available now · iOS & Android",
+    eyebrow: "Available for iOS and Android",
     appStorePre: "Download on the",
     appStore: "App Store",
     playPre: "Get it on",
     play: "Google Play",
-    trustNote: "Free · No health card required",
+    // Doc: "Free to download. No health card required to begin."
+    trustNote: "Free to download · No health card required to begin",
   },
   fr: {
-    eyebrow: "Disponible maintenant · iOS et Android",
+    eyebrow: "Disponible pour iOS et Android",
     appStorePre: "Télécharger dans l’",
     appStore: "App Store",
     playPre: "Disponible sur",
     play: "Google Play",
-    trustNote: "Gratuit · Aucune carte santé requise",
+    trustNote: "Gratuit à télécharger · Aucune carte santé requise pour commencer",
   },
 } as const;
 

@@ -69,6 +69,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         contactLabel={c.nav.contact}
         onContactClick={openDrawer}
         copyright={c.footer.copyright}
+        disclaimer={c.footer.disclaimer}
       />
 
       <ContactDrawer open={drawerOpen} onClose={closeDrawer} />
