@@ -61,16 +61,18 @@ export const fr: SiteContent = {
     ],
 
     bridging: {
-      // [DRAFT FR] — requires client review
-      heading: "Combler les lacunes en soins de santé",
-      headingPrefix: "Combler",
-      headingAccent: "les lacunes en soins de santé",
+      // [FR TODO] — structure updated to the new copy; French text pending translation
+      heading: "Les soins peuvent exister et rester difficiles d'accès.",
+      headingPrefix: "Les soins peuvent exister et rester",
+      headingAccent: "difficiles d'accès.",
       statLabel: "Ontariens actuellement sans médecin de famille", // [DRAFT FR]
+      statBody: "Plus de 2,5 millions d'Ontariens naviguent actuellement dans le système de santé sans médecin de famille.",
+      barriers: ["Accès", "Hésitation", "Confusion", "Confidentialité"],
       ctaLink: "Fonctionnement →",
       body1:
-        "Plus de 2,5 millions d'Ontariens naviguent actuellement dans le système de santé sans médecin de famille. Ontario Legion Health (OLH) a été conçu pour combler cette lacune. Nous offrons un service de dépistage préventif à faible seuil, axé sur les principaux facteurs de bien-être au quotidien : la santé cardiovasculaire et mentale.",
+        "La distance, les longues attentes, les préoccupations de confidentialité, l'incertitude et le manque de soins primaires peuvent empêcher les gens d'avoir une première conversation utile.",
       body2:
-        "Bien qu'OLH ne remplace pas un médecin de famille, il sert de plaque tournante sécuritaire et temporaire. Nous vous aidons à prendre en charge votre bien-être, à détecter les risques pour la santé tôt et à naviguer dans le système de soins de santé pendant que vous attendez d'être jumelé à un prestataire de soins primaires.",
+        "OLH creates an additional front door to health support. It does not replace family doctors, emergency departments or existing community services. It gives people a simple, private way to begin, understand their options and move toward an appropriate next step.",
     },
 
     // [DRAFT FR] — PLACEHOLDER, pending Legion history claim confirmation.
@@ -241,37 +243,45 @@ export const fr: SiteContent = {
     inclusiveNote:
       "OLH ne s'adresse pas exclusivement aux membres de la Légion, aux anciens combattants, aux aînés ou aux peuples autochtones. Le programme est conçu pour servir tout le monde dans la communauté.",
 
+    // [FR TODO] — structure updated to the new partner copy; French text pending translation
     partners: {
-      // [DRAFT FR]
-      heading: "Des partenariats fondés sur la confiance",
+      heading: "Navigation only matters if it ends in service.",
       subheading:
-        "Le programme pilote OLH est rendu possible grâce à une coalition de leaders communautaires, de la santé et de la technologie :",
+        "Our fulfillment network gives the OLH Nurse Navigator practical options when a client needs more than an explanation.",
+      intro:
+        "OLH is beginning with respected organizations that bring specialized expertise and established service pathways. As the pilot continues, we expect to add multiple new healthcare and community-service organizations based on the needs we observe.",
       list: [
         {
-          name: "The Royal Canadian Legion – Ontario Command",
-          description:
-            "Accueillir nos kiosques de dépistage dans leurs succursales à travers la province, à titre de partenaire communautaire de confiance.",
-          logo: "/assets/olh/partners/OLH Master Logo.png",
-        },
-        {
           name: "Sunnybrook Health Sciences Centre",
+          tagline: "Specialized hospital pathways for veterans and cardiovascular care.",
           description:
-            "Assurer la supervision clinique, l'expertise en recherche et la navigation spécialisée en soins pour les anciens combattants.",
+            "Sunnybrook brings nationally recognized clinical expertise and access pathways that may support eligible OLH clients through the Veterans Program and the Schulich Heart Program. The OLH Nurse Navigator can help an appropriate client understand the available pathway and what information or next steps may be required.",
           logo: "/assets/olh/partners/sunnybrook.svg",
         },
         {
-          name: "TryCycle Data Systems",
+          name: "CAMH",
+          tagline: "Specialized mental-health, smoking, memory and related service pathways.",
           description:
-            "Alimenter l'application mobile sécurisée et les outils de dépistage en santé mentale.",
-          logo: "/assets/olh/partners/trycycle-black-text.svg",
+            "CAMH expands the range of services that may be available to eligible OLH clients. Current pathways may include STOP smoking services, memory services, lung-cancer access and Indigenous services. The Nurse Navigator helps determine which pathway may fit the client's needs and supports a clearer handoff.",
+          logo: "/assets/olh/partners/camh.png",
         },
         {
-          name: "PharmaSmart",
+          name: "MoCA Cognition",
+          tagline: "Recognized cognitive-assessment expertise.",
           description:
-            "Fournir les kiosques biométriques validés cliniquement utilisés partout au pays.",
-          logo: "/assets/olh/partners/pharmasmart.svg",
+            "MoCA Cognition provides a pathway related to cognitive assessment and memory concerns. When appropriate, the OLH Nurse Navigator can help an eligible client understand the next step and prepare for a more informed connection.",
+          logo: "/assets/olh/partners/mocacognition.png",
         },
       ],
+      growTitle: "A network designed to grow",
+      growTagline: "These partners are the beginning—not the limit.",
+      growBody1:
+        "The pilot will help OLH learn which services communities need most. We expect to add new fulfillment partners over time, expanding the range of possible connections available to clients and giving Nurse Navigators more appropriate options.",
+      growBody2:
+        "More partners can mean more service pathways and more opportunities for useful referrals. It does not mean every screening results in a referral. The right measure is a successful, consented connection to an appropriate service—not referral volume alone.",
+      ctaText:
+        "Interested in becoming an OLH care or service partner? Let's discuss how your organization could strengthen the community pathway.",
+      ctaButton: "Become a Service Partner",
     },
 
     // [DRAFT FR]
@@ -326,11 +336,28 @@ export const fr: SiteContent = {
     copyright: "© 2025 Ontario Legion Health. Tous droits réservés.",
   },
 
-  // [DRAFT FR] — Placeholder page; full content pending privacy/clinical review.
+  // [FR TODO] — structure updated to the new privacy copy; French text pending translation
   privacy: {
-    heading: "Confidentialité, consentement et supervision humaine",
-    headingPrefix: "Confidentialité, consentement",
-    headingAccent: "et supervision humaine",
-    comingSoon: "Texte à venir.",
+    headingPrefix: "Your information",
+    headingAccent: "moves only with your permission.",
+    subheading:
+      "OLH is designed to keep control with the client while giving the Nurse Navigator enough authorized information to prepare for a useful conversation.",
+    controlTitle: "What you control",
+    controlItems: [
+      "whether to complete an assessment;",
+      "which information you authorize OLH to share;",
+      "whether an OLH Nurse Navigator may contact you; and",
+      "whether information may be used to support a connection with a service partner.",
+    ],
+    useTitle: "How your authorized information is used",
+    useBody:
+      "When you provide the required consent, selected app assessments and kiosk screening information may be sent to the OLH Nurse Navigator. AI-assisted review may help organize the information and identify combinations that merit attention. The Nurse Navigator reviews the source information and uses human judgment during the call.",
+    notTitle: "What OLH does not do",
+    notItems: [
+      "The kiosk and app do not provide a medical diagnosis.",
+      "AI does not make the final decision about your care.",
+      "Your information is not sent to a service partner without the permissions required for that connection.",
+      "OLH does not replace emergency services, a family doctor or other members of your healthcare team.",
+    ],
   },
 };

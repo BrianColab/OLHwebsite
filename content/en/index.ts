@@ -66,40 +66,40 @@ export const en = {
       },
     ],
 
+    // Doc: "Problem" section — approved by client
     bridging: {
-      // Doc: paragraph 3 heading
-      heading: "Bridging the Gap in Healthcare",
-      headingPrefix: "Bridging the",
-      headingAccent: "Gap in Healthcare",
+      heading: "Care can exist and still be difficult to reach.",
+      headingPrefix: "Care can exist and still be",
+      headingAccent: "difficult to reach.",
       statLabel: "Ontarians currently without a primary care provider",
+      // Doc: stat sentence (2.5M figure kept as-is per client)
+      statBody:
+        "Over 2.5 million Ontarians are currently navigating the healthcare system without a primary care provider.",
       ctaLink: "How It Works →",
-      // Doc: paragraph 4
       body1:
-        "Over 2.5 million Ontarians are currently navigating the healthcare system without a primary care provider. Ontario Legion Health (OLH) was designed to bridge this gap. We provide a low-barrier, preventative screening service focused on the leading contributors to everyday wellness: cardiovascular and mental health.",
-      // Doc: paragraph 5
+        "Distance, long waits, privacy concerns, uncertainty and lack of primary care can stop people before the first useful conversation.",
       body2:
-        "While OLH does not replace a family doctor, it serves as a secure, temporary hub. We help you take charge of your wellbeing, interpret health risks early, and navigate the healthcare system while you wait to be connected with a primary care provider.",
+        "OLH creates an additional front door to health support. It does not replace family doctors, emergency departments or existing community services. It gives people a simple, private way to begin, understand their options and move toward an appropriate next step.",
+      // Doc: barrier labels
+      barriers: ["Access", "Hesitation", "Confusion", "Privacy"],
     },
 
-    // Doc: "Why the Legion matters" (trust section)
-    // PLACEHOLDER — pending client confirmation of the Legion history claim (see review list, item 2).
-    // The doc's "For more than a century..." line is deliberately omitted until approved.
+    // Doc: "Why the Legion matters" (trust section) — approved by client
     trust: {
       heading: "Why the Legion matters",
       body1:
-        "Royal Canadian Legion branches are familiar gathering places in communities across Ontario. They are recognizable, accessible and often less intimidating than a clinical setting.",
+        "For more than a century, Royal Canadian Legion branches have been familiar gathering places in communities across Ontario. They are recognizable, accessible and often less intimidating than a clinical setting.",
       body2:
         "By placing the OLH kiosk inside participating branches, residents can begin without scheduling an appointment or entering a waiting room. The branch supplies trust before the technology asks for action.",
     },
 
-    // Doc: Partner preview section
-    // PLACEHOLDER — partner names withheld pending client confirmation of the roster (see review list, item 1).
+    // Doc: Partner preview section — approved by client
     partnerPreview: {
       heading: "Screening is only useful when it leads somewhere.",
       body1:
         "OLH is building a fulfillment network that helps turn authorized health information into practical next steps.",
       body2:
-        "[Partner names pending confirmation — see partner roster review]. Together, they provide pathways into specialized services spanning veterans' health, cardiovascular care, smoking cessation, mental health, memory and cognitive assessment.",
+        "Our initial partners include Sunnybrook Health Sciences Centre, CAMH and MoCA Cognition. Together, they provide pathways into specialized services spanning veterans' health, cardiovascular care, smoking cessation, mental health, memory and cognitive assessment.",
       body3:
         "These organizations are the beginning. As the pilot reveals what communities need most, OLH expects to add new care and service partners. A larger network creates more possible pathways and gives Nurse Navigators more appropriate options when helping clients move forward.",
       link: "Meet Our Service Partners →",
@@ -264,46 +264,45 @@ export const en = {
     inclusiveNote:
       "OLH is not exclusively for Legion members, veterans, seniors or Indigenous people. It is designed to serve everyone in the community.",
 
+    // Doc: section 5 — Care and Service Partners
     partners: {
-      // Doc: paragraph 25
-      heading: "Built on Trusted Partnerships",
-      // Doc: paragraph 26
+      heading: "Navigation only matters if it ends in service.",
       subheading:
-        "The OLH pilot program is made possible by a coalition of community, healthcare, and technology leaders:",
+        "Our fulfillment network gives the OLH Nurse Navigator practical options when a client needs more than an explanation.",
+      intro:
+        "OLH is beginning with respected organizations that bring specialized expertise and established service pathways. As the pilot continues, we expect to add multiple new healthcare and community-service organizations based on the needs we observe.",
       list: [
         {
-          // Doc: paragraph 27 label
-          name: "The Royal Canadian Legion – Ontario Command",
-          // Doc: paragraph 27
-          description:
-            "Serving as the welcoming, community-based home for our screening kiosks across the province.",
-          logo: "/assets/olh/partners/OLH Master Logo.png",
-        },
-        {
-          // Doc: paragraph 28 label
           name: "Sunnybrook Health Sciences Centre",
-          // Doc: paragraph 28
+          tagline: "Specialized hospital pathways for veterans and cardiovascular care.",
           description:
-            "Providing clinical oversight, research expertise, and specialized care navigation for Veterans.",
+            "Sunnybrook brings nationally recognized clinical expertise and access pathways that may support eligible OLH clients through the Veterans Program and the Schulich Heart Program. The OLH Nurse Navigator can help an appropriate client understand the available pathway and what information or next steps may be required.",
           logo: "/assets/olh/partners/sunnybrook.svg",
         },
         {
-          // Doc: paragraph 29 label
-          name: "TryCycle Data Systems",
-          // Doc: paragraph 29
+          name: "CAMH",
+          tagline: "Specialized mental-health, smoking, memory and related service pathways.",
           description:
-            "Powering the secure mobile application and mental health screening tools.",
-          logo: "/assets/olh/partners/trycycle-black-text.svg",
+            "CAMH expands the range of services that may be available to eligible OLH clients. Current pathways may include STOP smoking services, memory services, lung-cancer access and Indigenous services. The Nurse Navigator helps determine which pathway may fit the client's needs and supports a clearer handoff.",
+          logo: "/assets/olh/partners/camh.png",
         },
         {
-          // Doc: paragraph 30 label
-          name: "PharmaSmart",
-          // Doc: paragraph 30
+          name: "MoCA Cognition",
+          tagline: "Recognized cognitive-assessment expertise.",
           description:
-            "Supplying the clinically validated biometric kiosks used across the country.",
-          logo: "/assets/olh/partners/pharmasmart.svg",
+            "MoCA Cognition provides a pathway related to cognitive assessment and memory concerns. When appropriate, the OLH Nurse Navigator can help an eligible client understand the next step and prepare for a more informed connection.",
+          logo: "/assets/olh/partners/mocacognition.png",
         },
       ],
+      growTitle: "A network designed to grow",
+      growTagline: "These partners are the beginning—not the limit.",
+      growBody1:
+        "The pilot will help OLH learn which services communities need most. We expect to add new fulfillment partners over time, expanding the range of possible connections available to clients and giving Nurse Navigators more appropriate options.",
+      growBody2:
+        "More partners can mean more service pathways and more opportunities for useful referrals. It does not mean every screening results in a referral. The right measure is a successful, consented connection to an appropriate service—not referral volume alone.",
+      ctaText:
+        "Interested in becoming an OLH care or service partner? Let's discuss how your organization could strengthen the community pathway.",
+      ctaButton: "Become a Service Partner",
     },
 
     // CTA — removed invented subheadings; heading is a UI label
@@ -362,13 +361,32 @@ export const en = {
     copyright: "© 2025 Ontario Legion Health. All rights reserved.",
   },
 
-  // Placeholder page — full content (section 6 of the doc) is on hold pending
-  // privacy/clinical counsel review. Do not publish real copy here without sign-off.
+  // Doc: section 6 — Privacy, Consent and Human Oversight.
+  // Staging only. The doc's "required before publication" counsel review
+  // (consent flow, data controller, hosting, retention, withdrawal, AI role,
+  // audit access, breach response) is still outstanding and must be completed before go-live.
   privacy: {
-    heading: "Privacy, Consent and Human Oversight",
-    headingPrefix: "Privacy, Consent",
-    headingAccent: "and Human Oversight",
-    comingSoon: "Text coming soon.",
+    headingPrefix: "Your information",
+    headingAccent: "moves only with your permission.",
+    subheading:
+      "OLH is designed to keep control with the client while giving the Nurse Navigator enough authorized information to prepare for a useful conversation.",
+    controlTitle: "What you control",
+    controlItems: [
+      "whether to complete an assessment;",
+      "which information you authorize OLH to share;",
+      "whether an OLH Nurse Navigator may contact you; and",
+      "whether information may be used to support a connection with a service partner.",
+    ],
+    useTitle: "How your authorized information is used",
+    useBody:
+      "When you provide the required consent, selected app assessments and kiosk screening information may be sent to the OLH Nurse Navigator. AI-assisted review may help organize the information and identify combinations that merit attention. The Nurse Navigator reviews the source information and uses human judgment during the call.",
+    notTitle: "What OLH does not do",
+    notItems: [
+      "The kiosk and app do not provide a medical diagnosis.",
+      "AI does not make the final decision about your care.",
+      "Your information is not sent to a service partner without the permissions required for that connection.",
+      "OLH does not replace emergency services, a family doctor or other members of your healthcare team.",
+    ],
   },
 };
 

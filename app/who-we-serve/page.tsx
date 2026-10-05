@@ -4,6 +4,7 @@ import { useLang } from "../LangProvider";
 import { content } from "@/content";
 import { AudienceCard } from "@/components/AudienceCard";
 import { PartnerCard } from "@/components/PartnerCard";
+import { Button } from "@/components/Button";
 import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -57,20 +58,38 @@ export default function WhoWeServePage() {
             heading={c.partners.heading}
             subheading={c.partners.subheading}
             align="center"
-            className="mb-12"
+            className="mb-6"
           />
+          <p className="max-w-3xl mx-auto text-center text-base text-olh-text-secondary leading-relaxed mb-12">
+            {c.partners.intro}
+          </p>
           </FadeIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {c.partners.list.map((partner, i) => (
-              <FadeIn key={partner.name} delay={i * 80}>
+              <FadeIn key={partner.name} delay={i * 80} className="h-full">
               <PartnerCard
                 name={partner.name}
+                tagline={partner.tagline}
                 description={partner.description}
                 logo={partner.logo}
               />
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay={160}>
+          <div className="mt-16 max-w-3xl mx-auto text-center flex flex-col items-center gap-4">
+            <h3 className="text-2xl font-black text-olh-text-primary tracking-tight">{c.partners.growTitle}</h3>
+            <p className="text-base font-semibold text-olh-text-primary">{c.partners.growTagline}</p>
+            <p className="text-base text-olh-text-secondary leading-relaxed">{c.partners.growBody1}</p>
+            <p className="text-base text-olh-text-secondary leading-relaxed">{c.partners.growBody2}</p>
+            <p className="mt-2 text-base text-olh-text-secondary leading-relaxed">{c.partners.ctaText}</p>
+            {/* TODO: replace href="#" with the partner contact address once confirmed */}
+            <Button href="#" variant="primary" className="text-base px-7 py-4">
+              {c.partners.ctaButton}
+            </Button>
+          </div>
+          </FadeIn>
         </div>
       </section>
 

@@ -1,10 +1,11 @@
 interface PartnerCardProps {
   name: string;
+  tagline?: string;
   description: string;
   logo?: string | null;
 }
 
-export function PartnerCard({ name, description, logo }: PartnerCardProps) {
+export function PartnerCard({ name, tagline, description, logo }: PartnerCardProps) {
   return (
     <div className="bg-white border border-olh-border rounded-xl p-6 flex flex-col gap-5">
       {/* Logo area — shows real logo when supplied, otherwise a clean text treatment */}
@@ -26,6 +27,9 @@ export function PartnerCard({ name, description, logo }: PartnerCardProps) {
       {/* Divider */}
       <div className="border-t border-olh-border" aria-hidden="true" />
 
+      {tagline && (
+        <p className="text-sm font-semibold text-olh-text-primary leading-relaxed">{tagline}</p>
+      )}
       <p className="text-sm text-olh-text-secondary leading-relaxed">{description}</p>
     </div>
   );

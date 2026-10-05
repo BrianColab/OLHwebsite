@@ -142,6 +142,16 @@ export default function HomePage() {
               <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed">
                 {c.bridging.body2}
               </p>
+              <div className="flex flex-wrap gap-2">
+                {c.bridging.barriers.map((barrier) => (
+                  <span
+                    key={barrier}
+                    className="text-xs font-semibold uppercase tracking-widest text-olh-red border border-olh-red/30 rounded-full px-3 py-1.5"
+                  >
+                    {barrier}
+                  </span>
+                ))}
+              </div>
               <div className="mt-2">
                 <Button href="/how-it-works" variant="ghost" className="pl-0 text-base font-semibold">
                   {c.bridging.ctaLink}
@@ -169,7 +179,7 @@ export default function HomePage() {
             </div>
             <div className="w-px self-stretch bg-olh-border hidden sm:block" aria-hidden="true" />
             <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed max-w-xl">
-              {c.bridging.body1}
+              {c.bridging.statBody}
             </p>
           </div>
           </FadeIn>
