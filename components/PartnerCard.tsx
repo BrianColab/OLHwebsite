@@ -3,9 +3,10 @@ interface PartnerCardProps {
   tagline?: string;
   description: string;
   logo?: string | null;
+  logoClassName?: string;
 }
 
-export function PartnerCard({ name, tagline, description, logo }: PartnerCardProps) {
+export function PartnerCard({ name, tagline, description, logo, logoClassName = "max-h-14" }: PartnerCardProps) {
   return (
     <div className="bg-white border border-olh-border rounded-xl p-6 flex flex-col gap-5">
       {/* Logo area — shows real logo when supplied, otherwise a clean text treatment */}
@@ -15,7 +16,7 @@ export function PartnerCard({ name, tagline, description, logo }: PartnerCardPro
           <img
             src={logo}
             alt={`${name} logo`}
-            className="max-h-14 max-w-full w-auto object-contain"
+            className={`${logoClassName} max-w-full w-auto object-contain`}
           />
         ) : (
           <span className="text-xs font-semibold text-olh-text-secondary uppercase tracking-wider leading-snug">

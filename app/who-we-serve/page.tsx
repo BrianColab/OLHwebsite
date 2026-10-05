@@ -72,6 +72,7 @@ export default function WhoWeServePage() {
                 tagline={partner.tagline}
                 description={partner.description}
                 logo={partner.logo}
+                logoClassName={partner.logoClassName}
               />
               </FadeIn>
             ))}

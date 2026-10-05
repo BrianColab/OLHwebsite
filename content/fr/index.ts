@@ -271,6 +271,7 @@ export const fr: SiteContent = {
           description:
             "MoCA Cognition provides a pathway related to cognitive assessment and memory concerns. When appropriate, the OLH Nurse Navigator can help an eligible client understand the next step and prepare for a more informed connection.",
           logo: "/assets/olh/partners/mocacognition.png",
+          logoClassName: "max-h-24",
         },
       ],
       growTitle: "A network designed to grow",
