@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
 import { LOCATIONS } from "@/data/locations";
-import { CARTO_BASEMAP_URL } from "@/data/mapTiles";
+import { MAP_TILE_URL } from "@/data/mapTiles";
 
 const PIN_ICON = L.divIcon({
   html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="28" height="42">
@@ -32,7 +32,7 @@ export function LocationsPreviewMap() {
       attributionControl={false}
     >
       <TileLayer
-        url={CARTO_BASEMAP_URL}
+        url={MAP_TILE_URL}
         subdomains="abcd"
         maxZoom={19}
       />

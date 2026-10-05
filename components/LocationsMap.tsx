@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
 import { LOCATIONS } from "@/data/locations";
-import { CARTO_BASEMAP_URL } from "@/data/mapTiles";
+import { MAP_TILE_URL, MAP_TILE_ATTRIBUTION } from "@/data/mapTiles";
 import type { OLHLocation } from "@/data/locations";
 import { useLang } from "@/app/LangProvider";
 
@@ -42,8 +42,8 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
       scrollWheelZoom={false}
     >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        url={CARTO_BASEMAP_URL}
+        attribution={MAP_TILE_ATTRIBUTION}
+        url={MAP_TILE_URL}
         subdomains="abcd"
         maxZoom={19}
       />
