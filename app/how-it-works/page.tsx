@@ -10,13 +10,13 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { FadeIn } from "@/components/FadeIn";
 
 const STEP1_IMAGES = [
-  "/assets/olh/hero/image1a.png",
-  "/assets/olh/hero/image1b.png",
-  "/assets/olh/hero/image1c.png",
-  "/assets/olh/hero/image1d.png",
-  "/assets/olh/hero/image1e.png",
-  "/assets/olh/hero/image1f.png",
-  "/assets/olh/hero/image1g.png",
+  "/assets/olh/hero/image1a.png?v=0c4184f4d707",
+  "/assets/olh/hero/image1b.png?v=1668c60f002a",
+  "/assets/olh/hero/image1c.png?v=35675027043c",
+  "/assets/olh/hero/image1d.png?v=0e9ac24dff34",
+  "/assets/olh/hero/image1e.png?v=3001bf826f2f",
+  "/assets/olh/hero/image1f.png?v=9535f3533baa",
+  "/assets/olh/hero/image1g.png?v=c0d672586357",
 ];
 
 const STEP2_IMAGES = [
@@ -27,10 +27,10 @@ const STEP2_IMAGES = [
 ];
 
 const STEP3_IMAGES = [
-  "/assets/olh/hero/image3.png",
-  "/assets/olh/hero/image3x.png",
-  "/assets/olh/hero/image3y.png",
-  "/assets/olh/hero/image3z.png",
+  "/assets/olh/hero/image3.png?v=ac383c19f9d7",
+  "/assets/olh/hero/image3x.png?v=12ab64096ca5",
+  "/assets/olh/hero/image3y.png?v=ae20ba0e509e",
+  "/assets/olh/hero/image3z.png?v=d312898764cc",
 ];
 
 export default function HowItWorksPage() {
