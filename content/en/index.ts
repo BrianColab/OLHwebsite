@@ -155,14 +155,14 @@ export const en = {
         // Doc: "Receive a call from the Nurse Navigator"
         title: "Receive a call from the Nurse Navigator",
         body: "The kiosk visit and the call happen at different times. The Nurse Navigator reviews the information you authorized, calls you privately and helps make sense of the available options.",
-        imageAlt: "Person taking a private phone call from an OLH Nurse Navigator",
+        imageAlt: "Woman talking on a mobile phone indoors",
       },
       {
         number: "05",
         // Doc: "Connect with an appropriate service"
         title: "Connect with an appropriate service",
         body: "When further support is appropriate, the Nurse Navigator can help connect you with an OLH care or service partner based on your needs, eligibility and the services available.",
-        imageAlt: "Person connecting with a healthcare service partner",
+        imageAlt: "Older adult discussing care with a healthcare professional",
       },
     ],
 

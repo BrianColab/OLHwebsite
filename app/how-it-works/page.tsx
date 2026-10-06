@@ -62,7 +62,7 @@ export default function HowItWorksPage() {
               title={step.title}
               body={step.body}
               imageAlt={step.imageAlt}
-              imageSrc={i === 0 ? step1Image : i === 1 ? step2Image : i === 2 ? step3Image : undefined}
+              imageSrc={[step1Image, step2Image, step3Image, "/assets/olh/hero/image4.jpg", "/assets/olh/hero/image5.jpg"][i]}
               reversed={i % 2 === 1}
             />
             </FadeIn>

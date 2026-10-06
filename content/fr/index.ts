@@ -145,14 +145,14 @@ export const fr: SiteContent = {
         // [DRAFT FR]
         title: "Recevez un appel de l'infirmier-navigateur",
         body: "La visite à la borne et l'appel ont lieu à des moments différents. L'infirmier-navigateur examine les renseignements que vous avez autorisés, vous appelle en toute confidentialité et vous aide à comprendre les options possibles.",
-        imageAlt: "Personne recevant un appel privé d'un infirmier-navigateur OLH",
+        imageAlt: "Femme parlant au téléphone mobile à l'intérieur",
       },
       {
         number: "05",
         // [DRAFT FR]
         title: "Connectez-vous avec un service approprié",
         body: "Lorsqu'un soutien supplémentaire est approprié, l'infirmier-navigateur peut vous aider à entrer en contact avec un partenaire de soins ou de services OLH selon vos besoins, votre admissibilité et les services offerts.",
-        imageAlt: "Personne mise en contact avec un partenaire de services de santé",
+        imageAlt: "Personne âgée discutant de ses soins avec une professionnelle de la santé",
       },
     ],
 
