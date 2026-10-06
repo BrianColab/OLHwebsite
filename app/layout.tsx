@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Free, accessible screening for your heart and mental health, located in the trusted spaces of your local Royal Canadian Legion.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/assets/olh/olh-logo.png",
   },
 };
 

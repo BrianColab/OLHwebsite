@@ -53,7 +53,7 @@ export function Header({ lang, onLangChange, onContactClick, navLabels }: Header
             className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red rounded"
           >
             <Image
-              src="/assets/olh/partners/OLH Master Logo.png"
+              src="/assets/olh/olh-logo.png"
               alt="Ontario Legion Health"
               width={180}
               height={52}
