@@ -2,7 +2,7 @@
 
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, Tooltip, ZoomControl } from "react-leaflet";
 import { LOCATIONS, localizeLocation } from "@/data/locations";
 import { MAP_TILE_URL, MAP_TILE_ATTRIBUTION } from "@/data/mapTiles";
 import type { OLHLocation } from "@/data/locations";
@@ -40,7 +40,9 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
       boundsOptions={{ padding: [40, 40] }}
       className="h-full w-full"
       scrollWheelZoom={false}
+      zoomControl={false}
     >
+      <ZoomControl key={lang} position="topleft" zoomInTitle={lang === "fr" ? "Zoom avant" : "Zoom in"} zoomOutTitle={lang === "fr" ? "Zoom arrière" : "Zoom out"} />
       <TileLayer
         attribution={MAP_TILE_ATTRIBUTION}
         url={MAP_TILE_URL}
@@ -50,7 +52,7 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
       {LOCATIONS.map((location) => {
         const loc = localizeLocation(location, lang);
         return (
-        <Marker key={loc.id} position={[loc.lat, loc.lng]} icon={loc.id.startsWith("downtown-toronto-") ? L.divIcon({ ...PIN_ICON.options, iconAnchor: [loc.id.endsWith("1") ? 30 : -2, 42] }) : PIN_ICON}>
+        <Marker key={loc.id} title={loc.community} position={[loc.lat, loc.lng]} icon={loc.id.startsWith("downtown-toronto-") ? L.divIcon({ ...PIN_ICON.options, iconAnchor: [loc.id.endsWith("1") ? 30 : -2, 42] }) : PIN_ICON}>
           <Tooltip direction="top" offset={[0, -46]} opacity={1}>
             <div className="olh-map-tooltip">
               <p className="font-bold text-[12px] leading-snug text-gray-900">{loc.community}</p>
