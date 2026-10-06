@@ -5,10 +5,10 @@ import Image from "next/image";
 import { useLang } from "@/app/LangProvider";
 
 const CTA_IMAGES = [
-  "/assets/olh/hero/image2a.png",
-  "/assets/olh/hero/image2b.png",
-  "/assets/olh/hero/image2c.png",
-  "/assets/olh/hero/image2d.png",
+  "/assets/olh/hero/image2a.png?v=be8074cd7c10",
+  "/assets/olh/hero/image2b.png?v=fc24c5d6f8b0",
+  "/assets/olh/hero/image2c.png?v=7c2d411786b4",
+  "/assets/olh/hero/image2d.png?v=243cadca2a08",
 ];
 
 const CTA_LABELS = {
