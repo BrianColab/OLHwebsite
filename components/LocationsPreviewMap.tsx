@@ -41,7 +41,7 @@ export function LocationsPreviewMap() {
       {LOCATIONS.map((location) => {
         const loc = localizeLocation(location, lang);
         return (
-        <Marker key={`${loc.id}-${lang}`} title={loc.community} position={[loc.lat, loc.lng]} icon={loc.id.startsWith("downtown-toronto-") ? L.divIcon({ ...PIN_ICON.options, iconAnchor: [loc.id.endsWith("1") ? 30 : -2, 42] }) : PIN_ICON}>
+        <Marker key={`${loc.id}-${lang}`} title={loc.community} position={[loc.lat, loc.lng]} icon={PIN_ICON}>
           <Tooltip direction="top" offset={[0, -46]} opacity={1}>
             <span className="text-[12px] font-bold text-gray-900">{loc.community}</span>
             {loc.detailsPending && <p className="text-[11px] text-gray-500">{loc.address}</p>}

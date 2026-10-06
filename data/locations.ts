@@ -65,11 +65,11 @@ export const LOCATIONS: OLHLocation[] = [
     lng: -77.9789,
     detailsPending: true,
   },
-  // Both Toronto entries use the same approximate downtown position until
-  // venue addresses are supplied. Maps offset their icons to keep both visible.
-  ...([1, 2] as const).map((number): OLHLocation => ({
-    id: `downtown-toronto-${number}`,
-    community: `Downtown Toronto (${number})`,
+  // The remaining Toronto entry uses an approximate downtown position until
+  // its venue address is supplied.
+  {
+    id: "downtown-toronto-2",
+    community: "Downtown Toronto (2)",
     branch: "Venue details to be confirmed",
     branchNumber: null,
     address: "Downtown Toronto, ON — approximate community location",
@@ -77,7 +77,7 @@ export const LOCATIONS: OLHLocation[] = [
     lat: 43.6532,
     lng: -79.3832,
     detailsPending: true,
-  })),
+  },
   {
     id: "beaverton",
     community: "Beaverton",
@@ -111,16 +111,6 @@ export const LOCATIONS: OLHLocation[] = [
     lng: -78.5469,
   },
   {
-    id: "deseronto",
-    community: "Deseronto",
-    branch: "Royal Canadian Legion Branch 280",
-    branchNumber: 280,
-    address: "340 Main St, Deseronto, ON K0K 1X0",
-    isRCL: true,
-    lat: 44.1974,
-    lng: -77.0517,
-  },
-  {
     id: "petawawa",
     community: "Petawawa",
     branch: "Royal Canadian Legion Branch 517",
@@ -129,35 +119,5 @@ export const LOCATIONS: OLHLocation[] = [
     isRCL: true,
     lat: 45.8957,
     lng: -77.2794,
-  },
-  {
-    id: "manotick",
-    community: "Manotick",
-    branch: "Royal Canadian Legion Branch 314",
-    branchNumber: 314,
-    address: "5550 Ann St, Manotick, ON K4M 1A3",
-    isRCL: true,
-    lat: 45.2218,
-    lng: -75.6863,
-  },
-  {
-    id: "woodbridge",
-    community: "Woodbridge",
-    branch: "Royal Canadian Legion Branch 414",
-    branchNumber: 414,
-    address: "60 Legion Court Road, Woodbridge, ON L4L 5T7",
-    isRCL: true,
-    lat: 43.7889,
-    lng: -79.5927,
-  },
-  {
-    id: "north-york",
-    community: "North York",
-    branch: "Finchurst Veterans Homes",
-    branchNumber: null,
-    address: "4715 Bathurst St, North York, ON",
-    isRCL: false,
-    lat: 43.7806,
-    lng: -79.4419,
   },
 ];
