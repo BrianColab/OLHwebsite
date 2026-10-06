@@ -61,7 +61,7 @@ export const fr: SiteContent = {
     ],
 
     bridging: {
-      // [FR TODO] — structure updated to the new copy; French text pending translation
+      // French translation of the retained English copy.
       heading: "Les soins peuvent exister et rester difficiles d'accès.",
       headingPrefix: "Les soins peuvent exister et rester",
       headingAccent: "difficiles d'accès.",
@@ -72,7 +72,7 @@ export const fr: SiteContent = {
       body1:
         "La distance, les longues attentes, les préoccupations de confidentialité, l'incertitude et le manque de soins primaires peuvent empêcher les gens d'avoir une première conversation utile.",
       body2:
-        "OLH creates an additional front door to health support. It does not replace family doctors, emergency departments or existing community services. It gives people a simple, private way to begin, understand their options and move toward an appropriate next step.",
+        "OLH offre un point d’accès supplémentaire au soutien en santé. Le programme ne remplace pas les médecins de famille, les services d’urgence ni les services communautaires existants. Il donne aux gens un moyen simple et confidentiel de commencer, de comprendre leurs options et de passer à une prochaine étape appropriée.",
     },
 
     // [DRAFT FR] — PLACEHOLDER, pending Legion history claim confirmation.
@@ -243,46 +243,46 @@ export const fr: SiteContent = {
     inclusiveNote:
       "OLH ne s'adresse pas exclusivement aux membres de la Légion, aux anciens combattants, aux aînés ou aux peuples autochtones. Le programme est conçu pour servir tout le monde dans la communauté.",
 
-    // [FR TODO] — structure updated to the new partner copy; French text pending translation
+    // French translation of the retained partner descriptions; scope review remains pending.
     partners: {
-      heading: "Navigation only matters if it ends in service.",
+      heading: "L’accompagnement n’a de sens que s’il mène à un service.",
       subheading:
-        "Our fulfillment network gives the OLH Nurse Navigator practical options when a client needs more than an explanation.",
+        "Notre réseau de services donne à l’infirmier-navigateur OLH des options concrètes lorsqu’une personne a besoin de plus qu’une explication.",
       intro:
-        "OLH is beginning with respected organizations that bring specialized expertise and established service pathways. As the pilot continues, we expect to add multiple new healthcare and community-service organizations based on the needs we observe.",
+        "OLH commence avec des organisations reconnues qui apportent une expertise spécialisée et des parcours de services établis. Au fil du projet pilote, nous prévoyons accueillir de nouvelles organisations de soins de santé et de services communautaires selon les besoins observés.",
       list: [
         {
           name: "Sunnybrook Health Sciences Centre",
-          tagline: "Specialized hospital pathways for veterans and cardiovascular care.",
+          tagline: "Parcours hospitaliers spécialisés pour les anciens combattants et les soins cardiovasculaires.",
           description:
-            "Sunnybrook brings nationally recognized clinical expertise and access pathways that may support eligible OLH clients through the Veterans Program and the Schulich Heart Program. The OLH Nurse Navigator can help an appropriate client understand the available pathway and what information or next steps may be required.",
+            "Sunnybrook apporte une expertise clinique reconnue à l’échelle nationale et des parcours d’accès pouvant soutenir les personnes admissibles qui utilisent OLH, notamment par son programme pour les anciens combattants et son programme de cardiologie Schulich. L’infirmier-navigateur OLH peut aider une personne, lorsque cela convient à sa situation, à comprendre le parcours offert ainsi que les renseignements ou les prochaines étapes nécessaires.",
           logo: "/assets/olh/partners/sunnybrook.svg",
         },
         {
           name: "CAMH",
-          tagline: "Specialized mental-health, smoking, memory and related service pathways.",
+          tagline: "Parcours spécialisés en santé mentale, en abandon du tabac, en mémoire et en services connexes.",
           description:
-            "CAMH expands the range of services that may be available to eligible OLH clients. Current pathways may include STOP smoking services, memory services, lung-cancer access and Indigenous services. The Nurse Navigator helps determine which pathway may fit the client's needs and supports a clearer handoff.",
+            "CAMH élargit la gamme de services pouvant être offerts aux personnes admissibles qui utilisent OLH. Les parcours actuels peuvent comprendre les services d’abandon du tabac STOP, les services liés à la mémoire, l’accès aux services liés au cancer du poumon et les services destinés aux peuples autochtones. L’infirmier-navigateur aide à déterminer le parcours qui pourrait répondre aux besoins de la personne et facilite la transition vers le service.",
           logo: "/assets/olh/partners/camh.png",
         },
         {
           name: "MoCA Cognition",
-          tagline: "Recognized cognitive-assessment expertise.",
+          tagline: "Une expertise reconnue en évaluation cognitive.",
           description:
-            "MoCA Cognition provides a pathway related to cognitive assessment and memory concerns. When appropriate, the OLH Nurse Navigator can help an eligible client understand the next step and prepare for a more informed connection.",
+            "MoCA Cognition offre un parcours lié à l’évaluation cognitive et aux préoccupations concernant la mémoire. Lorsque cela convient à la situation, l’infirmier-navigateur OLH peut aider une personne admissible à comprendre la prochaine étape et à préparer une mise en relation mieux éclairée.",
           logo: "/assets/olh/partners/mocacognition.png",
           logoClassName: "max-h-24",
         },
       ],
-      growTitle: "A network designed to grow",
-      growTagline: "These partners are the beginning—not the limit.",
+      growTitle: "Un réseau appelé à grandir",
+      growTagline: "Ces partenaires constituent un point de départ, sans limiter les possibilités.",
       growBody1:
-        "The pilot will help OLH learn which services communities need most. We expect to add new fulfillment partners over time, expanding the range of possible connections available to clients and giving Nurse Navigators more appropriate options.",
+        "Le projet pilote aidera OLH à mieux comprendre les services dont les communautés ont le plus besoin. Nous prévoyons ajouter de nouveaux partenaires de services au fil du temps afin d’élargir les possibilités de mise en relation et de donner aux infirmiers-navigateurs davantage d’options adaptées.",
       growBody2:
-        "More partners can mean more service pathways and more opportunities for useful referrals. It does not mean every screening results in a referral. The right measure is a successful, consented connection to an appropriate service—not referral volume alone.",
+        "Un plus grand nombre de partenaires peut offrir davantage de parcours de services et de possibilités d’orientation utiles. Cela ne signifie pas que chaque dépistage mène à une orientation. La réussite se mesure par une mise en relation réussie, avec le consentement de la personne, vers un service approprié, et pas seulement par le nombre d’orientations.",
       ctaText:
-        "Interested in becoming an OLH care or service partner? Let's discuss how your organization could strengthen the community pathway.",
-      ctaButton: "Become a Service Partner",
+        "Vous souhaitez devenir un partenaire de soins ou de services OLH? Discutons de la façon dont votre organisation pourrait renforcer le parcours communautaire.",
+      ctaButton: "Devenir partenaire de services",
     },
 
     // [DRAFT FR]

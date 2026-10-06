@@ -68,6 +68,7 @@ export default function WhoWeServePage() {
             {c.partners.list.map((partner, i) => (
               <FadeIn key={partner.name} delay={i * 80} className="h-full">
               <PartnerCard
+                lang={lang}
                 name={partner.name}
                 tagline={partner.tagline}
                 description={partner.description}

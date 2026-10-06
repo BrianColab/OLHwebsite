@@ -63,7 +63,7 @@ export function Header({ lang, onLangChange, onContactClick, navLabels }: Header
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-6" aria-label={lang === "fr" ? "Navigation principale" : "Main navigation"}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -97,7 +97,7 @@ export function Header({ lang, onLangChange, onContactClick, navLabels }: Header
             <button
               type="button"
               className="w-11 h-11 flex items-center justify-center rounded text-olh-text-secondary hover:text-olh-text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-label={lang === "fr" ? (menuOpen ? "Fermer le menu" : "Ouvrir le menu") : (menuOpen ? "Close menu" : "Open menu")}
               aria-expanded={menuOpen}
               aria-controls="mobile-nav"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -123,7 +123,7 @@ export function Header({ lang, onLangChange, onContactClick, navLabels }: Header
           <nav
             id="mobile-nav"
             className="lg:hidden border-t border-olh-border py-3 flex flex-col gap-1"
-            aria-label="Mobile navigation"
+            aria-label={lang === "fr" ? "Navigation mobile" : "Mobile navigation"}
           >
             {navLinks.map((link) => (
               <Link

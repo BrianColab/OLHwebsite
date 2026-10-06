@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Lang } from "@/content";
 
 interface FooterProps {
+  lang: Lang;
   tagline: string;
   links: { label: string; href: string }[];
   contactLabel: string;
@@ -10,7 +12,7 @@ interface FooterProps {
   disclaimer: string;
 }
 
-export function Footer({ tagline, links, contactLabel, onContactClick, copyright, disclaimer }: FooterProps) {
+export function Footer({ lang, tagline, links, contactLabel, onContactClick, copyright, disclaimer }: FooterProps) {
   return (
     <footer className="bg-olh-text-primary text-white py-12 px-6 lg:px-8">
       <div className="max-w-container mx-auto">
@@ -30,7 +32,7 @@ export function Footer({ tagline, links, contactLabel, onContactClick, copyright
           </div>
 
           {/* Nav links + Contact Us */}
-          <nav aria-label="Footer navigation" className="flex flex-col sm:flex-row gap-2 sm:gap-8 sm:items-center">
+          <nav aria-label={lang === "fr" ? "Navigation du pied de page" : "Footer navigation"} className="flex flex-col sm:flex-row gap-2 sm:gap-8 sm:items-center">
             {links.map((link) => (
               <Link
                 key={link.href}

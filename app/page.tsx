@@ -78,7 +78,7 @@ export default function HomePage() {
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
                   src={heroImage}
-                  alt="Community member using Ontario Legion Health screening services at a local Legion branch"
+                  alt={lang === "fr" ? "Membre de la communauté utilisant les services de dépistage Ontario Legion Health dans une succursale locale de la Légion" : "Community member using Ontario Legion Health screening services at a local Legion branch"}
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -172,7 +172,7 @@ export default function HomePage() {
           <FadeIn>
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-12">
             <div className="flex-shrink-0 text-center sm:text-left">
-              <span className="text-4xl md:text-5xl font-bold text-olh-red block">2.5M+</span>
+              <span className="text-4xl md:text-5xl font-bold text-olh-red block">{lang === "fr" ? "2,5 M+" : "2.5M+"}</span>
               <span className="text-sm text-olh-text-secondary mt-1 block max-w-[200px]">
                 {c.bridging.statLabel}
               </span>

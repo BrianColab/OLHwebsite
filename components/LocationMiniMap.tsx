@@ -39,7 +39,7 @@ export function LocationMiniMap({ location }: LocationMiniMapProps) {
         subdomains="abcd"
         maxZoom={19}
       />
-      <Marker position={[location.lat, location.lng]} icon={PIN_ICON} />
+      <Marker key={location.community} title={location.community} alt={location.community} position={[location.lat, location.lng]} icon={PIN_ICON} />
     </MapContainer>
   );
 }

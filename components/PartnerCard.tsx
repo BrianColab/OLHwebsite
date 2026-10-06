@@ -1,4 +1,5 @@
 interface PartnerCardProps {
+  lang?: "en" | "fr";
   name: string;
   tagline?: string;
   description: string;
@@ -6,7 +7,7 @@ interface PartnerCardProps {
   logoClassName?: string;
 }
 
-export function PartnerCard({ name, tagline, description, logo, logoClassName = "max-h-14" }: PartnerCardProps) {
+export function PartnerCard({ lang = "en", name, tagline, description, logo, logoClassName = "max-h-14" }: PartnerCardProps) {
   return (
     <div className="bg-white border border-olh-border rounded-xl p-6 flex flex-col gap-5">
       {/* Logo area — shows real logo when supplied, otherwise a clean text treatment */}
@@ -15,7 +16,7 @@ export function PartnerCard({ name, tagline, description, logo, logoClassName = 
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={logo}
-            alt={`${name} logo`}
+            alt={lang === "fr" ? `Logo de ${name}` : `${name} logo`}
             className={`${logoClassName} max-w-full w-auto object-contain`}
           />
         ) : (

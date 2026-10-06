@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup, Tooltip, ZoomControl } from "react-leaflet";
 import { LOCATIONS, localizeLocation } from "@/data/locations";
-import { MAP_TILE_URL, MAP_TILE_ATTRIBUTION } from "@/data/mapTiles";
+import { MAP_TILE_URL, MAP_TILE_ATTRIBUTION, MAP_TILE_ATTRIBUTION_FR } from "@/data/mapTiles";
 import type { OLHLocation } from "@/data/locations";
 import { useLang } from "@/app/LangProvider";
 
@@ -44,7 +44,7 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
     >
       <ZoomControl key={lang} position="topleft" zoomInTitle={lang === "fr" ? "Zoom avant" : "Zoom in"} zoomOutTitle={lang === "fr" ? "Zoom arrière" : "Zoom out"} />
       <TileLayer
-        attribution={MAP_TILE_ATTRIBUTION}
+        attribution={lang === "fr" ? MAP_TILE_ATTRIBUTION_FR : MAP_TILE_ATTRIBUTION}
         url={MAP_TILE_URL}
         subdomains="abcd"
         maxZoom={19}
@@ -52,7 +52,7 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
       {LOCATIONS.map((location) => {
         const loc = localizeLocation(location, lang);
         return (
-        <Marker key={`${loc.id}-${lang}`} title={loc.community} position={[loc.lat, loc.lng]} icon={PIN_ICON}>
+        <Marker key={`${loc.id}-${lang}`} title={loc.community} alt={loc.community} position={[loc.lat, loc.lng]} icon={PIN_ICON}>
           <Tooltip direction="top" offset={[0, -46]} opacity={1}>
             <div className="olh-map-tooltip">
               <p className="font-bold text-[12px] leading-snug text-gray-900">{loc.community}</p>

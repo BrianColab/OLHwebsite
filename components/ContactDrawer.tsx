@@ -261,7 +261,7 @@ export function ContactDrawer({ open, onClose }: ContactDrawerProps) {
             </div>
           ) : (
             // ── Contact form ───────────────────────────────────────────────
-            <form onSubmit={handleSubmit} noValidate aria-label="Contact form" className="flex flex-col gap-4">
+            <form onSubmit={handleSubmit} noValidate aria-label={lang === "fr" ? "Formulaire de contact" : "Contact form"} className="flex flex-col gap-4">
 
               {/* Reason */}
               <div className="flex flex-col gap-1.5">

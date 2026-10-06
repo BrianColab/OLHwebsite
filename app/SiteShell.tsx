@@ -64,6 +64,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       </main>
 
       <Footer
+        lang={lang}
         tagline={c.footer.tagline}
         links={c.footer.links}
         contactLabel={c.nav.contact}

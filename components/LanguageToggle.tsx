@@ -10,7 +10,7 @@ export function LanguageToggle({ lang, onToggle }: LanguageToggleProps) {
     <div
       className="flex items-center gap-0.5 text-sm font-medium"
       role="group"
-      aria-label="Language selection"
+      aria-label={lang === "fr" ? "Choix de la langue" : "Language selection"}
     >
       <button
         onClick={() => onToggle("en")}
