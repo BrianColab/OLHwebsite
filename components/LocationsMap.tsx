@@ -52,7 +52,7 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
       {LOCATIONS.map((location) => {
         const loc = localizeLocation(location, lang);
         return (
-        <Marker key={loc.id} title={loc.community} position={[loc.lat, loc.lng]} icon={loc.id.startsWith("downtown-toronto-") ? L.divIcon({ ...PIN_ICON.options, iconAnchor: [loc.id.endsWith("1") ? 30 : -2, 42] }) : PIN_ICON}>
+        <Marker key={`${loc.id}-${lang}`} title={loc.community} position={[loc.lat, loc.lng]} icon={loc.id.startsWith("downtown-toronto-") ? L.divIcon({ ...PIN_ICON.options, iconAnchor: [loc.id.endsWith("1") ? 30 : -2, 42] }) : PIN_ICON}>
           <Tooltip direction="top" offset={[0, -46]} opacity={1}>
             <div className="olh-map-tooltip">
               <p className="font-bold text-[12px] leading-snug text-gray-900">{loc.community}</p>
