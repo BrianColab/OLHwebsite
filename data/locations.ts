@@ -10,9 +10,96 @@ export type OLHLocation = {
   isRCL: boolean;
   lat: number;
   lng: number;
+  detailsPending?: boolean;
 };
 
+// Keep street addresses and coordinates unchanged across languages.
+export function localizeLocation(location: OLHLocation, lang: "en" | "fr"): OLHLocation {
+  if (lang === "en") return location;
+  const community = location.community.replace("Downtown Toronto", "Centre-ville de Toronto");
+  return {
+    ...location,
+    community,
+    branch: location.detailsPending
+      ? "Détails du lieu à confirmer"
+      : location.isRCL
+        ? `Légion royale canadienne — Filiale ${location.branchNumber}`
+        : location.branch,
+    address: location.detailsPending
+      ? location.address.replace("Downtown Toronto", "Centre-ville de Toronto").replace("approximate community location", "emplacement communautaire approximatif")
+      : location.address,
+  };
+}
+
 export const LOCATIONS: OLHLocation[] = [
+  {
+    id: "dunnville",
+    community: "Dunnville",
+    branch: "Venue details to be confirmed",
+    branchNumber: null,
+    address: "Dunnville, ON — approximate community location",
+    isRCL: false,
+    lat: 42.9036,
+    lng: -79.6175,
+    detailsPending: true,
+  },
+  {
+    id: "eganville",
+    community: "Eganville",
+    branch: "Venue details to be confirmed",
+    branchNumber: null,
+    address: "Eganville, ON — approximate community location",
+    isRCL: false,
+    lat: 45.5397,
+    lng: -77.1019,
+    detailsPending: true,
+  },
+  {
+    id: "norwood",
+    community: "Norwood",
+    branch: "Venue details to be confirmed",
+    branchNumber: null,
+    address: "Norwood, ON — approximate community location",
+    isRCL: false,
+    lat: 44.3828,
+    lng: -77.9789,
+    detailsPending: true,
+  },
+  // Both Toronto entries use the same approximate downtown position until
+  // venue addresses are supplied. Maps offset their icons to keep both visible.
+  ...([1, 2] as const).map((number): OLHLocation => ({
+    id: `downtown-toronto-${number}`,
+    community: `Downtown Toronto (${number})`,
+    branch: "Venue details to be confirmed",
+    branchNumber: null,
+    address: "Downtown Toronto, ON — approximate community location",
+    isRCL: false,
+    lat: 43.6532,
+    lng: -79.3832,
+    detailsPending: true,
+  })),
+  {
+    id: "beaverton",
+    community: "Beaverton",
+    branch: "Venue details to be confirmed",
+    branchNumber: null,
+    address: "Beaverton, ON — approximate community location",
+    isRCL: false,
+    lat: 44.4297,
+    lng: -79.1547,
+    detailsPending: true,
+  },
+  {
+    id: "ingersoll",
+    community: "Ingersoll",
+    branch: "Venue details to be confirmed",
+    branchNumber: null,
+    address: "Ingersoll, ON — approximate community location",
+    isRCL: false,
+    lat: 43.0392,
+    lng: -80.8836,
+    detailsPending: true,
+  },
   {
     id: "bobcaygeon",
     community: "Bobcaygeon",

@@ -136,7 +136,7 @@ export const fr: SiteContent = {
       {
         number: "03",
         // [DRAFT FR]
-        title: "Choisissez ce que vous partagez",
+        title: "Choisissez de partager",
         body: "Vous décidez quels renseignements peuvent être transmis à l'infirmier-navigateur OLH et si vous souhaitez être contacté. Rien n'est transmis au navigateur sans les autorisations requises pour ce suivi.",
         imageAlt: "Écran de préférences de consentement et de partage de l'application OLH",
       },
@@ -306,8 +306,10 @@ export const fr: SiteContent = {
     },
     // [DRAFT FR]
     mapNote:
-      "Les emplacements des épingles sont approximatifs. Confirmez les heures d'ouverture avec votre succursale locale avant de vous y rendre.",
-    getDirections: "Obtenir l'itinéraire", // [DRAFT FR]
+      "Les emplacements des épingles sont approximatifs. Confirmez les heures d'ouverture publiques auprès de l'emplacement participant avant de vous y rendre.",
+    participatingLocation: "Emplacement participant", // [DRAFT FR]
+    communityLocation: "Emplacement communautaire", // [DRAFT FR]
+    getDirections: "Itinéraire", // [DRAFT FR]
     rcl: "Légion royale canadienne", // [DRAFT FR]
     // [DRAFT FR]
     cta: {
@@ -334,31 +336,31 @@ export const fr: SiteContent = {
       { label: "Emplacements", href: "/locations" }, // [DRAFT FR]
       { label: "Confidentialité", href: "/privacy" },
     ],
-    copyright: "© 2025 Ontario Legion Health. Tous droits réservés.",
+    copyright: "© 2026 Ontario Legion Health. Tous droits réservés.",
   },
 
-  // [FR TODO] — structure updated to the new privacy copy; French text pending translation
+  // [DRAFT FR] — translation of retained English privacy copy, pending language review.
   privacy: {
-    headingPrefix: "Your information",
-    headingAccent: "moves only with your permission.",
+    headingPrefix: "Vos renseignements",
+    headingAccent: "ne sont transmis qu’avec votre autorisation.",
     subheading:
-      "OLH is designed to keep control with the client while giving the Nurse Navigator enough authorized information to prepare for a useful conversation.",
-    controlTitle: "What you control",
+      "OLH est conçu pour vous laisser le contrôle tout en donnant à l’infirmier-navigateur suffisamment de renseignements autorisés pour préparer une conversation utile.",
+    controlTitle: "Ce que vous contrôlez",
     controlItems: [
-      "whether to complete an assessment;",
-      "which information you authorize OLH to share;",
-      "whether an OLH Nurse Navigator may contact you; and",
-      "whether information may be used to support a connection with a service partner.",
+      "si vous souhaitez remplir une évaluation;",
+      "quels renseignements vous autorisez OLH à partager;",
+      "si un infirmier-navigateur OLH peut vous contacter; et",
+      "si vos renseignements peuvent être utilisés pour faciliter une mise en relation avec un partenaire de services.",
     ],
-    useTitle: "How your authorized information is used",
+    useTitle: "Comment vos renseignements autorisés sont utilisés",
     useBody:
-      "When you provide the required consent, selected app assessments and kiosk screening information may be sent to the OLH Nurse Navigator. AI-assisted review may help organize the information and identify combinations that merit attention. The Nurse Navigator reviews the source information and uses human judgment during the call.",
-    notTitle: "What OLH does not do",
+      "Lorsque vous donnez le consentement requis, certaines évaluations de l’application et certains renseignements de dépistage de la borne peuvent être transmis à l’infirmier-navigateur OLH. Une révision assistée par IA peut aider à organiser les renseignements et à repérer des combinaisons qui méritent attention. L’infirmier-navigateur examine les renseignements source et exerce son jugement humain pendant l’appel.",
+    notTitle: "Ce qu’OLH ne fait pas",
     notItems: [
-      "The kiosk and app do not provide a medical diagnosis.",
-      "AI does not make the final decision about your care.",
-      "Your information is not sent to a service partner without the permissions required for that connection.",
-      "OLH does not replace emergency services, a family doctor or other members of your healthcare team.",
+      "La borne et l’application ne fournissent pas de diagnostic médical.",
+      "L’IA ne prend pas la décision finale concernant vos soins.",
+      "Vos renseignements ne sont pas transmis à un partenaire de services sans les autorisations requises pour cette mise en relation.",
+      "OLH ne remplace pas les services d’urgence, un médecin de famille ou les autres membres de votre équipe de soins.",
     ],
   },
 };

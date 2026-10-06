@@ -97,6 +97,7 @@ export default function WhoWeServePage() {
       {/* ── CTA ────────────────────────────────────────────────────────────── */}
       <CTASection
         heading={c.cta.heading}
+        subheading={c.cta.subheading}
         iosLabel={c.cta.iosButton}
         androidLabel={c.cta.androidButton}
       />

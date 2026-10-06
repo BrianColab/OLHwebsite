@@ -3,7 +3,7 @@
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
-import { LOCATIONS } from "@/data/locations";
+import { LOCATIONS, localizeLocation } from "@/data/locations";
 import { MAP_TILE_URL, MAP_TILE_ATTRIBUTION } from "@/data/mapTiles";
 import type { OLHLocation } from "@/data/locations";
 import { useLang } from "@/app/LangProvider";
@@ -22,8 +22,8 @@ const PIN_ICON = L.divIcon({
 });
 
 const LABELS = {
-  en: { getDirections: "Get Directions" },
-  fr: { getDirections: "Obtenir l'itinéraire" },
+  en: { getDirections: "Directions" },
+  fr: { getDirections: "Itinéraire" },
 } as const;
 
 interface LocationsMapProps {
@@ -36,8 +36,8 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
 
   return (
     <MapContainer
-      center={[44.8, -77.5]}
-      zoom={7}
+      bounds={LOCATIONS.map((loc) => [loc.lat, loc.lng] as [number, number])}
+      boundsOptions={{ padding: [40, 40] }}
       className="h-full w-full"
       scrollWheelZoom={false}
     >
@@ -47,8 +47,10 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
         subdomains="abcd"
         maxZoom={19}
       />
-      {LOCATIONS.map((loc) => (
-        <Marker key={loc.id} position={[loc.lat, loc.lng]} icon={PIN_ICON}>
+      {LOCATIONS.map((location) => {
+        const loc = localizeLocation(location, lang);
+        return (
+        <Marker key={loc.id} position={[loc.lat, loc.lng]} icon={loc.id.startsWith("downtown-toronto-") ? L.divIcon({ ...PIN_ICON.options, iconAnchor: [loc.id.endsWith("1") ? 30 : -2, 42] }) : PIN_ICON}>
           <Tooltip direction="top" offset={[0, -46]} opacity={1}>
             <div className="olh-map-tooltip">
               <p className="font-bold text-[12px] leading-snug text-gray-900">{loc.community}</p>
@@ -60,17 +62,18 @@ export function LocationsMap({ onDirectionsClick }: LocationsMapProps) {
               <p className="font-bold text-[13px] leading-snug text-gray-900">{loc.community}</p>
               <p className="text-[12px] text-gray-500 mt-0.5 leading-snug">{loc.branch}</p>
               <p className="text-[11px] text-gray-400 mt-1 leading-snug">{loc.address}</p>
-              <button
+              {!loc.detailsPending && <button
                 type="button"
-                onClick={() => onDirectionsClick(loc)}
+                onClick={() => onDirectionsClick(location)}
                 className="mt-2 inline-block text-[12px] font-semibold text-[#CF1F2A] hover:underline cursor-pointer"
               >
                 {t.getDirections} →
-              </button>
+              </button>}
             </div>
           </Popup>
         </Marker>
-      ))}
+        );
+      })}
     </MapContainer>
   );
 }

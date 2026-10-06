@@ -6,16 +6,17 @@ Pre-launch items grouped by owner. Check each before go-live.
 
 ## CLIENT SIGN-OFF REQUIRED
 
-- [ ] **CTA heading confirmed** — "Your health. Your community. Your time." is from the build brief, not the Word doc. Confirm or replace before launch. See `content/en/index.ts` (marked `[BRIEF]`).
-- [ ] **Footer tagline confirmed** — "Ontario Legion Health — Care in Your Community" is from the build brief. Confirm or replace. See `content/en/index.ts` (marked `[BRIEF]`).
-- [ ] **Copyright year confirmed** — Currently "© 2025 Ontario Legion Health." Verify year is correct at launch.
+- [x] **CTA heading matched to Draft 2** — "Your health. Your information. Your next step."
+- [x] **Footer tagline matched to Draft 2** — "Ontario Legion Health — A trusted place. A simple first step. A human path to care."
+- [x] **Copyright year matched to Draft 2** — English and French now use © 2026.
+- [ ] **Draft 2 outstanding confirmations** — See `COPY_REVIEW_OCT_6_2026.md` for retained wording and operational, clinical, partner, location and privacy questions.
 - [ ] **French copy client review** — FR toggle is now live. Draft French translation is in `content/fr/index.ts`. All strings are marked `[DRAFT FR]`. A qualified Canadian French translator must review before public launch. Do not launch FR without client sign-off.
 
 ---
 
 ## COPY / CONTENT
 
-- [ ] **Full copy review against `OLH Website Copy.docx`** — Verify all body copy matches the source document exactly.
+- [ ] **Final copy sign-off against `OLH_Website_Copy_Draft_2-Oct 6 2026.docx`** — Clear updates applied; deferred differences and outstanding confirmations are recorded in `COPY_REVIEW_OCT_6_2026.md`.
 - [ ] **Contact drawer intro text** — "Contact details to be added." is a placeholder. Add real contact information or messaging before launch.
 - [ ] **Contact form endpoint** — Form currently shows "Contact form endpoint to be added." Wire a real endpoint (Formspree, EmailJS, API route, or CRM). See `components/ContactDrawer.tsx` `handleSubmit()`.
 - [ ] **French copy review** — Draft French copy is in `content/fr/index.ts`. Must be reviewed and approved by client and a qualified Canadian French translator before public launch.

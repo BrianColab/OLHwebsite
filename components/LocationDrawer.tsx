@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef } from "react";
 import dynamic from "next/dynamic";
-import type { OLHLocation } from "@/data/locations";
+import { localizeLocation, type OLHLocation } from "@/data/locations";
 import { useLang } from "@/app/LangProvider";
 
 const LocationMiniMap = dynamic(
@@ -21,7 +21,7 @@ const LABELS = {
     openAppleMaps: "Open in Apple Maps",
     copyAddress: "Copy address",
     copied: "Copied!",
-    approximate: "Pin location is approximate. Confirm opening hours with your local branch before visiting.",
+    approximate: "Pin location is approximate. Confirm public opening hours with the participating location before visiting.",
     rcl: "Royal Canadian Legion",
   },
   fr: {
@@ -31,7 +31,7 @@ const LABELS = {
     openAppleMaps: "Ouvrir dans Plans",
     copyAddress: "Copier l'adresse",
     copied: "Copié !",
-    approximate: "L'emplacement de l'épingle est approximatif. Confirmez les heures d'ouverture avec votre succursale locale avant de vous y rendre.",
+    approximate: "L'emplacement de l'épingle est approximatif. Confirmez les heures d'ouverture publiques auprès de l'emplacement participant avant de vous y rendre.",
     rcl: "Légion royale canadienne",
   },
 } as const;
@@ -42,8 +42,9 @@ interface LocationDrawerProps {
   onClose: () => void;
 }
 
-export function LocationDrawer({ location, open, onClose }: LocationDrawerProps) {
+export function LocationDrawer({ location: sourceLocation, open, onClose }: LocationDrawerProps) {
   const { lang } = useLang();
+  const location = sourceLocation ? localizeLocation(sourceLocation, lang) : null;
   const t = LABELS[lang];
   const headingId = useId();
   const drawerRef = useRef<HTMLDivElement>(null);

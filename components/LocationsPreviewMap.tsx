@@ -3,7 +3,8 @@
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, TileLayer, Marker, Tooltip } from "react-leaflet";
-import { LOCATIONS } from "@/data/locations";
+import { LOCATIONS, localizeLocation } from "@/data/locations";
+import { useLang } from "@/app/LangProvider";
 import { MAP_TILE_URL } from "@/data/mapTiles";
 
 const PIN_ICON = L.divIcon({
@@ -19,10 +20,11 @@ const PIN_ICON = L.divIcon({
 });
 
 export function LocationsPreviewMap() {
+  const { lang } = useLang();
   return (
     <MapContainer
-      center={[44.8, -77.5]}
-      zoom={7}
+      bounds={LOCATIONS.map((loc) => [loc.lat, loc.lng] as [number, number])}
+      boundsOptions={{ padding: [40, 40] }}
       className="h-full w-full"
       scrollWheelZoom={false}
       zoomControl={false}
@@ -36,13 +38,17 @@ export function LocationsPreviewMap() {
         subdomains="abcd"
         maxZoom={19}
       />
-      {LOCATIONS.map((loc) => (
-        <Marker key={loc.id} position={[loc.lat, loc.lng]} icon={PIN_ICON}>
+      {LOCATIONS.map((location) => {
+        const loc = localizeLocation(location, lang);
+        return (
+        <Marker key={loc.id} position={[loc.lat, loc.lng]} icon={loc.id.startsWith("downtown-toronto-") ? L.divIcon({ ...PIN_ICON.options, iconAnchor: [loc.id.endsWith("1") ? 30 : -2, 42] }) : PIN_ICON}>
           <Tooltip direction="top" offset={[0, -46]} opacity={1}>
             <span className="text-[12px] font-bold text-gray-900">{loc.community}</span>
+            {loc.detailsPending && <p className="text-[11px] text-gray-500">{loc.address}</p>}
           </Tooltip>
         </Marker>
-      ))}
+        );
+      })}
     </MapContainer>
   );
 }

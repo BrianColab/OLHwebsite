@@ -9,7 +9,7 @@ import { Button } from "@/components/Button";
 import { FeatureCard } from "@/components/FeatureCard";
 import { CTASection } from "@/components/CTASection";
 import { Icon } from "@/components/icons";
-import { LOCATIONS } from "@/data/locations";
+import { LOCATIONS, localizeLocation } from "@/data/locations";
 import { FadeIn } from "@/components/FadeIn";
 
 const LocationsPreviewMap = dynamic(
@@ -259,20 +259,20 @@ export default function HomePage() {
 
             {/* Eyebrow */}
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-olh-red mb-5">
-              OLH Kiosk Locations
+              {lang === "fr" ? "Emplacements des bornes OLH" : "OLH Kiosk Locations"}
             </p>
 
             {/* Heading — explicit lines to prevent long strings overflowing */}
             <h2 className="text-3xl md:text-4xl xl:text-5xl font-black text-white leading-tight tracking-tight">
-              Now in
+              {lang === "fr" ? "Maintenant dans" : "Now in"}
               <br />
-              <span className="text-olh-red">{LOCATIONS.length} communities</span>
+              <span className="text-olh-red">{LOCATIONS.length} {lang === "fr" ? "emplacements" : "locations"}</span>
               <br />
-              across Ontario
+              {lang === "fr" ? "à travers l’Ontario" : "across Ontario"}
             </h2>
 
             <p className="mt-4 text-base text-white/55 leading-relaxed">
-              Find a free OLH health screening kiosk at a Royal Canadian Legion branch near you.
+              {content[lang].locations.hero.subheading}
             </p>
 
             {/* Location chips */}
@@ -285,7 +285,7 @@ export default function HomePage() {
                   <svg className="w-3 h-3 text-olh-red flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
-                  {loc.community}
+                  {localizeLocation(loc, lang).community}
                 </span>
               ))}
             </div>
@@ -293,7 +293,7 @@ export default function HomePage() {
             {/* CTA */}
             <div className="mt-8">
               <Button href="/locations" variant="primary" className="text-base px-7 py-4">
-                Find a Location Near You →
+                {lang === "fr" ? "Trouvez un emplacement près de chez vous →" : "Find a Location Near You →"}
               </Button>
             </div>
 
@@ -306,6 +306,7 @@ export default function HomePage() {
       {/* [BRIEF] heading came from build brief — pending client confirmation */}
       <CTASection
         heading={c.cta.heading}
+        subheading={c.cta.subheading}
         iosLabel={c.cta.iosButton}
         androidLabel={c.cta.androidButton}
       />

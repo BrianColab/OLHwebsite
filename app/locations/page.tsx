@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useCallback, useRef, useState } from "react";
 import { useLang } from "../LangProvider";
 import { content } from "@/content";
-import { LOCATIONS } from "@/data/locations";
+import { LOCATIONS, localizeLocation } from "@/data/locations";
 import type { OLHLocation } from "@/data/locations";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
@@ -86,18 +86,23 @@ export default function LocationsPage() {
       <section className="bg-olh-bg-light border-y border-olh-border py-16 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {LOCATIONS.map((loc, i) => (
+            {LOCATIONS.map((location, i) => {
+              const loc = localizeLocation(location, lang);
+              return (
               <FadeIn key={loc.id} delay={i * 60}>
               <div
                 className="bg-white rounded-2xl border border-olh-border p-6 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow"
               >
                 {/* Card header */}
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-olh-text-secondary">
+                  {loc.detailsPending ? c.communityLocation : c.participatingLocation}
+                </p>
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
                     <p className="font-bold text-olh-text-primary leading-snug">{loc.community}</p>
                     <p className="text-xs text-olh-text-secondary mt-0.5 leading-snug">
                       {loc.isRCL && loc.branchNumber
-                        ? `${c.rcl} · Branch ${loc.branchNumber}`
+                        ? `${c.rcl} · ${lang === "fr" ? "Filiale" : "Branch"} ${loc.branchNumber}`
                         : loc.branch}
                     </p>
                   </div>
@@ -110,9 +115,9 @@ export default function LocationsPage() {
                 <p className="text-sm text-olh-text-secondary leading-relaxed">{loc.address}</p>
 
                 {/* Directions button */}
-                <button
+                {!loc.detailsPending && <button
                   type="button"
-                  onClick={() => openDrawer(loc)}
+                  onClick={() => openDrawer(location)}
                   className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-olh-red hover:text-olh-red-hover transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olh-red rounded"
                 >
                   {c.getDirections}
@@ -129,10 +134,11 @@ export default function LocationsPage() {
                     <line x1="5" y1="12" x2="19" y2="12" />
                     <polyline points="12 5 19 12 12 19" />
                   </svg>
-                </button>
+                </button>}
               </div>
               </FadeIn>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -140,6 +146,7 @@ export default function LocationsPage() {
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <CTASection
         heading={c.cta.heading}
+        subheading={c.cta.subheading}
         iosLabel={c.cta.iosButton}
         androidLabel={c.cta.androidButton}
       />

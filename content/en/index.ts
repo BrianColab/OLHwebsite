@@ -1,4 +1,5 @@
-// Source of truth: OLH Website Copy.docx
+// Source of truth: OLH_Website_Copy_Draft_2-Oct 6 2026.docx
+// Outstanding confirmations and retained wording: COPY_REVIEW_OCT_6_2026.md.
 // All copy must be traceable to that document or marked as a UI label.
 // Lines marked [BRIEF] came from the client's build brief, not the Word doc
 // — they are flagged for client review and should be confirmed or replaced.
@@ -144,8 +145,8 @@ export const en = {
       },
       {
         number: "03",
-        // Doc: "Choose what to share"
-        title: "Choose what to share",
+        // Draft 2: step label only; consent body retained pending operational review.
+        title: "Choose to share",
         body: "You decide what information may be sent to the OLH Nurse Navigator and whether you want to be contacted. Nothing moves to the navigator without the permissions required for that follow-up.",
         imageAlt: "OLH app consent and sharing preferences screen",
       },
@@ -329,8 +330,10 @@ export const en = {
     },
     // UI label — approximate disclaimer for map pins
     mapNote:
-      "Pin locations are approximate. Confirm opening hours with your local branch before visiting.",
-    getDirections: "Get Directions",
+      "Pin locations are approximate. Confirm public opening hours with the participating location before visiting.",
+    participatingLocation: "Participating location",
+    communityLocation: "Community location",
+    getDirections: "Directions",
     rcl: "Royal Canadian Legion",
     // Doc: App promotion (section 8)
     cta: {
@@ -359,7 +362,7 @@ export const en = {
       { label: "Locations", href: "/locations" },
       { label: "Privacy", href: "/privacy" },
     ],
-    copyright: "© 2025 Ontario Legion Health. All rights reserved.",
+    copyright: "© 2026 Ontario Legion Health. All rights reserved.",
   },
 
   // Doc: section 6 — Privacy, Consent and Human Oversight.
