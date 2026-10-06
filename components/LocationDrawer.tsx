@@ -164,7 +164,7 @@ export function LocationDrawer({ location: sourceLocation, open, onClose }: Loca
                 </h2>
                 <p className="mt-0.5 text-sm text-white/50 leading-snug">
                   {location?.isRCL && location.branchNumber
-                    ? `${t.rcl} · Branch ${location.branchNumber}`
+                    ? `${t.rcl} · ${lang === "fr" ? "Filiale" : "Branch"} ${location.branchNumber}`
                     : location?.branch ?? ""}
                 </p>
               </div>
