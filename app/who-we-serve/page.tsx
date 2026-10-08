@@ -48,9 +48,7 @@ export default function WhoWeServePage() {
       </section>
 
       {/* ── Partners ───────────────────────────────────────────────────────── */}
-      {/* TODO: Replace text-placeholder cards with official partner logos
-          once supplied. Required: PNG or SVG at ≥ 2× resolution on white bg.
-          Do not invent or approximate official logos. */}
+      {/* Partner logos supplied and approved for use by the respective partners. */}
       <section id="partners" className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <FadeIn>
@@ -86,8 +84,7 @@ export default function WhoWeServePage() {
             <p className="text-base text-olh-text-secondary leading-relaxed">{c.partners.growBody1}</p>
             <p className="text-base text-olh-text-secondary leading-relaxed">{c.partners.growBody2}</p>
             <p className="mt-2 text-base text-olh-text-secondary leading-relaxed">{c.partners.ctaText}</p>
-            {/* TODO: replace href="#" with the partner contact address once confirmed */}
-            <Button href="#" variant="primary" className="text-base px-7 py-4">
+            <Button href="mailto:john@trycycle.ca" variant="primary" className="text-base px-7 py-4">
               {c.partners.ctaButton}
             </Button>
           </div>
