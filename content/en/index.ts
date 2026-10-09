@@ -149,8 +149,8 @@ export const en = {
   },
   "whoWeServe": {
     "hero": {
-      "heading": "Everyone is welcome.",
-      "headingPrefix": "Everyone is",
+      "heading": "Everyone in Ontario is welcome.",
+      "headingPrefix": "Everyone in Ontario is",
       "headingAccent": "welcome.",
       "subheading": "OLH is designed for anyone who wants a simple, private first step—but it may be especially valuable when care feels distant, confusing, uncomfortable or difficult to access."
     },

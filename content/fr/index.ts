@@ -150,8 +150,8 @@ export const fr: SiteContent = {
   },
   "whoWeServe": {
     "hero": {
-      "heading": "Tout le monde est le bienvenu.",
-      "headingPrefix": "Tout le monde est",
+      "heading": "Tout le monde en Ontario est le bienvenu.",
+      "headingPrefix": "Tout le monde en Ontario est",
       "headingAccent": "le bienvenu.",
       "subheading": "OLH est conçu pour quiconque souhaite un premier pas simple et privé—mais il peut être particulièrement utile lorsque les soins semblent distants, déroutants, inconfortables ou difficiles d'accès."
     },
