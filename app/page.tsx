@@ -46,7 +46,7 @@ export default function HomePage() {
         </p>
       </div>
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="bg-white py-16 md:py-24 px-6 lg:px-8 overflow-hidden">
+      <section id="overview" className="bg-white py-16 md:py-24 px-6 lg:px-8 overflow-hidden">
         <div className="max-w-container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
 
@@ -112,7 +112,7 @@ export default function HomePage() {
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {c.features.map((feature, i) => (
-              <FadeIn key={feature.title} delay={i * 80}>
+              <FadeIn id={"feature-" + i} key={feature.title} delay={i * 80}>
               <FeatureCard
                 icon={feature.icon}
                 title={feature.title}
@@ -125,7 +125,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Bridging the Gap ───────────────────────────────────────────────── */}
-      <section className="bg-white py-20 px-6 lg:px-8">
+      <section id="access-to-care" className="bg-white py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Keyword-split heading: prefix small/gray, accent large/red */}
@@ -193,7 +193,7 @@ export default function HomePage() {
 
       {/* ── Trust section: Why the Legion matters ──────────────────────────── */}
       {/* PLACEHOLDER copy — pending client confirmation of the Legion history claim. */}
-      <section className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
+      <section id="legion" className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto max-w-3xl">
           <FadeIn>
           <h2 className="text-2xl md:text-3xl font-black text-olh-text-primary tracking-tight mb-4">
@@ -211,7 +211,7 @@ export default function HomePage() {
 
       {/* ── Partner preview ───────────────────────────────────────────────── */}
       {/* PLACEHOLDER copy — partner names withheld pending roster confirmation. */}
-      <section className="bg-white py-20 px-6 lg:px-8">
+      <section id="service-network" className="bg-white py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto max-w-3xl">
           <FadeIn>
           <h2 className="text-2xl md:text-3xl font-black text-olh-text-primary tracking-tight mb-4">

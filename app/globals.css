@@ -65,3 +65,8 @@ body {
 .leaflet-tooltip-top::before {
   border-top-color: #E8E8E8 !important;
 }
+
+/* Keep search destinations visible below the sticky navigation. */
+main [id] { scroll-margin-top: 7rem; }
+body:has(dialog.site-search[open]) { overflow: hidden; }
+.site-search { left: 0; right: 0; max-height: 85vh; }

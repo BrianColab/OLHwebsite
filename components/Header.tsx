@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "./Button";
+import { SiteSearch } from "./SiteSearch";
 import { LanguageToggle } from "./LanguageToggle";
 import type { Lang } from "@/content";
 
@@ -63,7 +64,7 @@ export function Header({ lang, onLangChange, onContactClick, navLabels }: Header
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6" aria-label={lang === "fr" ? "Navigation principale" : "Main navigation"}>
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6" aria-label={lang === "fr" ? "Navigation principale" : "Main navigation"}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -81,6 +82,7 @@ export function Header({ lang, onLangChange, onContactClick, navLabels }: Header
 
           {/* Right side: lang toggle + Contact Us */}
           <div className="hidden lg:flex items-center gap-4">
+            <SiteSearch lang={lang} onOpen={() => setMenuOpen(false)} />
             <LanguageToggle lang={lang} onToggle={onLangChange} />
             <Button
               onClick={handleContactClick}
@@ -92,7 +94,8 @@ export function Header({ lang, onLangChange, onContactClick, navLabels }: Header
           </div>
 
           {/* Mobile: lang toggle + hamburger */}
-          <div className="flex lg:hidden items-center gap-3">
+          <div className="flex lg:hidden items-center gap-1 sm:gap-3">
+            <SiteSearch lang={lang} onOpen={() => setMenuOpen(false)} />
             <LanguageToggle lang={lang} onToggle={onLangChange} />
             <button
               type="button"

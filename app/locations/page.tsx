@@ -89,7 +89,7 @@ export default function LocationsPage() {
             {LOCATIONS.map((location, i) => {
               const loc = localizeLocation(location, lang);
               return (
-              <FadeIn key={loc.id} delay={i * 60}>
+              <FadeIn id={"location-" + loc.id} key={loc.id} delay={i * 60}>
               <div
                 className="bg-white rounded-2xl border border-olh-border p-6 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow"
               >

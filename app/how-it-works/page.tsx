@@ -56,7 +56,7 @@ export default function HowItWorksPage() {
       <section className="bg-white py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto flex flex-col gap-20 lg:gap-28">
           {c.steps.map((step, i) => (
-            <FadeIn key={step.number} delay={i * 80}>
+            <FadeIn id={"step-" + step.number} key={step.number} delay={i * 80}>
             <StepCard
               number={step.number}
               title={step.title}
@@ -71,7 +71,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── Callout ────────────────────────────────────────────────────────── */}
-      <section className="bg-white px-6 lg:px-8">
+      <section id="screening-call" className="bg-white px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <FadeIn>
           <div className="rounded-2xl bg-olh-bg-light border border-olh-border px-6 py-5 md:px-8 md:py-6">
@@ -85,7 +85,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── What the technology does ─────────────────────────────────────────── */}
-      <section className="bg-white py-20 px-6 lg:px-8">
+      <section id="technology" className="bg-white py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto max-w-3xl">
           <FadeIn>
           <h2 className="text-2xl md:text-3xl font-black text-olh-text-primary tracking-tight mb-4">
@@ -102,7 +102,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* ── What happens next ────────────────────────────────────────────────── */}
-      <section className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
+      <section id="next-steps" className="bg-olh-bg-light border-y border-olh-border py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto">
           <FadeIn>
           <SectionHeading

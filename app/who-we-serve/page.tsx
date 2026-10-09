@@ -28,7 +28,7 @@ export default function WhoWeServePage() {
         <div className="max-w-container mx-auto">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {c.audiences.map((audience, i) => (
-              <FadeIn key={audience.title} delay={i * 80}>
+              <FadeIn id={"audience-" + i} key={audience.title} delay={i * 80}>
               <AudienceCard
                 icon={audience.icon}
                 title={audience.title}
@@ -64,7 +64,7 @@ export default function WhoWeServePage() {
           </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {c.partners.list.map((partner, i) => (
-              <FadeIn key={partner.name} delay={i * 80} className="h-full">
+              <FadeIn id={"partner-" + i} key={partner.name} delay={i * 80} className="h-full">
               <PartnerCard
                 lang={lang}
                 name={partner.name}
@@ -77,7 +77,7 @@ export default function WhoWeServePage() {
             ))}
           </div>
 
-          <FadeIn delay={160}>
+          <FadeIn id="network-growth" delay={160}>
           <div className="mt-16 max-w-3xl mx-auto text-center flex flex-col items-center gap-4">
             <h3 className="text-2xl font-black text-olh-text-primary tracking-tight">{c.partners.growTitle}</h3>
             <p className="text-base font-semibold text-olh-text-primary">{c.partners.growTagline}</p>

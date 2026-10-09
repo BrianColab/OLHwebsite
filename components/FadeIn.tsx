@@ -3,11 +3,12 @@ import { useEffect, useRef, useState, ReactNode } from "react";
 
 interface FadeInProps {
   children: ReactNode;
+  id?: string;
   delay?: number;
   className?: string;
 }
 
-export function FadeIn({ children, delay = 0, className = "" }: FadeInProps) {
+export function FadeIn({ children, id, delay = 0, className = "" }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -29,6 +30,7 @@ export function FadeIn({ children, delay = 0, className = "" }: FadeInProps) {
 
   return (
     <div
+      id={id}
       ref={ref}
       className={className}
       style={{

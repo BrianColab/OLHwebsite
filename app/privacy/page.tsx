@@ -15,7 +15,7 @@ export default function PrivacyPage() {
 
       <section className="bg-white py-20 px-6 lg:px-8">
         <div className="max-w-container mx-auto max-w-3xl flex flex-col gap-12">
-          <FadeIn>
+          <FadeIn id="your-control">
           <div>
             <h2 className="text-2xl font-black text-olh-text-primary tracking-tight mb-4">{c.controlTitle}</h2>
             <ul className="flex flex-col gap-3">
@@ -29,14 +29,14 @@ export default function PrivacyPage() {
           </div>
           </FadeIn>
 
-          <FadeIn delay={80}>
+          <FadeIn id="information-use" delay={80}>
           <div>
             <h2 className="text-2xl font-black text-olh-text-primary tracking-tight mb-4">{c.useTitle}</h2>
             <p className="text-base md:text-lg text-olh-text-secondary leading-relaxed">{c.useBody}</p>
           </div>
           </FadeIn>
 
-          <FadeIn delay={160}>
+          <FadeIn id="limits" delay={160}>
           <div>
             <h2 className="text-2xl font-black text-olh-text-primary tracking-tight mb-4">{c.notTitle}</h2>
             <ul className="flex flex-col gap-3">
