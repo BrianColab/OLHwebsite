@@ -40,6 +40,11 @@ export default function HomePage() {
 
   return (
     <>
+      <div className="bg-olh-red px-6 py-4 text-center text-white">
+        <p className="text-sm md:text-base font-bold tracking-[0.2em]">
+          {lang === "fr" ? "BIENTÔT DISPONIBLE" : "COMING SOON"}
+        </p>
+      </div>
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="bg-white py-16 md:py-24 px-6 lg:px-8 overflow-hidden">
         <div className="max-w-container mx-auto">
