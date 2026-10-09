@@ -42,7 +42,7 @@ export default function HomePage() {
     <>
       <div className="bg-olh-red px-6 py-4 text-center text-white">
         <p className="text-sm md:text-base font-bold tracking-[0.2em]">
-          {lang === "fr" ? "BIENTÔT DISPONIBLE" : "COMING SOON"}
+          {lang === "fr" ? "Bientôt disponible - 13 novembre 2026" : "Coming soon - November 13th 2026"}
         </p>
       </div>
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
