@@ -18,10 +18,10 @@ const LocationsPreviewMap = dynamic(
 );
 
 const HERO_IMAGES = [
-  "/assets/olh/hero/image2a.png?v=be8074cd7c10",
-  "/assets/olh/hero/image2b.png?v=fc24c5d6f8b0",
-  "/assets/olh/hero/image2c.png?v=7c2d411786b4",
-  "/assets/olh/hero/image2d.png?v=243cadca2a08",
+  "/assets/olh/hero/image2a.png?v=c20ff2c3fcdb",
+  "/assets/olh/hero/image2b.png?v=bf8243b1c2b3",
+  "/assets/olh/hero/image2c.png?v=793b5cbd832a",
+  "/assets/olh/hero/image2d.png?v=7464d1f8a9a4",
 ];
 
 export default function HomePage() {
