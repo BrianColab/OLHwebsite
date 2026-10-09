@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { LangProvider } from "./LangProvider";
 import { SiteShell } from "./SiteShell";
@@ -23,6 +24,12 @@ export default function RootLayout({
         <LangProvider>
           <SiteShell>{children}</SiteShell>
         </LangProvider>
+        <Script
+          async
+          data-id="101512968"
+          src="https://static.getclicky.com/js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
