@@ -106,7 +106,7 @@ export const en = {
       {
         "number": "03",
         "title": "Sharing of your information",
-        "body": "Your screening results will be sent securely to the OLH Nurse Navigator, who will review the information.",
+        "body": "With your consent, your screening results will be sent securely to the OLH Nurse Navigator, who will review the information.",
         "imageAlt": "OLH app consent and sharing preferences screen"
       },
       {

@@ -107,7 +107,7 @@ export const fr: SiteContent = {
       {
         "number": "03",
         "title": "Partage de vos renseignements",
-        "body": "Vos résultats de dépistage seront transmis de façon sécurisée à l’infirmier-navigateur OLH, qui les examinera.",
+        "body": "Avec votre consentement, vos résultats de dépistage seront transmis de façon sécurisée à l’infirmier-navigateur OLH, qui les examinera.",
         "imageAlt": "Écran de préférences de consentement et de partage de l'application OLH"
       },
       {
