@@ -25,13 +25,13 @@ const stores = [
     platform: "iOS",
     device: "iPhone",
     store: "App Store",
-    href: "https://apps.apple.com/ca/app/talking-stick-indigenous/id1611790835",
+    href: "https://apps.apple.com/us/app/trycycle/6781012143",
   },
   {
     platform: "Android",
     device: "Android",
     store: "Google Play",
-    href: "https://play.google.com/store/apps/details?id=app.talkingstick&hl=en_GB",
+    href: "https://play.google.com/store/apps/details?id=app.ontariolegionhealth",
   },
 ];
 
@@ -53,12 +53,15 @@ export default function GetAppPage() {
         aria-label={french ? "Télécharger l’application" : "Download the app"}
         className="bg-olh-bg-light px-6 py-16 md:py-20 lg:px-8"
       >
-        <div className="mx-auto mb-10 flex max-w-3xl flex-col items-center justify-center gap-5 sm:flex-row sm:gap-7">
-          <Image src="/assets/talking-stick/app-icon.png" alt="Talking Stick" width={160} height={160} className="rounded-2xl shadow-sm" />
-          <div className="text-center sm:text-left">
-            <p className="text-3xl font-bold tracking-tight text-olh-text-primary">talking stick</p>
-            <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] text-olh-text-secondary">Every voice matters</p>
-          </div>
+        <div className="mx-auto mb-10 flex max-w-3xl justify-center">
+          <Image
+            src="/assets/olh/app-icon-horizontal.png"
+            alt="Ontario Legion Health app"
+            width={2137}
+            height={950}
+            sizes="(max-width: 640px) min(calc((100vw - 48px) * 0.7), 280px), 280px"
+            className="h-auto w-[70%] max-w-[280px] object-contain"
+          />
         </div>
         <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
           {stores.map(({ platform, device, store, href }) => (
