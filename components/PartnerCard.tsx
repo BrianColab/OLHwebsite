@@ -32,7 +32,7 @@ export function PartnerCard({ lang = "en", name, tagline, description, logo, log
       {tagline && (
         <p className="text-sm font-semibold text-olh-text-primary leading-relaxed">{tagline}</p>
       )}
-      <p className="text-sm text-olh-text-secondary leading-relaxed">{description}</p>
+      <p className="text-sm text-olh-text-secondary leading-relaxed whitespace-pre-line">{description}</p>
     </div>
   );
 }

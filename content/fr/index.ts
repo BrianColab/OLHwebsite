@@ -73,7 +73,7 @@ export const fr: SiteContent = {
     "partnerPreview": {
       "heading": "Le dépistage n'est utile que s'il mène quelque part.",
       "body1": "OLH bâtit un réseau de services qui aide à transformer les renseignements de santé autorisés en prochaines étapes concrètes.",
-      "body2": "Nos premiers partenaires comprennent Sunnybrook Health Sciences Centre, CAMH et MoCA Cognition. Ensemble, ils offrent des parcours vers des services spécialisés en santé des anciens combattants, en soins cardiovasculaires, en abandon du tabac, en santé mentale, en mémoire et en évaluation cognitive.",
+      "body2": "Nos premiers partenaires comprennent la Légion royale canadienne – Direction de l’Ontario, Sunnybrook Health Sciences Centre, CAMH et MoCA Cognition. Ensemble, ils offrent des parcours vers des services spécialisés en santé des anciens combattants, en soins cardiovasculaires, en abandon du tabac, en santé mentale, en mémoire et en évaluation cognitive.",
       "body3": "Ces organisations ne sont qu'un début. À mesure que le projet pilote révèle les besoins des communautés, OLH prévoit ajouter de nouveaux partenaires en soins et en services.",
       "link": "Découvrir nos partenaires de services →"
     },
@@ -215,6 +215,14 @@ export const fr: SiteContent = {
           "tagline": "Une expertise reconnue en évaluation cognitive.",
           "description": "MoCA Cognition offre un parcours lié à l’évaluation cognitive et aux préoccupations concernant la mémoire. Lorsque cela convient à la situation, l’infirmier-navigateur OLH peut aider une personne admissible à comprendre la prochaine étape et à préparer une mise en relation mieux éclairée.",
           "logo": "/assets/olh/partners/moca-cognition-horizontal.png",
+          "logoClassName": "max-h-20"
+        },
+        {
+          // [DRAFT FR]
+          "name": "La Légion royale canadienne – Direction de l’Ontario",
+          "tagline": "La Légion royale canadienne – Direction de l’Ontario soutient les anciens combattants et leurs familles, honore le Souvenir et renforce les communautés partout en Ontario.",
+          "description": "Grâce à Ontario Legion Health, la Direction de l’Ontario contribue à rapprocher des gens un dépistage de santé gratuit et un suivi professionnel. Les succursales participantes de la Légion offrent des lieux communautaires familiers où les Ontariennes et les Ontariens peuvent faire un pas proactif pour mieux comprendre leur santé et obtenir du soutien.\n\nCe partenariat s’appuie sur l’engagement de longue date de la Légion envers le service, en accueillant les anciens combattants, leurs familles et l’ensemble de la communauté. Il n’est pas nécessaire d’être membre de la Légion ni ancien combattant pour participer à Ontario Legion Health.",
+          "logo": "/assets/olh/partners/rcl-ontario-command.png",
           "logoClassName": "max-h-20"
         }
       ],

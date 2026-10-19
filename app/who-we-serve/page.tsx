@@ -62,7 +62,7 @@ export default function WhoWeServePage() {
             {c.partners.intro}
           </p>
           </FadeIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
             {c.partners.list.map((partner, i) => (
               <FadeIn id={"partner-" + i} key={partner.name} delay={i * 80} className="h-full">
               <PartnerCard

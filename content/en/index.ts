@@ -72,7 +72,7 @@ export const en = {
     "partnerPreview": {
       "heading": "Screening is only useful when it leads somewhere.",
       "body1": "OLH is building a fulfillment network that helps turn authorized health information into practical next steps.",
-      "body2": "Our initial partners include Sunnybrook Health Sciences Centre, CAMH and MoCA Cognition. Together, they provide pathways into specialized services spanning veterans' health, cardiovascular care, smoking cessation, mental health, memory and cognitive assessment.",
+      "body2": "Our initial partners include the Royal Canadian Legion – Ontario Command, Sunnybrook Health Sciences Centre, CAMH and MoCA Cognition. Together, they provide pathways into specialized services spanning veterans' health, cardiovascular care, smoking cessation, mental health, memory and cognitive assessment.",
       "body3": "These organizations are the beginning. As the pilot reveals what communities need most, OLH expects to add new care and service partners. A larger network creates more possible pathways and gives Nurse Navigators more appropriate options when helping clients move forward.",
       "link": "Meet Our Service Partners →"
     },
@@ -214,6 +214,13 @@ export const en = {
           "tagline": "Recognized cognitive-assessment expertise.",
           "description": "MoCA Cognition provides a pathway related to cognitive assessment and memory concerns. When appropriate, the OLH Nurse Navigator can help an eligible client understand the next step and prepare for a more informed connection.",
           "logo": "/assets/olh/partners/moca-cognition-horizontal.png",
+          "logoClassName": "max-h-20"
+        },
+        {
+          "name": "Royal Canadian Legion – Ontario Command",
+          "tagline": "The Royal Canadian Legion – Ontario Command supports Veterans and their families, honours Remembrance, and strengthens communities across Ontario.",
+          "description": "Through Ontario Legion Health, Ontario Command is helping bring free health screening and professional follow-up closer to home. Participating Legion branches provide familiar community settings where Ontarians can take a proactive step toward understanding their health and connecting with support.\n\nThis partnership builds on the Legion’s longstanding commitment to service—welcoming Veterans, their families and the broader community. You do not need to be a Legion member or a Veteran to participate in Ontario Legion Health.",
+          "logo": "/assets/olh/partners/rcl-ontario-command.png",
           "logoClassName": "max-h-20"
         }
       ],
