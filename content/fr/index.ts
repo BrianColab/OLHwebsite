@@ -277,7 +277,7 @@ export const fr: SiteContent = {
       },
       {
         "label": "Confidentialité",
-        "href": "/privacy"
+        "href": "/your-data"
       }
     ],
     "copyright": "© 2026 Ontario Legion Health. Tous droits réservés."

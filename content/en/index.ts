@@ -276,7 +276,7 @@ export const en = {
       },
       {
         "label": "Privacy",
-        "href": "/privacy"
+        "href": "/your-data"
       }
     ],
     "copyright": "© 2026 Ontario Legion Health. All rights reserved."

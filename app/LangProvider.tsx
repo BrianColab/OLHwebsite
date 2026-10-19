@@ -48,8 +48,20 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
         fr: ["Emplacements | Ontario Legion Health", "Trouvez une borne de dépistage OLH près de chez vous, dans les succursales de la Légion royale canadienne et les lieux communautaires de l’Ontario."],
       },
       "/privacy": {
-        en: ["Privacy | Ontario Legion Health", "Understand how you control your OLH information, permissions and connections to service partners."],
-        fr: ["Confidentialité | Ontario Legion Health", "Découvrez comment vous contrôlez vos renseignements OLH, vos autorisations et vos mises en relation avec les partenaires de services."],
+        en: ["Privacy Policy | Ontario Legion Health", "Ontario Legion Health privacy policy."],
+        fr: ["Politique de confidentialité | Ontario Legion Health", "Politique de confidentialité d’Ontario Legion Health."],
+      },
+      "/terms-waiver": {
+        en: ["Terms & Waiver | Ontario Legion Health", "Ontario Legion Health terms and waiver."],
+        fr: ["Conditions et renonciation | Ontario Legion Health", "Conditions et renonciation d’Ontario Legion Health."],
+      },
+      "/data-sharing": {
+        en: ["Data Sharing | Ontario Legion Health", "How Ontario Legion Health shares data."],
+        fr: ["Partage des données | Ontario Legion Health", "Comment Ontario Legion Health partage les données."],
+      },
+      "/your-data": {
+        en: ["Your Data | Ontario Legion Health", "Understand how you control your OLH information, permissions and connections to service partners."],
+        fr: ["Vos données | Ontario Legion Health", "Découvrez comment vous contrôlez vos renseignements OLH, vos autorisations et vos mises en relation avec les partenaires de services."],
       },
     };
     const page = pages[pathname as keyof typeof pages];

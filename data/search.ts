@@ -27,10 +27,10 @@ export function getSearchEntries(lang: Lang): SearchEntry[] {
   add(c.locations.hero.heading, c.locations.hero.subheading, c.nav.locations, "/locations#overview");
   LOCATIONS.forEach((location) => { const loc = localizeLocation(location, lang); add(loc.community + " — " + loc.branch, loc.address, c.nav.locations, "/locations#location-" + loc.id); });
   const privacy = lang === "fr" ? "Confidentialité" : "Privacy";
-  add(c.privacy.headingPrefix + " " + c.privacy.headingAccent, c.privacy.subheading, privacy, "/privacy#overview");
-  add(c.privacy.controlTitle, c.privacy.controlItems.join(" "), privacy, "/privacy#your-control");
-  add(c.privacy.useTitle, c.privacy.useBody, privacy, "/privacy#information-use");
-  add(c.privacy.notTitle, c.privacy.notItems.join(" "), privacy, "/privacy#limits");
+  add(c.privacy.headingPrefix + " " + c.privacy.headingAccent, c.privacy.subheading, privacy, "/your-data#overview");
+  add(c.privacy.controlTitle, c.privacy.controlItems.join(" "), privacy, "/your-data#your-control");
+  add(c.privacy.useTitle, c.privacy.useBody, privacy, "/your-data#information-use");
+  add(c.privacy.notTitle, c.privacy.notItems.join(" "), privacy, "/your-data#limits");
   return entries;
 }
 export function searchEntries(entries: SearchEntry[], query: string) {
