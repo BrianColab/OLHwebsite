@@ -48,16 +48,16 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
         fr: ["Emplacements | Ontario Legion Health", "Trouvez une borne de dépistage OLH près de chez vous, dans les succursales de la Légion royale canadienne et les lieux communautaires de l’Ontario."],
       },
       "/privacy": {
-        en: ["Privacy Policy | Ontario Legion Health", "Ontario Legion Health privacy policy."],
-        fr: ["Politique de confidentialité | Ontario Legion Health", "Politique de confidentialité d’Ontario Legion Health."],
+        en: ["Privacy Notice | Ontario Legion Health", "How Ontario Legion Health collects, uses, discloses and protects your personal and health information."],
+        fr: ["Avis de confidentialité | Ontario Legion Health", "Comment Ontario Legion Health recueille, utilise, communique et protège vos renseignements personnels et de santé."],
       },
       "/terms-waiver": {
-        en: ["Terms & Waiver | Ontario Legion Health", "Ontario Legion Health terms and waiver."],
-        fr: ["Conditions et renonciation | Ontario Legion Health", "Conditions et renonciation d’Ontario Legion Health."],
+        en: ["Terms & Conditions | Ontario Legion Health", "The terms and conditions for using the Ontario Legion Health app and websites."],
+        fr: ["Conditions d’utilisation | Ontario Legion Health", "Les conditions d’utilisation de l’application et des sites Web d’Ontario Legion Health."],
       },
       "/data-sharing": {
-        en: ["Data Sharing | Ontario Legion Health", "How Ontario Legion Health shares data."],
-        fr: ["Partage des données | Ontario Legion Health", "Comment Ontario Legion Health partage les données."],
+        en: ["Consent to Share My Health Information | Ontario Legion Health", "What information Ontario Legion Health may share, with whom, and how you can withdraw your consent."],
+        fr: ["Consentement au partage des renseignements de santé | Ontario Legion Health", "Les renseignements qu’Ontario Legion Health peut partager, avec qui, et comment retirer votre consentement."],
       },
       "/your-data": {
         en: ["Your Data | Ontario Legion Health", "Understand how you control your OLH information, permissions and connections to service partners."],

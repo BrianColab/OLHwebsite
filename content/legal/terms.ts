@@ -1,0 +1,479 @@
+// Source: 20261020 OLH Terms and Conditions.html (shown in the page hero, so the <h1> is omitted here).
+export const TERMS_HTML = `
+<strong>Ontario Legion Health</strong><br />
+<em>Last updated: July 2026</em>
+<h2>1. Legal Agreement</h2>
+<p>
+  These terms and conditions (&quot;Terms and Conditions&quot;) apply to the access and use of the &quot;Ontario
+  Legion Health&quot; application (the &quot;App&quot;), the website located at 
+  <a target="_blank" rel="noopener noreferrer" href="https://my.ontariolegionhealth.ca">
+    https://my.ontariolegionhealth.ca
+  </a>
+  , 
+  <a target="_blank" rel="noopener noreferrer" href="https://nurse.ontariolegionhealth.ca">
+    https://nurse.ontariolegionhealth.ca
+  </a>
+  , and any other website associated with a feature of the Ontario Legion Health App (each a &quot;Website&quot;,
+  together the &quot;Websites&quot;).
+</p>
+<p>
+  These Terms and Conditions, together with any documents and/or additional terms they expressly incorporate by
+  reference, constitute a legal agreement (&quot;Agreement&quot;) between you and TryCycle Data Systems Inc.
+  (&quot;TryCycle&quot;/&quot;us&quot;/&quot;our&quot;/&quot;we&quot;), which is the owner and operator of the
+  Websites and App.
+</p>
+<p>
+  By accessing and using a Website or by downloading or using the App, you agree to be legally bound by this
+  Agreement. If you do not accept the terms of this Agreement, you must not access or use the Websites and must not
+  download or use the App. By agreeing to enter into this Agreement, you also acknowledge having read and agreed to
+  our Privacy Notice.
+</p>
+<p>
+  By accessing or using a Website, or by downloading or using the App, you represent and warrant that you have the
+  full legal capacity to enter into this Agreement or have obtained all necessary authorizations to do so.
+</p>
+<p>
+  The App is intended for adult members of the Royal Canadian Legion and eligible Ontario residents. It is not
+  intended for children and is not designed to attract the attention of anyone under the age of majority. If you are
+  a parent or guardian and believe we have collected personal information about a minor in error, please contact us
+  immediately using the contact information at the end of these terms so that we can make reasonable efforts to
+  promptly remove all personal information relating to the minor from our systems.
+</p>
+<p>
+  If you are accessing or using a Website, or downloading or using the App, in a capacity other than that of a
+  Legion member end user (for example, because you are a Nurse, a Program Administrator, or a Legion Branch
+  Coordinator), this Agreement applies to you as well. However, any specific agreements you may have entered into
+  regarding your duties associated with your role(s) in relation to the App will take precedence over these terms,
+  including any specific disclaimers, limitations of liability, and indemnity agreements to which you may have
+  agreed for the purposes of your role(s).
+</p>
+<p>
+  Please be advised that this Agreement contains provisions that may impact the claims that you and TryCycle may
+  have against each other (in particular, see the following provisions: &quot;Disclaimer&quot;; &quot;Limitation of
+  Liability&quot;; &quot;Indemnity&quot;; and &quot;Governing Law&quot;).
+</p>
+
+<h2>2. Description of the Ontario Legion Health App and Websites</h2>
+<p>
+  Ontario Legion Health is a guided health screening program offered to members of the Royal Canadian Legion at
+  participating Legion Posts across Ontario. The program combines a veteran-facing mobile application, a web-based
+  nurse portal, and an on-site PharmaSmart kiosk that captures biometric measurements at participating Posts.
+</p>
+<p>
+  Through the App, eligible members complete a structured health screening questionnaire and, where a kiosk is
+  present, contribute biometric readings captured at the Post. Screening responses are reviewed by registered
+  nurses, who may follow up with participants where appropriate. TryCycle acts as the backend operator and system of
+  record for the program.
+</p>
+<p>
+  Ontario Legion Health provides health <em>screening</em> and nurse review. It is not a provider of emergency
+  services and is not a substitute for the care of your own physician or health care team.
+</p>
+
+<h2>3. Nurse Follow-Up Notifications and Specific Limitation of Liability</h2>
+<p>
+  Nurse follow-up notifications (&quot;Follow-Up Notifications&quot;) are a feature of the App. Where your screening
+  results indicate that a nurse should be in contact, or where you have requested a nurse callback, the App may send
+  push notifications to your mobile device advising you that a nurse intends to reach out or that a message is
+  waiting for you.
+</p>
+<p>
+  To receive Follow-Up Notifications, you must allow the App to display push notifications on your mobile device.
+</p>
+<p>
+  The delivery of Follow-Up Notifications can be affected by limitations, delays, and disruptions associated with
+  internet-based mobile communication technologies, as well as by factors outside TryCycle&apos;s control, including
+  your device&apos;s settings, its operating system limitations, the quality and availability of network
+  connectivity, and battery life. You are responsible for setting up your device to display push notifications and
+  for ensuring your device has adequate battery life and network connectivity. It therefore cannot be guaranteed
+  that Follow-Up Notifications will be timely, continuous, or that you will receive every notification intended for
+  your device.
+</p>
+<p>
+  Follow-Up Notifications are a convenience and do not replace direct contact from a nurse. To the fullest extent
+  permitted by applicable law, and except if you are a resident of the Province of Quebec, we expressly disclaim all
+  liability for any losses, damages, or inconveniences arising from any disruption, delay, or failure in the
+  delivery of Follow-Up Notifications.
+</p>
+
+<h2>4. Use and Security of the Websites and App</h2>
+<p>
+  The Websites and App are secured through encryption technologies, and all data is stored in Canada in support of
+  applicable data-residency requirements. Where functionality requires authentication, you will be required to keep
+  your login credentials strictly confidential.
+</p>
+<p>
+  All Personal Information and Personal Health Information, as defined in our Privacy Notice, that may be collected
+  through a Website or App will be held in the strictest confidence by TryCycle, to the extent permitted by law, and
+  in accordance with applicable law — including the <em>Personal Health Information Protection Act, 2004</em> 
+  (PHIPA) and the <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) — and our Privacy
+  Notice.
+</p>
+<p>
+  Unless otherwise explicitly stated herein or in our Privacy Notice, or otherwise required by applicable law, any
+  non-personal information or material, including suggestions, reviews, comments, or feedback sent to TryCycle
+  related to any aspect of a Website or App (&quot;Feedback&quot;), will be deemed not to be confidential. By
+  sending Feedback to TryCycle, you grant TryCycle an unrestricted, irrevocable licence to use, reproduce, modify,
+  transmit, and distribute such Feedback, and you agree that TryCycle is free to use any ideas, concepts, or
+  techniques you send for any purpose. TryCycle will not release your name or otherwise publicize the fact that you
+  submitted Feedback unless you grant permission or TryCycle is required to do so by law.
+</p>
+<p>
+  To protect the integrity of the Websites, App, or any other services of TryCycle or a third party, TryCycle
+  reserves the right, at any time and in its sole discretion, to block certain users, devices, or IP addresses from
+  accessing the Websites or App.
+</p>
+
+<h2>5. Intellectual Property Rights and Ownership</h2>
+<p>
+  The Websites, the App, and the information they contain are the property of TryCycle and are protected from
+  unauthorized copying and dissemination by copyright, trademark, patent, industrial design, and other intellectual
+  property laws.
+</p>
+<p>
+  Subject to these Terms and Conditions, TryCycle grants you a revocable, non-transferable, non-exclusive licence to
+  download, install, and use one copy of the App on each mobile device that you own or are an authorized user of,
+  strictly for your personal, non-commercial use (the &quot;Licence&quot;). The App is licensed, not sold, to you.
+  Source code and any information pertaining to the logic, design, or structure of the App is specifically excluded
+  from the Licence.
+</p>
+<p>
+  Title to the Websites and App, and all related documentation and material, shall at all times remain with
+  TryCycle, and all intellectual property rights of whatever nature with respect thereto shall be and remain the
+  exclusive property of TryCycle. Nothing in this Agreement gives you a right to use TryCycle&apos;s names,
+  trademarks, logos, or other distinctive brand features — nor those of the Royal Canadian Legion or PharmaSmart —
+  without prior written consent from the relevant owner.
+</p>
+
+<h2>6. Rules of Conduct</h2>
+<p>
+  It is a condition of your use of the Websites and App that you use them only for lawful purposes and in accordance
+  with this Agreement, and that you do not:
+</p>
+<ol type="a">
+  <li>
+    attempt to circumvent or violate the security of a Website or App, including, without limitation: accessing data
+    not intended for you; breaching or attempting to breach authentication measures; restricting, disrupting, or
+    disabling service to users, hosts, servers, or networks; using any robot, spider, or automatic device to access
+    or copy material; introducing viruses, Trojan horses, worms, or other malicious material; attacking a Website or
+    App via a denial-of-service or distributed denial-of-service attack, flooding, or crashing; or otherwise
+    interfering with the proper working of a Website or App;
+  </li>
+  <li>
+    access or use for any commercial purpose any part of a Website or App or any services or materials available
+    through it;
+  </li>
+  <li>
+    reproduce, distribute, modify, create derivative works of, publicly display, republish, download, store, or
+    transmit any material on a Website or App, or delete or alter any proprietary notices, except that your device
+    may temporarily cache material, a reasonable number of copies may be printed for personal non-commercial use
+    with notices intact, and one copy may be downloaded per device you own or are authorized to use;
+  </li>
+  <li>
+    use a Website or App, or submit content, that: violates any applicable law or regulation, or any third-party
+    rights; is exploitive, obscene, harmful, threatening, abusive, harassing, hateful, defamatory, sexually
+    explicit, violent, inflammatory, or discriminatory; involves stalking or attempting to exploit or harm any
+    individual; provides false, inaccurate, or misleading health or personal information; impersonates TryCycle, a
+    nurse, another user, or any other person or entity; transmits advertisements, promotions, or spam without our
+    prior written consent; discloses the personal information of other individuals without their consent; or
+    encourages any conduct that restricts anyone&apos;s use or enjoyment of a Website or App, or that may expose
+    TryCycle or other users to liability.
+  </li>
+</ol>
+<p>
+  Non-compliance with these rules may lead to the suspension or termination of your access to the Websites and App,
+  enforced by all appropriate legal or technological means at our disposal, such as banning IP addresses or device
+  identifiers. This does not limit TryCycle&apos;s legal recourse under applicable law.
+</p>
+
+<h2>7. Emergency</h2>
+<p>
+  Except as explicitly provided in this Agreement, the Websites and App are not intended for use during immediate
+  emergencies or to provide immediate aid, including in situations of medical or mental health emergencies. If you
+  are experiencing an emergency, please contact your local emergency services (call 911) or seek professional
+  medical help immediately.
+</p>
+<p>
+  Any content on the Websites or App is provided for general information and screening purposes only; it is not
+  intended to amount to medical advice on which you should rely, and it does not replace assessment or treatment by
+  a qualified health care professional. Nurse review under the program supports triage and follow-up but does not
+  constitute the provision of comprehensive health care services.
+</p>
+
+<h2>8. Ontario Legion Health App: Guidelines for Nurses</h2>
+<p>
+  If you are a Nurse participating in the program, in addition to these Terms and Conditions you must comply with
+  the following guidelines:
+</p>
+<ul>
+  <li>
+    <strong>Compliance with Laws:</strong> Nurses must abide by all applicable laws, regulations, and professional
+    standards — including the standards of the College of Nurses of Ontario — in their interactions within the App.
+  </li>
+  <li>
+    <strong>Respect for Privacy:</strong> Nurses must respect the privacy of participants and handle all Personal
+    Health Information in accordance with PHIPA, PIPEDA, and program policy. Information should be accessed only as
+    necessary to perform review and follow-up duties.
+  </li>
+  <li>
+    <strong>Respectful Conduct:</strong> Nurses should treat all participants with respect, understanding, and
+    patience. Any form of discrimination, harassment, or abuse is strictly prohibited.
+  </li>
+  <li>
+    <strong>Confidentiality:</strong> All screening data and shared information are confidential and must not be
+    disclosed or used outside the program except as permitted by these guidelines and applicable law.
+  </li>
+  <li>
+    <strong>Accuracy of Information:</strong> Nurses should provide accurate and truthful information to the best of
+    their professional knowledge and should not make promises or guarantees they cannot fulfill.
+  </li>
+  <li>
+    <strong>Scope of Practice:</strong> Nurses must operate within their professional scope of practice and program
+    protocols, including established contact standards and triage tiers, and must escalate cases as protocol
+    requires.
+  </li>
+  <li>
+    <strong>Professionalism:</strong> Nurses should maintain a high level of ethical standards and professionalism
+    and must not engage in conduct that could harm the reputation of the program, of TryCycle, of the Royal Canadian
+    Legion, or of any individual or community.
+  </li>
+  <li>
+    <strong>Reporting Concerns:</strong> If a Nurse identifies illegal activity, a safety concern, or rule-breaking
+    behaviour, they should report it immediately through the reporting mechanisms available within the nurse portal
+    and notify their program contact. In an emergency, Nurses should also contact local authorities directly.
+  </li>
+  <li>
+    <strong>Adherence to Training:</strong> Nurses should act in accordance with the training and program
+    instructions they have received.
+  </li>
+</ul>
+<p>
+  Non-compliance with these guidelines may lead to termination of the Nurse role and potential removal of access to
+  the App. This does not limit TryCycle&apos;s legal recourse under applicable law. These guidelines may be updated
+  periodically, and Nurses may be required to accept the revised guidelines to continue using the App.
+</p>
+
+<h2>9. Disclaimer</h2>
+<p>
+  The Websites and App are provided &quot;as is&quot;. While TryCycle endeavours to provide accurate, current, and
+  timely information, TryCycle makes no representation, warranties, or covenants of any kind, express or implied,
+  statutory or otherwise, regarding the Websites or App, including, without limitation, that: the Websites or App
+  and their contents will be accurate, complete, current, reliable, timely, of merchantable quality, or suitable for
+  a particular purpose; the operation of the Websites or App will be uninterrupted or error-free; the App will not
+  be erased from your device; defects or errors will be corrected; the Websites or App will be free from viruses or
+  harmful components; or that communications to or from the Websites or App will be secure or uninterrupted.
+</p>
+<p>
+  Transmission of information via the Internet is not completely secure. Although TryCycle does its best to protect
+  your information, TryCycle cannot guarantee the security of information transmitted to the Websites or App. You
+  acknowledge and agree that your access to and use of the Websites and App is at your own risk.
+</p>
+<p>
+  This Section 9 is to be interpreted in accordance with applicable law and is not intended to waive any obligations
+  of TryCycle or relinquish any rights of consumers which cannot be waived or relinquished as per applicable law.
+</p>
+
+<h2>10. Limitation of Liability</h2>
+<p>
+  <em>(Not applicable to consumers who reside in the Province of Quebec.)</em>
+</p>
+<p>
+  To the fullest extent permitted by applicable law, you agree that TryCycle and its officers, directors, employees,
+  agents, licensors, and their respective successors and assigns will not be liable for damages of any kind,
+  including any direct, indirect, special, punitive, incidental, exemplary, consequential, or other damages,
+  including any loss or damages relating to medical or personal injury, wrongful death, inaccurate information, or
+  your inability to use a Website or App. The foregoing limitation shall apply even if TryCycle knew of or ought to
+  have known of the possibility of such damages.
+</p>
+<p>
+  To the fullest extent permitted by applicable law, TryCycle will not be liable for any loss or damage caused by
+  denial-of-service attacks, viruses, or other technologically harmful material that may infect your equipment due
+  to your use of a Website or App, and TryCycle disclaims all liability for the acts, omissions, conduct, or content
+  provided by any third-party user, advertiser, licensor, or partner of a Website or App.
+</p>
+
+<h2>11. Indemnity</h2>
+<p>
+  You agree to indemnify, defend, and hold harmless TryCycle and its officers, directors, employees, agents,
+  licensors, subsidiaries, affiliates, and their respective successors and assigns, from any claims, actions,
+  demands, liabilities, costs, or expenses whatsoever, including reasonable legal fees, arising out of your breach
+  of this Agreement, your improper use of a Website or the App, or your breach of applicable law or of the rights of
+  a third party.
+</p>
+
+<h2>12. Termination</h2>
+<p>
+  TryCycle may, in its sole discretion, cancel or terminate your right to use the Websites or App at any time, with
+  or without notice. Cause for termination may include, but is not limited to: breaches of this Agreement or any
+  other agreement with TryCycle; requests by law enforcement or government agencies; a request by you;
+  discontinuance or material modification of a Website or App; unexpected technical, security, or legal issues; or
+  your participation in fraudulent or illegal activities.
+</p>
+<p>
+  In the event of termination, you will no longer be authorized to access or use the affected Websites or App.
+  TryCycle shall not be liable to you or anyone else for such termination. To the fullest extent permitted by
+  applicable law, TryCycle also reserves the right to terminate this Agreement without cause at any time. The
+  following sections survive any termination: Disclaimer, Limitation of Liability, Indemnity, and Governing Law.
+</p>
+
+<h2>13. Eligibility and Use Prohibited Where Contrary to Law</h2>
+<p>
+  Access to and use of the App as a program participant is limited to individuals who are residents of Ontario and
+  hold valid Ontario Health Insurance Plan (OHIP) coverage, as self-attested during onboarding. Use of the Websites
+  or App is prohibited in any jurisdiction where they may violate any laws or regulations, and you agree not to
+  access or use them in such jurisdictions. You are responsible for compliance with all applicable laws and
+  regulations.
+</p>
+
+<h2>14. Governing Law (Outside Quebec)</h2>
+<p>
+  <em>(Not applicable if you reside in the Province of Quebec.)</em>
+</p>
+<p>
+  To the fullest extent permitted by applicable law, the Websites, the App, and this Agreement shall be governed by
+  the laws of the Province of Ontario and the laws of Canada applicable therein, without regard to conflicts-of-law
+  principles or your place of residence. You agree and hereby submit to the exclusive jurisdiction of the courts of
+  the Province of Ontario with respect to all matters relating to your access and use of the Websites and App and to
+  any dispute arising therefrom.
+</p>
+
+<h2>15. Governing Law (Quebec Residents)</h2>
+<p>
+  <em>(Applicable only if you reside in the Province of Quebec.)</em>
+</p>
+<p>
+  The Websites, App, and this Agreement shall be governed by the laws of the Province of Quebec and the laws of
+  Canada applicable therein.
+</p>
+
+<h2>16. Amendments</h2>
+<p>
+  We reserve the right at any time to modify or discontinue, temporarily or permanently, a Website or App or any
+  part thereof, and we shall not be liable to you or any third party for any such modification, suspension, or
+  discontinuance. We may amend this Agreement at any time by posting the amended terms on a Website or in the App.
+  If required by applicable law, we will provide at least 30 days&apos; notice in advance of an amendment taking
+  effect. Your continued access or use of a Website or App will constitute acceptance of the amended terms.
+  Alternatively, we may request that you acknowledge acceptance via an electronic click-through. If you do not agree
+  to an amendment, you must stop accessing and using the Websites and App and delete the App from your device.
+</p>
+<p>
+  <em>Applicable only if you reside in the Province of Quebec:</em> Notwithstanding the foregoing, if we wish to
+  unilaterally amend this Agreement, we will provide you with notice outlining the new or amended clauses and their
+  former wording, along with the effective date, at least thirty (30) days in advance. If the amended terms increase
+  your obligations or reduce ours, you may notify us within thirty (30) days after they take effect of your refusal,
+  upon which this Agreement will terminate without cost or penalty to you.
+</p>
+
+<h2>17. Relationship of the Parties</h2>
+<p>
+  No partnership, joint venture, agency, or employment relationship is created as a result of this Agreement, and
+  neither party has any authority to bind the other in any such respect.
+</p>
+
+<h2>18. Force Majeure</h2>
+<p>
+  TryCycle and its officers, directors, employees, agents, content providers, customers, and suppliers shall not be
+  liable, nor be deemed to have defaulted or breached this Agreement, for any failure or delay in performing these
+  Terms and Conditions when and to the extent that such failure or delay is caused by acts or circumstances beyond
+  TryCycle&apos;s reasonable control, including acts of God, flood, fire, earthquake, governmental actions, war,
+  terrorist acts, civil unrest, epidemics, pandemics, governmental emergency orders, labour disputes,
+  telecommunication or equipment breakdown, computer viruses, unauthorized access, severe weather, or power outages.
+  Notwithstanding the foregoing, this Agreement shall continue in full force and effect.
+</p>
+
+<h2>19. Notices</h2>
+<p>
+  You agree that we may provide any notice required by applicable law or related to this Agreement by means of a
+  notice accessible through a Website or within the App, or by using any contact details we may have for you,
+  including via email or push notification if you have enabled push notifications.
+</p>
+
+<h2>20. Severability</h2>
+<p>
+  If any provision of this Agreement is determined to be invalid or unenforceable, in whole or in part, by any court
+  of competent jurisdiction, the remaining provisions shall continue in full force and effect.
+</p>
+
+<h2>21. Waiver</h2>
+<p>
+  Any consent granted by TryCycle to a breach of this Agreement, or any waiver thereof, shall not be deemed consent
+  to or waiver of any subsequent or different breach. No provision of this Agreement may be amended or waived except
+  through a written document.
+</p>
+
+<h2>22. Benefit of the Agreement</h2>
+<p>
+  This Agreement shall enure to the benefit of TryCycle and its successors and assigns and shall be binding on you
+  and your heirs, executors, administrators, successors, and permitted assigns. You may not assign this Agreement or
+  any rights or licences granted hereunder without the prior written consent of TryCycle.
+</p>
+
+<h2>23. Entire Agreement</h2>
+<p>
+  These Terms and Conditions constitute the entire Agreement between you and TryCycle relating to your access and
+  use of the Websites and your download and use of the App, and supersede all prior representations, warranties,
+  understandings, and agreements relating to the subject matter of this Agreement.
+</p>
+
+<h2>24. Language / Langue</h2>
+<p>
+  <em>(Residents of the Province of Quebec Only.)</em>
+</p>
+<p>
+  You acknowledge having requested that this Agreement be drawn up exclusively in English and hereby agree to be
+  bound by the English-only version, and to have all related documents drawn up exclusively in English. 
+  <em>
+    Vous reconnaissez avoir demandé que le présent contrat soit rédigé exclusivement en anglais et acceptez par la
+    présente d&apos;être lié par la version exclusivement en anglais du présent accord et à ce que tous les
+    documents liés au présent accord soient rédigés exclusivement en anglais.
+  </em>
+</p>
+
+<h2>25. Specific Terms Applicable to Apple&apos;s App Store</h2>
+<ul>
+  <li>
+    <strong>Acknowledgement:</strong> By agreeing to these Terms, you acknowledge that they are a binding contract
+    between you and TryCycle, excluding Apple.
+  </li>
+  <li>
+    <strong>Maintenance and Support:</strong> TryCycle and its service providers are responsible for any required
+    maintenance and support for the App. Apple has no obligation to provide maintenance or support.
+  </li>
+  <li>
+    <strong>Warranty:</strong> Apple carries no warranty obligations related to the App.
+  </li>
+  <li>
+    <strong>Product Claims:</strong> Apple is not responsible for addressing any claims related to the App or your
+    possession or use of it.
+  </li>
+  <li>
+    <strong>Legal Compliance:</strong> You declare that you are not located in a country subject to a U.S.
+    Government embargo or designated as a &quot;terrorist supporting&quot; country, and that you are not listed on
+    any U.S. Government list of prohibited or restricted parties.
+  </li>
+  <li>
+    <strong>Third-Party Terms:</strong> You must comply with any relevant third-party terms of agreement when using
+    the App.
+  </li>
+  <li>
+    <strong>Third-Party Beneficiary:</strong> You acknowledge that Apple and its subsidiaries are third-party
+    beneficiaries of these Terms and, once you accept them, Apple will have the right to enforce them.
+  </li>
+</ul>
+
+<h2>26. Contact Us</h2>
+<p>
+  Notices under, and questions or comments regarding, this Agreement, the Websites, or the App should be directed to
+  Geoff Schaadt at <a href="mailto:info@trycycle.ca">info@trycycle.ca</a> or by regular mail to:
+</p>
+<p>
+  TryCycle Data Systems Inc.
+  <br />7 Bayview Station Road
+  <br />
+  Ottawa, ON K1Y 2C5
+  <br />
+  Canada
+  <br />
+  Tel: <a href="tel:+16132740001">(613)-274-0001</a>
+</p>
+`;

@@ -70,3 +70,12 @@ body {
 main [id] { scroll-margin-top: 7rem; }
 body:has(dialog.site-search[open]) { overflow: hidden; }
 .site-search { left: 0; right: 0; max-height: 85vh; }
+
+/* Legal documents (privacy, terms, data sharing) supplied as HTML */
+.legal-content { @apply text-base text-olh-text-secondary leading-relaxed; }
+.legal-content h2 { @apply mt-10 mb-3 text-xl md:text-2xl font-black text-olh-text-primary tracking-tight; }
+.legal-content p { @apply mb-4; }
+.legal-content strong { @apply font-semibold text-olh-text-primary; }
+.legal-content ul { @apply mb-4 pl-6 list-disc flex flex-col gap-2; }
+.legal-content ol { @apply mb-4 pl-6 list-[lower-alpha] flex flex-col gap-2; }
+.legal-content a { @apply text-olh-red underline underline-offset-2 break-words hover:text-olh-red-hover; }
